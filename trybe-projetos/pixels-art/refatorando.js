@@ -2,7 +2,9 @@
 const imputBoardSize = document.getElementById('board-size');
 let pixelBoard = document.getElementById('pixel-board');
 const buttonGenerateBoard = document.getElementById('generate-board');
-
+let paletteColor = document.getElementById('palette-color');
+let colorStore = 'background-color: rgb(0, 0, 0)';
+const buttonSelectColor = document.getElementById('select-color');
 
 //MUNDA QUANTIDADE DE PIXEL PARA PINTAR.
 function sizeBoard() {
@@ -35,4 +37,21 @@ buttonGenerateBoard.addEventListener('click', function () {
     pixelBoard.innerHTML = '';
     sizeBoard();
   }
+})
+
+//SELECIONA COR
+buttonSelectColor.addEventListener('click', function(event){
+  let aux = paletteColor.value
+  colorStore = aux;
+  console.log(aux);
+  console.log(colorStore);
+})
+
+//COLORE PIXEL
+function colorize2(paint) {
+  paint.setAttribute('style', 'background-color: ' + colorStore,);
+}
+
+pixelBoard.addEventListener('click', function (event) {
+  colorize2(event.target);
 })
