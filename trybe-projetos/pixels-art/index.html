@@ -13,75 +13,76 @@
 </head>
 
 <body>
-    <video autoplay loop poster="files/backgroundImage.jpg" class="bg_video">
+    <video autoplay loop poster="files/backgroundImage.jpg" id="bg_video">
         <source src="files/background.webm" type="video/webm">
         <source src="files/background.mp4" type="video/mp4">
     </video>
 
-    <h1 id="title" class="main-font bg-title font-title">PIXEL ART - SUA ARTE EM 8 BIT</h1>
+    <h1 id="title" class="main-font bg-title">PIXEL ART - SUA ARTE EM 8 BIT</h1>
 
-    <div id="palette-color" class="bg-title">
-        <div class="main-font horizontal">Escolha uma cor:</div>
-        <input class="horizontal" type="color">
-        <button id="clear-board">Limpar</button>
-    </div>
+    <main id="main">
+        <div id="setup">
+            <div id="size" class="main-font horizontal">Escolha um tamanho:
+                <input id="board-size" type="number" min="1"
+                    oninput="validity.valid ? this.save = value : value = this.save;" placeholder="Min: 5 Max: 50"
+                    class="main-font">
+                <button id="generate-board" class="main-font">VQV</button>
+            </div>
 
-    <div id="color-palette">
-        <div class="color color-black border horizontal size selected"></div>
-        <div class="color color-red border horizontal size"></div>
-        <div class="color color-blue border horizontal size"></div>
-        <div class="color color-green border horizontal size"></div>
-    </div>
-
-    
-    <input id="board-size" type="number" min="1" oninput="validity.valid ? this.save = value : value = this.save;">
-    <button id="generate-board">VQV</button>
-
-    <div id="pixel-board">
-
-        <div id="board1" class="line newLine">
-            <div class="pixel color-white size border horizontal"></div>
-            <div class="pixel color-white size border horizontal"></div>
-            <div class="pixel color-white size border horizontal"></div>
-            <div class="pixel color-white size border horizontal"></div>
-            <div class="pixel color-white size border horizontal"></div>
+            <div id="color" class="main-font horizontal">Escolha uma cor:
+                <input id="palette-color" class="horizontal main-font" type="color">
+                <button id="clear-board" class="main-font">Limpar</button>
+            </div>
         </div>
 
-        <div id="board2" class="line  newLine">
-            <div class="pixel color-white size border horizontal"></div>
-            <div class="pixel color-white size border horizontal"></div>
-            <div class="pixel color-white size border horizontal"></div>
-            <div class="pixel color-white size border horizontal"></div>
-            <div class="pixel color-white size border horizontal"></div>
+        <div id="pixel-board">
+
+            <div id="board1" class="line newLine">
+                <div class="pixel color-white size border horizontal"></div>
+                <div class="pixel color-white size border horizontal"></div>
+                <div class="pixel color-white size border horizontal"></div>
+                <div class="pixel color-white size border horizontal"></div>
+                <div class="pixel color-white size border horizontal"></div>
+            </div>
+
+            <div id="board2" class="line  newLine">
+                <div class="pixel color-white size border horizontal"></div>
+                <div class="pixel color-white size border horizontal"></div>
+                <div class="pixel color-white size border horizontal"></div>
+                <div class="pixel color-white size border horizontal"></div>
+                <div class="pixel color-white size border horizontal"></div>
+            </div>
+
+            <div id="board3" class="line  newLine">
+                <div class="pixel color-white size border horizontal"></div>
+                <div class="pixel color-white size border horizontal"></div>
+                <div class="pixel color-white size border horizontal"></div>
+                <div class="pixel color-white size border horizontal"></div>
+                <div class="pixel color-white size border horizontal"></div>
+            </div>
+
+            <div id="board4" class="line  newLine">
+                <div class="pixel color-white size border horizontal"></div>
+                <div class="pixel color-white size border horizontal"></div>
+                <div class="pixel color-white size border horizontal"></div>
+                <div class="pixel color-white size border horizontal"></div>
+                <div class="pixel color-white size border horizontal"></div>
+            </div>
+
+            <div id="board5" class="line  newLine">
+                <div class="pixel color-white size border horizontal"></div>
+                <div class="pixel color-white size border horizontal"></div>
+                <div class="pixel color-white size border horizontal"></div>
+                <div class="pixel color-white size border horizontal"></div>
+                <div class="pixel color-white size border horizontal"></div>
+            </div>
         </div>
+    </main>
 
-        <div id="board3" class="line  newLine">
-            <div class="pixel color-white size border horizontal"></div>
-            <div class="pixel color-white size border horizontal"></div>
-            <div class="pixel color-white size border horizontal"></div>
-            <div class="pixel color-white size border horizontal"></div>
-            <div class="pixel color-white size border horizontal"></div>
-        </div>
+    <footer>
 
-        <div id="board4" class="line  newLine">
-            <div class="pixel color-white size border horizontal"></div>
-            <div class="pixel color-white size border horizontal"></div>
-            <div class="pixel color-white size border horizontal"></div>
-            <div class="pixel color-white size border horizontal"></div>
-            <div class="pixel color-white size border horizontal"></div>
-        </div>
-
-        <div id="board5" class="line  newLine">
-            <div class="pixel color-white size border horizontal"></div>
-            <div class="pixel color-white size border horizontal"></div>
-            <div class="pixel color-white size border horizontal"></div>
-            <div class="pixel color-white size border horizontal"></div>
-            <div class="pixel color-white size border horizontal"></div>
-        </div>
-
-
-    </div>
-    <script src="script.js"></script>
+    </footer>
+    <script src="refatorando.js"></script>
 </body>
 
 </html>
