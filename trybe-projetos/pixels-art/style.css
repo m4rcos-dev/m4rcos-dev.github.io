@@ -1,0 +1,42 @@
+/* CORES */
+
+.color-black {
+    background-color: black;
+}
+
+.color-red {
+    background-color: red;
+}
+
+.color-blue {
+    background-color: blue;
+}
+
+.color-green {
+    background-color: green;
+}
+
+.color-white {
+    background-color: white;
+}
+
+/* BORDAS */
+.border {
+    border: solid 1px;
+}
+
+/* TAMANHOS */
+.size-mainboard {
+    width: 25px;
+}
+
+.size {
+    width: 40px;
+    height: 40px;
+}
+
+/* POSICIONAMENTO */
+
+.horizontal {
+    display: inline-block;
+}
