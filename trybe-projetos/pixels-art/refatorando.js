@@ -5,6 +5,7 @@ const buttonGenerateBoard = document.getElementById('generate-board');
 let paletteColor = document.getElementById('palette-color');
 let colorStore = 'background-color: rgb(0, 0, 0)';
 const buttonSelectColor = document.getElementById('select-color');
+const clearBoard = document.getElementById('clear-board');
 
 //MUNDA QUANTIDADE DE PIXEL PARA PINTAR.
 function sizeBoard() {
@@ -55,3 +56,8 @@ function colorize2(paint) {
 pixelBoard.addEventListener('click', function (event) {
   colorize2(event.target);
 })
+
+//LIMPAR TELA.
+clearBoard.addEventListener('click', function () {
+  location.reload();
+});
