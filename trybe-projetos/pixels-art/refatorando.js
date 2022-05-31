@@ -12,8 +12,8 @@ function sizeBoard() {
   let imputValue = imputBoardSize.value;
   if (imputValue < 5) {
     imputValue = 5;
-  } else if (imputValue > 50) {
-    imputValue = 50;
+  } else if (imputValue > 30) {
+    imputValue = 30;
   } 
     for (let c = 0; c < imputValue; c += 1) {
       let newLine = document.createElement('div');

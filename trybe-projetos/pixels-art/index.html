@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PIXEL ART</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,24 +18,24 @@
         <source src="files/background.mp4" type="video/mp4">
     </video>
 
-    <h1 id="title" class="main-font bg-title">PIXEL ART - SUA ARTE EM 8 BIT</h1>
+    <h1 id="title" class="main-font bg-title">PIXEL ART</h1>
 
-    <main id="main">
-        <div id="setup">
-            <div id="size" class="main-font horizontal">Escolha um tamanho:
-                <input id="board-size" type="number" min="1"
-                    oninput="validity.valid ? this.save = value : value = this.save;" placeholder="Min: 5 Max: 50"
-                    class="main-font">
-                <button id="generate-board" class="main-font">VQV!</button>
-            </div>
-
-            <div id="color" class="main-font horizontal">Escolha uma cor:
-                <input id="palette-color" class="horizontal main-font" type="color">
-                <button id="select-color" class="main-font">VQV!</button>
-                <button id="clear-board" class="main-font">Limpar</button>
-            </div>
+    <div id="setup">
+        <div id="size" class="main-font horizontal">Escolha um tamanho:
+            <input id="board-size" type="number" min="1"
+                oninput="validity.valid ? this.save = value : value = this.save;" placeholder="Min: 5 Max: 30"
+                class="main-font">
+            <button id="generate-board" class="main-font">VQV!</button>
         </div>
 
+        <div id="color" class="main-font horizontal">Escolha uma cor:
+            <input id="palette-color" class="horizontal main-font" type="color">
+            <button id="select-color" class="main-font">VQV!</button>
+            <button id="clear-board" class="main-font">Limpar</button>
+        </div>
+    </div>
+
+    <main id="main">
         <div id="pixel-board">
 
             <div id="board1" class="line newLine">
@@ -81,7 +81,7 @@
     </main>
 
     <footer>
-
+        <H3 id="footer" class="main-font">Desenvolvido como projeto na <a href="https://www.betrybe.com/">TRYBE</a> por <a href="https://www.linkedin.com/in/dev-marcospaulo">Marcos Paulo!</a></H3>
     </footer>
     <script src="refatorando.js"></script>
 </body>
