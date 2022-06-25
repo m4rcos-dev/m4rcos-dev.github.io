@@ -1,0 +1,70 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0
+}
+
+main {
+  display: flex;
+  padding: 0px 0px 0px 21%;
+  height: 100vh;
+  background-color: #121112;
+}
+
+.font-standart {
+  color: white;
+  font-family: 'Fredoka One', cursive;
+}
+
+.font-contrast {
+  color: #f43f33;
+  font-family: 'Fredoka One', cursive;
+}
+
+.title-contrast {
+  font-family: 'Tangerine', cursive;
+  font-size: 50px;
+}
+
+.title-content {
+  padding: 6% 0px 0px 0px;
+}
+
+#aside-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  height: 100vh;
+  position: fixed;
+  background-color: #1d1b1d;
+  border-right: #363537 2px solid;
+}
+
+#title-aside-left {
+  display: flex;
+  border: 0px;
+  padding: 0px;
+}
+
+#subtitle-aside-left {
+  display: flex;
+  border: 0px;
+  padding-right: 90px;
+}
+
+.paddin-ico {
+  padding: 10px 0px 0px 80px;
+  font-size: 50px;
+  align-self: start;
+}
+
+.nav-content {
+  display: flex;
+  flex-direction: column;
+}
+
+#home {
+  width: 80%;
+}
