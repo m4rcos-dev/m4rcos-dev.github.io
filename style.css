@@ -103,7 +103,8 @@ a {
   font-size: large;
 }
 
-a:active, a:hover {
+a:active,
+a:hover {
   color: #f43f33;
 }
 
@@ -119,3 +120,42 @@ hr {
 }
 
 /* MAIN  */
+#home {
+  display: flex;
+}
+
+#descreption {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#avatar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#ico-top-avatar {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 80px;
+  padding-right: 100px;
+  margin-right: 400px;
+}
+
+#ico-botton-avatar {
+  display: flex;
+  justify-content: end;
+  font-size: 80px;
+  padding-right: 100px;
+  margin-right: 400px;
+}
+
+#avatar-img {
+  height: 550px;
+  background-color: white;
+  border-radius: 30px;
+}
+
