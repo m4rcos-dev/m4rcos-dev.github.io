@@ -7,6 +7,8 @@
 /* MENU LATERAL  */
 main {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 0px 0px 0px 21%;
   height: 100vh;
   background-color: #121112;
@@ -20,7 +22,7 @@ main {
 
 .font-contrast {
   color: #f43f33;
-  font-family: 'Fredoka One', cursive;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #aside-left {
@@ -135,12 +137,13 @@ hr {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-right: 150px;
 }
 
 #ico-top-avatar {
   display: flex;
   justify-content: flex-start;
-  font-size: 80px;
+  font-size: 70px;
   padding-right: 100px;
   margin-right: 400px;
 }
@@ -148,14 +151,32 @@ hr {
 #ico-botton-avatar {
   display: flex;
   justify-content: end;
-  font-size: 80px;
-  padding-right: 100px;
-  margin-right: 400px;
+  font-size: 70px;
+  padding-left: 100px;
+  margin-left: 390px;
 }
 
 #avatar-img {
-  height: 550px;
+  height: 490px;
   background-color: white;
   border-radius: 30px;
 }
+
+#title-home-container {
+  display: flex;
+}
+
+#title-home {
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+#my-name {
+  font-family: 'Tangerine', cursive;
+  font-weight: bold;
+  font-size: 40px;
+  margin-left: 10px;
+}
+
+
 
