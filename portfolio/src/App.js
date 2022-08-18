@@ -1,10 +1,11 @@
-
+import { Box } from '@mui/material';
+import DrawerLeft from './components/DrawerLeft';
 
 function App() {
   return (
-    <div>
-      
-    </div>
+    <Box sx={{ display: 'flex' }}>
+      <DrawerLeft />
+    </Box>
   );
 }
 
