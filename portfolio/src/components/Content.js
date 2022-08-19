@@ -10,6 +10,7 @@ class Content extends React.Component {
       <Box sx={{
         width: '80%',
         height: '100vh',
+        bgcolor: 'secondary.main'
       }}>
         <Routes>
           <Route path="/" element={<Home />} />

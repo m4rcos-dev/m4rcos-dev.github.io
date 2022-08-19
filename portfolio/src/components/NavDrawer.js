@@ -22,6 +22,15 @@ class NavDrawer extends React.Component {
     }
     `}
     `
+    const TypographyCustom = styled(Typography)`
+    ${({ theme }) => `
+    cursor: crosshair;
+    justify-content: center;
+    &:hover {
+      color: ${theme.palette.alternateColor1.main};
+    }
+    `}
+    `
     const arrayNavLinksText = ['Inicio', 'Sobre', 'Projetos'];
     const arrayNavLinks = ['/', '/about', '/projects'];
     const arrayIcons = [
@@ -45,7 +54,7 @@ class NavDrawer extends React.Component {
                   <ListemItemButtonCustom>
                     {arrayIcons[index]}
                   </ListemItemButtonCustom>
-                  <Typography variant="h5" fontFamily='Hack'>{text}</Typography>
+                  <TypographyCustom variant="h5" fontFamily='Hack'>{text}</TypographyCustom>
                 </Link>
               </ListemItemButtonCustom>
 
