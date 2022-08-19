@@ -9,7 +9,6 @@ class DrawerLeft extends React.Component {
       <Box sx={{
         width: '20%',
         height: '100vh',
-        position: 'fixed',
         bgcolor: 'primary',
         borderRight: 1,
         borderColor: 'divider'
