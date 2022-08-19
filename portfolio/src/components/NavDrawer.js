@@ -9,19 +9,21 @@ import SettingsEthernetIcon from '@mui/icons-material/SettingsEthernet';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { Box, styled, Typography } from "@mui/material";
+import { Link } from 'react-router-dom';
 
 class NavDrawer extends React.Component {
   render() {
     const ListemItemButtonCustom = styled(ListItemButton)`
     ${({ theme }) => `
     cursor: crosshair;
+    justify-content: center;
     &:hover {
       color: ${theme.palette.alternateColor1.main};
     }
     `}
     `
-    const arrayNavLinks = ['Inicio', 'Sobre', 'Projetos'];
-
+    const arrayNavLinksText = ['Inicio', 'Sobre', 'Projetos'];
+    const arrayNavLinks = ['/', '/about', '/projects'];
     const arrayIcons = [
       <HomeIcon fontSize="large" />,
       <AssignmentIndIcon fontSize="large" />,
@@ -35,21 +37,25 @@ class NavDrawer extends React.Component {
     return (
       <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <List sx={{ mb: '3rem', mt: '9rem', }}>
-          {arrayNavLinks.map((text, index) => (
+          {arrayNavLinksText.map((text, index) => (
             <ListItem key={text}>
-              <ListemItemButtonCustom divider sx={{ display: 'flex', flexDirection: 'column' }}>
-                <ListemItemButtonCustom>
-                  {arrayIcons[index]}
-                </ListemItemButtonCustom>
-                <Typography variant="h5" fontFamily='Hack'>{text}</Typography>
+
+              <ListemItemButtonCustom divider>
+                <Link to={arrayNavLinks[index]} style={{ textDecoration: 'none', color: 'inherit' }}>
+                  <ListemItemButtonCustom>
+                    {arrayIcons[index]}
+                  </ListemItemButtonCustom>
+                  <Typography variant="h5" fontFamily='Hack'>{text}</Typography>
+                </Link>
               </ListemItemButtonCustom>
+
             </ListItem>
           ))}
         </List>
         <ListItemIcon sx={{ mt: '5rem' }}>
           {arraySocialIcons.map((social) => social)}
         </ListItemIcon>
-      </Box>
+      </Box >
     )
   }
 }
