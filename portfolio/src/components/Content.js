@@ -1,6 +1,9 @@
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import React from "react";
-
+import { Route, Routes } from 'react-router-dom';
+import Home from "../pages/Home";
+import About from "../pages/About";
+import Projects from "../pages/Projects";
 class Content extends React.Component {
   render() {
     return (
@@ -8,9 +11,11 @@ class Content extends React.Component {
         width: '80%',
         height: '100vh',
       }}>
-        <Typography>
-          Content
-        </Typography>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="projects" element={<Projects />} />
+        </Routes>
       </Box>
     )
   }

@@ -2,8 +2,8 @@ import { Box, Typography } from "@mui/material";
 import React from "react";
 
 class Home extends React.Component {
-  render(){
-    return(
+  render() {
+    return (
       <Box>
         <Typography>
           Home
