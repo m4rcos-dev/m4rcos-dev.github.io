@@ -32,6 +32,11 @@ const theme = createTheme({
       'Hack',
     ].join(','),
   },
+  breakpoints: {
+    values: {
+      md2: 1441,
+    },
+  }
 });
 
 export default theme;

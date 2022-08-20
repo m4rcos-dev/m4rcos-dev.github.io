@@ -2,6 +2,7 @@ import { Box, Typography } from "@mui/material";
 import React from "react";
 import Slide from '@mui/material/Slide'
 
+
 class Home extends React.Component {
   render() {
     return (
