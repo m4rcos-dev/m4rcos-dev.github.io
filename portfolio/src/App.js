@@ -1,14 +1,16 @@
-import { Box } from '@mui/material';
+import AppBarTop from './components/AppBarTop';
 import Content from './components/Content';
 import DrawerLeft from './components/DrawerLeft';
+import { BoxCustom } from './style/AppStyle';
 
 function App() {
   return (
-    <Box sx={{ display: 'flex' }}>
+    <BoxCustom sx={{ display: 'flex' }}>
+      <AppBarTop />
       <DrawerLeft />
       <Content />
-    </Box>
-  );
+    </BoxCustom>
+  )
 }
 
 export default App;

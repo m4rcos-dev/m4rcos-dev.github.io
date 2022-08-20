@@ -13,7 +13,6 @@ class ToolbarTitle extends React.Component {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center', p: 4,
-          mt: '4rem',
         }}
       >
         <ArrowBackIosIcon color='alternateColor1' fontSize="large" />

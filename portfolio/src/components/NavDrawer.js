@@ -2,12 +2,9 @@ import React from "react";
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
 import HomeIcon from '@mui/icons-material/Home';
 import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
 import SettingsEthernetIcon from '@mui/icons-material/SettingsEthernet';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import GitHubIcon from '@mui/icons-material/GitHub';
 import { Box, styled, Typography } from "@mui/material";
 import { Link } from 'react-router-dom';
 
@@ -38,10 +35,6 @@ class NavDrawer extends React.Component {
       <AssignmentIndIcon fontSize="large" />,
       <SettingsEthernetIcon fontSize="large" />
     ];
-    const arraySocialIcons = [
-      <ListemItemButtonCustom><LinkedInIcon fontSize="large" sx={{ m: '1rem' }} /></ListemItemButtonCustom>,
-      <ListemItemButtonCustom><GitHubIcon fontSize="large" sx={{ m: '1rem' }} /></ListemItemButtonCustom>
-    ];
 
     return (
       <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
@@ -61,9 +54,6 @@ class NavDrawer extends React.Component {
             </ListItem>
           ))}
         </List>
-        <ListItemIcon sx={{ mt: '5rem' }}>
-          {arraySocialIcons.map((social) => social)}
-        </ListItemIcon>
       </Box >
     )
   }
