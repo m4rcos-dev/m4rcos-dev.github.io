@@ -1,12 +1,19 @@
 import React from "react";
 import ToolbarTitle from "./ToolbarTitle";
 import NavDrawer from "./NavDrawer";
-import { BoxCustom } from "../style/DrawerLeftStyle";
 import { Box } from "@mui/system";
 import NavSoicalMedia from "./NavSocialMedia";
+import { styled } from "@mui/material";
 
 class DrawerLeft extends React.Component {
   render() {
+    //=============Breackpoints MediaQuery==================
+    const BoxCustom = styled('div')(({ theme }) => ({
+      [theme.breakpoints.down('md2')]: {
+        display: 'none',
+      },
+    }));
+
     return (
       <BoxCustom sx={{
         width: '20%',
