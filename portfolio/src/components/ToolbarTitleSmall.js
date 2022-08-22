@@ -30,9 +30,15 @@ overflow: hidden;
   }
 }
 `
+//=============Breackpoints MediaQuery==================
+const ToolbarCustom = styled(Toolbar)(({ theme }) => ({
+  [theme.breakpoints.up('md2')]: {
+    display: 'none',
+  },
+}));
 
     return (
-      <Toolbar
+      <ToolbarCustom
         sx={{
           display: 'flex',
           justifyContent: 'center',
@@ -47,7 +53,7 @@ overflow: hidden;
         </Box>
         <Typography variant="h4" sx={{ color: 'alternateColor1.main', ml: 1 }}>/</Typography>
         <ArrowForwardIosIcon color='alternateColor1' fontSize="small" />
-      </Toolbar>
+      </ToolbarCustom>
     )
   }
 }

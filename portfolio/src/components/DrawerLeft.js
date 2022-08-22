@@ -4,12 +4,13 @@ import NavDrawer from "./NavDrawer";
 import { Box } from "@mui/system";
 import NavSoicalMedia from "./NavSocialMedia";
 import { styled } from "@mui/material";
+import ToolbarTitleSmall from "./ToolbarTitleSmall";
 
 class DrawerLeft extends React.Component {
   render() {
     //=============Breackpoints MediaQuery==================
     const BoxCustom = styled('div')(({ theme }) => ({
-      [theme.breakpoints.down('md2')]: {
+      [theme.breakpoints.down('md3')]: {
         display: 'none',
       },
     }));
@@ -24,6 +25,7 @@ class DrawerLeft extends React.Component {
       }}>
         <Box sx={{ mt: '4rem' }}>
           <ToolbarTitle />
+          <ToolbarTitleSmall />
         </Box>
         <NavDrawer />
         <Box sx={{ mt: '5rem', display: 'flex', justifyContent: 'center' }} >

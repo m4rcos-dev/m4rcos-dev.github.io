@@ -5,11 +5,11 @@ import ContentDrawer from './components/ContentDrawer';
 import DrawerLeft from './components/DrawerLeft';
 
 //=============Breackpoints MediaQuery==================
-const BoxCustom = styled('div')(({theme}) => ({
+const BoxCustom = styled('div')(({ theme }) => ({
   [theme.breakpoints.up('md2')]: {
     display: 'flex',
   },
-  [theme.breakpoints.down('md2')]: {
+  [theme.breakpoints.down('md3')]: {
     display: 'flex',
     flexDirection: 'column'
   },

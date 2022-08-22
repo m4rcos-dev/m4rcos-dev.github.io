@@ -35,6 +35,7 @@ const theme = createTheme({
   breakpoints: {
     values: {
       md2: 1441,
+      md3: 1000,
     },
   }
 });

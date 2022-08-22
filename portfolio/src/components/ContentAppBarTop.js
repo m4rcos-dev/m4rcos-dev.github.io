@@ -8,7 +8,7 @@ class ContentAppBarTop extends React.Component {
   render() {
     //=============Breackpoints MediaQuery==================
     const BoxCustom = styled('div')(({ theme }) => ({
-      [theme.breakpoints.up('md2')]: {
+      [theme.breakpoints.up('md3')]: {
         display: 'none',
       },
     }));

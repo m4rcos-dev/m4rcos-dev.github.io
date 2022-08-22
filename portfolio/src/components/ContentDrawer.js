@@ -9,7 +9,7 @@ class ContentDrawer extends React.Component {
   render() {
     //=============Breackpoints MediaQuery==================
     const BoxCustom = styled('div')(({ theme }) => ({
-      [theme.breakpoints.down('md2')]: {
+      [theme.breakpoints.down('md3')]: {
         display: 'none',
       },
     }));
