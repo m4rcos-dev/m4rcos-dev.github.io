@@ -7,7 +7,7 @@ import MenuItem from '@mui/material/MenuItem';
 import HomeIcon from '@mui/icons-material/Home';
 import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
 import SettingsEthernetIcon from '@mui/icons-material/SettingsEthernet';
-import { styled } from "@mui/material";
+import { Link, styled } from "@mui/material";
 
 const arrayNavLinksText = ['Inicio', 'Sobre', 'Projetos'];
 const arrayIcons = [
@@ -19,6 +19,7 @@ const arrayIcons = [
 const MenuItemCustom = styled(MenuItem)`
 ${({ theme }) => `
 cursor: crosshair;
+font-family: Hack;
 &:hover {
   color: ${theme.palette.alternateColor1.main};
 }
@@ -27,7 +28,7 @@ cursor: crosshair;
 
 const NavAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-
+  const arrayNavLinks = ['#home', '#about', '#projects'];
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -45,7 +46,7 @@ const NavAppBar = () => {
         onClick={handleOpenNavMenu}
         color="inherit"
       >
-        <MenuIcon sx={{ color: 'alternateColor1.main'}}/>
+        <MenuIcon sx={{ color: 'alternateColor1.main' }} />
       </IconButton>
       <Menu
         id="menu-appbar"
@@ -66,10 +67,12 @@ const NavAppBar = () => {
         }}
       >
         {arrayNavLinksText.map((page, index) => (
-          <MenuItemCustom key={page} onClick={handleCloseNavMenu}>
+          <Link href={arrayNavLinks[index]} sx={{ textDecoration: 'none', color: 'inherit' }}>
+            <MenuItemCustom key={page} onClick={handleCloseNavMenu}>
               {arrayIcons[index]}
               {page}
-          </MenuItemCustom>
+            </MenuItemCustom>
+          </Link>
         ))}
       </Menu>
     </Box>
