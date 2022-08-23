@@ -7,11 +7,11 @@ import SettingsEthernetIcon from '@mui/icons-material/SettingsEthernet';
 import { Box, styled } from "@mui/material";
 import { Link } from 'react-router-dom';
 
-class NavDrawer extends React.Component {
+class NavDrawerSmall extends React.Component {
   render() {
     //=============Breackpoints MediaQuery==================
     const BoxCustom = styled(Box)(({ theme }) => ({
-      [theme.breakpoints.down('md2')]: {
+      [theme.breakpoints.up('md2')]: {
         display: 'none',
       },
     }));
@@ -31,9 +31,9 @@ class NavDrawer extends React.Component {
     const arrayNavLinksText = ['Inicio', 'Sobre', 'Projetos'];
     const arrayNavLinks = ['/', '/about', '/projects'];
     const arrayIcons = [
-      <HomeIcon fontSize="large" />,
-      <AssignmentIndIcon fontSize="large" />,
-      <SettingsEthernetIcon fontSize="large" />
+      <HomeIcon fontSize="medium" />,
+      <AssignmentIndIcon fontSize="medium" />,
+      <SettingsEthernetIcon fontSize="medium" />
     ];
 
     return (
@@ -41,7 +41,7 @@ class NavDrawer extends React.Component {
         <List sx={{ mb: '3rem', mt: '9rem', }}>
           {arrayNavLinksText.map((text, index) => (
             <Link to={arrayNavLinks[index]} style={{ textDecoration: 'none', color: 'inherit' }}>
-              <ListemItemButtonCustom divider sx={{ fontFamily: 'Hack', fontSize: '1.5rem', mb: '1rem' }}>
+              <ListemItemButtonCustom divider sx={{ fontFamily: 'Hack', fontSize: '1rem', mb: '1rem' }}>
                 {arrayIcons[index]}
                 {text}
               </ListemItemButtonCustom>
@@ -53,4 +53,4 @@ class NavDrawer extends React.Component {
   }
 }
 
-export default NavDrawer;
+export default NavDrawerSmall;

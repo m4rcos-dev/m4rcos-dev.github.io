@@ -18,8 +18,8 @@ class NavSoicalMedia extends React.Component {
     `
 
     const arraySocialIcons = [
-      <ListemItemButtonCustom><LinkedInIcon fontSize="large" sx={{ m: '1rem' }} /></ListemItemButtonCustom>,
-      <ListemItemButtonCustom><GitHubIcon fontSize="large" sx={{ m: '1rem' }} /></ListemItemButtonCustom>
+      <ListemItemButtonCustom><LinkedInIcon fontSize="large" /></ListemItemButtonCustom>,
+      <ListemItemButtonCustom><GitHubIcon fontSize="large" /></ListemItemButtonCustom>
     ];
     return (
       <ListItemIcon>
