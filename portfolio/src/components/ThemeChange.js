@@ -56,7 +56,7 @@ class ThemeChange extends React.Component {
     return (
       <Box>
           <FormControlLabel
-            control={<MaterialUISwitch sx={{ m: 1, zIndex: 'tooltip', left: '111rem' }} defaultChecked />}
+            control={<MaterialUISwitch defaultChecked />}
           />
       </Box>
     )

@@ -2,6 +2,7 @@ import { styled } from '@mui/material';
 import AppBarTop from './components/AppBarTop';
 import ContentAppBarTop from './components/ContentAppBarTop';
 import ContentDrawer from './components/ContentDrawer';
+import ControlPanel from './components/ControlPanel';
 import DrawerLeft from './components/DrawerLeft';
 
 //=============Breackpoints MediaQuery==================
@@ -22,6 +23,7 @@ function App() {
       <DrawerLeft />
       <ContentDrawer />
       <ContentAppBarTop />
+      <ControlPanel />
     </BoxCustom>
   )
 }
