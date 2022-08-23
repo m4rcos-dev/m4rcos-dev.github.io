@@ -28,22 +28,20 @@ class NavDrawer extends React.Component {
     `}
     `
 
-    const arrayNavLinksText = ['Inicio', 'Sobre', 'Projetos'];
-    const arrayNavLinks = ['/', '/about', '/projects'];
-    const arrayIcons = [
-      <HomeIcon fontSize="large" />,
-      <AssignmentIndIcon fontSize="large" />,
-      <SettingsEthernetIcon fontSize="large" />
+    const dataNav = [
+      { linkText: 'Inicio', link: '/', icon: <HomeIcon fontSize="large" /> },
+      { linkText: 'Sobre', link: '/about', icon: <AssignmentIndIcon fontSize="large" /> },
+      { linkText: 'Projetos', link: '/projects', icon: <SettingsEthernetIcon fontSize="large" /> },
     ];
 
     return (
       <BoxCustom sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <List sx={{ mb: '3rem', mt: '9rem', }}>
-          {arrayNavLinksText.map((text, index) => (
-            <Link to={arrayNavLinks[index]} style={{ textDecoration: 'none', color: 'inherit' }}>
+          {dataNav.map((nav) => (
+            <Link to={nav.link} style={{ textDecoration: 'none', color: 'inherit' }}>
               <ListemItemButtonCustom divider sx={{ fontFamily: 'Hack', fontSize: '1.5rem', mb: '1rem' }}>
-                {arrayIcons[index]}
-                {text}
+                {nav.icon}
+                {nav.linkText}
               </ListemItemButtonCustom>
             </Link>
           ))}
