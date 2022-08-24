@@ -4,9 +4,12 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { styled } from "@mui/material";
 import ListItemButton from '@mui/material/ListItemButton';
+import { connect } from "react-redux";
 
 class NavSoicalMedia extends React.Component {
   render() {
+    const { currentTheme } = this.props;
+    const currentTypography = currentTheme === 'dark' ? 'white' : 'black'
     const ListemItemButtonCustom = styled(ListItemButton)`
     ${({ theme }) => `
     cursor: crosshair;
@@ -24,10 +27,22 @@ class NavSoicalMedia extends React.Component {
     return (
       <ListItemIcon>
         {arraySocialIcons.map((social, index) => <ListemItemButtonCustom
-          key={`social${index}`}>{social}</ListemItemButtonCustom>)}
+          key={`social${index}`}
+          sx={{ color: `common.${currentTypography}` }}
+        >{social}
+        </ListemItemButtonCustom>)}
       </ListItemIcon>
     )
   }
 }
 
-export default NavSoicalMedia;
+// =======props Redux===============================
+const mapStateToProps = (state) => ({
+  ...state.themeChange,
+  ...state.colorChange,
+});
+
+// export default NavSoicalMedia;
+
+//============export Redux==========================
+export default connect(mapStateToProps)(NavSoicalMedia);
