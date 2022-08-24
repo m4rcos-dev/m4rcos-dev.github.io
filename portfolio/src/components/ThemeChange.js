@@ -3,10 +3,32 @@ import { styled } from '@mui/material/styles';
 import Switch from '@mui/material/Switch';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import { Box } from "@mui/system";
+import { connect } from 'react-redux'
+import { themeChange } from "../redux/actions/changeTheme";
 
 class ThemeChange extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      currentTheme: '',
+    }
+  }
+
+  handleTheme = ({ target: { checked } }) => {
+    const { dispatch } = this.props;
+    checked
+    ? dispatch(themeChange({ currentTheme: 'dark' }))
+    : dispatch(themeChange({ currentTheme: 'light' }))
+    // this.setState({ currentTheme: checked ? 'dark' : 'light' })
+    // this.setState((previousState) => {
+    //  const themeSate = previousState === 'light' ? 'light' : 'dark'
+    //   return {currentTheme: themeSate};
+    // });
+  }
+
   render() {
-    const MaterialUISwitch = styled(Switch)(({ theme }) => ({
+    const { currentTheme } = this.state
+    const MaterialUISwitch = styled(Switch, currentTheme)(({ theme }) => ({
       width: 62,
       height: 34,
       padding: 7,
@@ -24,12 +46,12 @@ class ThemeChange extends React.Component {
           },
           '& + .MuiSwitch-track': {
             opacity: 1,
-            backgroundColor: theme.palette.mode === 'dark' ? '#8796A5' : '#aab4be',
+            backgroundColor: currentTheme === 'dark' ? '#8796A5' : '#aab4be',
           },
         },
       },
       '& .MuiSwitch-thumb': {
-        backgroundColor: theme.palette.mode === 'dark' ? '#003892' : '#001e3c',
+        backgroundColor: currentTheme === 'dark' ? '#003892' : '#001e3c',
         width: 32,
         height: 32,
         '&:before': {
@@ -48,19 +70,20 @@ class ThemeChange extends React.Component {
       },
       '& .MuiSwitch-track': {
         opacity: 1,
-        backgroundColor: theme.palette.mode === 'dark' ? '#8796A5' : '#aab4be',
+        backgroundColor: currentTheme === 'dark' ? '#8796A5' : '#aab4be',
         borderRadius: 20 / 2,
       },
     }));
 
     return (
       <Box>
-          <FormControlLabel
-            control={<MaterialUISwitch defaultChecked />}
-          />
+        <FormControlLabel
+          control={<MaterialUISwitch />}
+          onChange={(event) => this.handleTheme(event)}
+        />
       </Box>
     )
   }
 }
 
-export default ThemeChange;
+export default connect()(ThemeChange);

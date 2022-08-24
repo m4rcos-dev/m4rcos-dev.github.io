@@ -6,9 +6,11 @@ import NavSoicalMedia from "./NavSocialMedia";
 import { styled } from "@mui/material";
 import ToolbarTitleSmall from "./ToolbarTitleSmall";
 import NavDrawerSmall from "./NavDrawerSmall";
+import { connect } from 'react-redux';
 
 class DrawerLeft extends React.Component {
   render() {
+    const { currentTheme } = this.props;
     //=============Breackpoints MediaQuery==================
     const BoxCustom = styled('div')(({ theme }) => ({
       [theme.breakpoints.down('md3')]: {
@@ -20,7 +22,7 @@ class DrawerLeft extends React.Component {
       <BoxCustom sx={{
         width: '20%',
         height: '100vh',
-        bgcolor: 'primary',
+        bgcolor: `primary.${currentTheme}`,
         borderRight: 1,
         borderColor: 'divider',
       }}>
@@ -38,4 +40,8 @@ class DrawerLeft extends React.Component {
   }
 }
 
-export default DrawerLeft;
+const mapStateToProps = (state) => ({
+  ...state.themeChange,
+});
+
+export default connect(mapStateToProps)(DrawerLeft);

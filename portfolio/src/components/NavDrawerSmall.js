@@ -38,7 +38,7 @@ class NavDrawerSmall extends React.Component {
       <BoxCustom sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <List sx={{ mb: '3rem', mt: '9rem', }}>
           {dataNav.map((nav) => (
-            <Link to={nav.link} style={{ textDecoration: 'none', color: 'inherit' }}>
+            <Link key={nav.linkText} to={nav.link} style={{ textDecoration: 'none', color: 'inherit' }}>
               <ListemItemButtonCustom divider sx={{ fontFamily: 'Hack', fontSize: '1.5rem', mb: '1rem' }}>
                 {nav.icon}
                 {nav.linkText}

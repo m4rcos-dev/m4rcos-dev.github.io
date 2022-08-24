@@ -67,7 +67,7 @@ const NavAppBar = () => {
         }}
       >
         {arrayNavLinksText.map((page, index) => (
-          <Link href={arrayNavLinks[index]} sx={{ textDecoration: 'none', color: 'inherit' }}>
+          <Link key={page} href={arrayNavLinks[index]} sx={{ textDecoration: 'none', color: 'inherit' }}>
             <MenuItemCustom key={page} onClick={handleCloseNavMenu}>
               {arrayIcons[index]}
               {page}
