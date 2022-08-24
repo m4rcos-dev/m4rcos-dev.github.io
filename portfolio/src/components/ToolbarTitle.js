@@ -1,13 +1,15 @@
-import { Box,styled, Toolbar, Typography } from "@mui/material";
+import { Box, styled, Toolbar, Typography } from "@mui/material";
 import React from "react";
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-
+import { connect } from 'react-redux';
 
 class ToolbarTitle extends React.Component {
   render() {
+    const { currentTheme } = this.props;
+    const currentTypography = currentTheme === 'dark' ? 'white' : 'black'
     // ==============Animação Escrita==================
-    const TypographyCustom = styled(Typography)`
+    const TypographyCustom = styled(Typography, currentTypography)`
 border-right: 2px solid;
 font-sizy: ${({ theme }) => theme.typography.h4}
 animation: blinkCursor 500ms steps(30) infinite normal, typing 1s steps(15) 1s normal both;
@@ -23,19 +25,19 @@ overflow: hidden;
 
 @keyframes blinkCursor {
   from {
-    border-right-color: ${({ theme }) => theme.palette.common.black};
+    border-right-color: ${({ theme }) => `theme.palette.common.${currentTypography}`};
   }
   to {
     border-right-color: transparent;
   }
 }
 `
-//=============Breackpoints MediaQuery==================
-const ToolbarCustom = styled(Toolbar)(({ theme }) => ({
-  [theme.breakpoints.down('md2')]: {
-    display: 'none',
-  },
-}));
+    //=============Breackpoints MediaQuery==================
+    const ToolbarCustom = styled(Toolbar)(({ theme }) => ({
+      [theme.breakpoints.down('md2')]: {
+        display: 'none',
+      },
+    }));
 
     return (
       <ToolbarCustom
@@ -47,7 +49,7 @@ const ToolbarCustom = styled(Toolbar)(({ theme }) => ({
       >
         <ArrowBackIosIcon color='alternateColor1' fontSize="large" />
         <Box>
-          <TypographyCustom fontFamily='Hack'>
+          <TypographyCustom fontFamily='Hack' sx={{ color: `common.${currentTypography}` }}>
             m4rcos.Dev
           </TypographyCustom>
         </Box>
@@ -58,4 +60,9 @@ const ToolbarCustom = styled(Toolbar)(({ theme }) => ({
   }
 }
 
-export default ToolbarTitle;
+const mapStateToProps = (state) => ({
+  ...state.themeChange,
+  ...state.colorChange,
+});
+
+export default connect(mapStateToProps)(ToolbarTitle);

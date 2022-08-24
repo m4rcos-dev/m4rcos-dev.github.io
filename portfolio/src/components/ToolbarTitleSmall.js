@@ -2,10 +2,12 @@ import { Box,styled, Toolbar, Typography } from "@mui/material";
 import React from "react";
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-
+import { connect } from 'react-redux';
 
 class ToolbarTitleSmall extends React.Component {
   render() {
+    const { currentTheme } = this.props;
+    const currentTypography = currentTheme === 'dark' ? 'white' : 'black'
     // ==============Animação Escrita==================
     const TypographyCustom = styled(Typography)`
 border-right: 2px solid;
@@ -23,7 +25,7 @@ overflow: hidden;
 
 @keyframes blinkCursor {
   from {
-    border-right-color: ${({ theme }) => theme.palette.common.black};
+    border-right-color: ${({ theme }) => `theme.palette.common.${currentTypography}`};
   }
   to {
     border-right-color: transparent;
@@ -47,7 +49,7 @@ const ToolbarCustom = styled(Toolbar)(({ theme }) => ({
       >
         <ArrowBackIosIcon color='alternateColor1' fontSize="small" />
         <Box>
-          <TypographyCustom fontFamily='Hack'>
+          <TypographyCustom fontFamily='Hack' sx={{ color: `common.${currentTypography}` }}>
             m4rcos.Dev
           </TypographyCustom>
         </Box>
@@ -58,4 +60,9 @@ const ToolbarCustom = styled(Toolbar)(({ theme }) => ({
   }
 }
 
-export default ToolbarTitleSmall;
+const mapStateToProps = (state) => ({
+  ...state.themeChange,
+  ...state.colorChange,
+});
+
+export default connect(mapStateToProps)(ToolbarTitleSmall);
