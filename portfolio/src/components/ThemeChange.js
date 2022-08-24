@@ -5,15 +5,15 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import { Box } from "@mui/system";
 
 // =====import Redux=========
-// import { connect } from 'react-redux'
-// import { themeChange } from "../redux/actions/changeTheme";
+import { connect } from 'react-redux'
+import { themeChange } from "../redux/actions/changeTheme";
 
 class ThemeChange extends React.Component {
   constructor() {
     super()
     this.state = {
       currentTheme: '',
-      currentChecked: '',
+      currentChecked: false,
     }
   }
 
@@ -38,10 +38,10 @@ class ThemeChange extends React.Component {
     })
 
     // =========utilizando Redux==================
-    // const { dispatch } = this.props;
-    // checked
-    // ? dispatch(themeChange({ currentTheme: 'dark' }))
-    // : dispatch(themeChange({ currentTheme: 'light' }))
+    const { dispatch } = this.props;
+    checked
+    ? dispatch(themeChange({ currentTheme: 'dark' }))
+    : dispatch(themeChange({ currentTheme: 'light' }))
   }
 
   render() {
@@ -96,7 +96,7 @@ class ThemeChange extends React.Component {
     return (
       <Box>
         <FormControlLabel
-          control={<MaterialUISwitch checked={currentChecked}/>}
+          control={<MaterialUISwitch />}
           checked={currentChecked}
           onChange={(event) => this.handleTheme(event)}
         />
@@ -105,7 +105,7 @@ class ThemeChange extends React.Component {
   }
 }
 
-export default ThemeChange;
+// export default ThemeChange;
 
 // ======export Redux=======
-// export default connect()(ThemeChange);
+export default connect()(ThemeChange);

@@ -6,11 +6,11 @@ import NavSoicalMedia from "./NavSocialMedia";
 import { styled } from "@mui/material";
 import ToolbarTitleSmall from "./ToolbarTitleSmall";
 import NavDrawerSmall from "./NavDrawerSmall";
-// import { connect } from 'react-redux';
+import { connect } from 'react-redux';
 
 class DrawerLeft extends React.Component {
   render() {
-    const currentTheme = localStorage.getItem('currentTheme');
+    const { currentTheme } = this.props;
     //=============Breackpoints MediaQuery==================
     const BoxCustom = styled('div')(({ theme }) => ({
       [theme.breakpoints.down('md3')]: {
@@ -41,11 +41,11 @@ class DrawerLeft extends React.Component {
 }
 
 // =======props Redux===============================
-// const mapStateToProps = (state) => ({
-//   ...state.themeChange,
-// });
+const mapStateToProps = (state) => ({
+  ...state.themeChange,
+});
 
-export default DrawerLeft;
+// export default DrawerLeft;
 
 //============export Redux==========================
-// export default connect(mapStateToProps)(DrawerLeft);
+export default connect(mapStateToProps)(DrawerLeft);
