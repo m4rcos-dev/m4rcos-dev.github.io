@@ -7,6 +7,7 @@ import DrawerLeft from './components/DrawerLeft';
 
 //=============Breackpoints MediaQuery==================
 const BoxCustom = styled('div')(({ theme }) => ({
+  overflow: 'hidden',
   [theme.breakpoints.up('md2')]: {
     display: 'flex',
   },
