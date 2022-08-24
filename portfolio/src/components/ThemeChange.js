@@ -3,31 +3,49 @@ import { styled } from '@mui/material/styles';
 import Switch from '@mui/material/Switch';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import { Box } from "@mui/system";
-import { connect } from 'react-redux'
-import { themeChange } from "../redux/actions/changeTheme";
+
+// =====import Redux=========
+// import { connect } from 'react-redux'
+// import { themeChange } from "../redux/actions/changeTheme";
 
 class ThemeChange extends React.Component {
   constructor() {
     super()
     this.state = {
       currentTheme: '',
+      currentChecked: '',
     }
   }
 
+  componentDidMount() {
+    localStorage.getItem('currentTheme') === null
+      ? this.setState({ currentTheme: 'light' })
+      : this.setState({ currentTheme: localStorage.getItem('currentTheme')});
+    localStorage.getItem('currentChecked') === null
+    ? this.setState({ currentChecked: false})
+    : this.setState({ currentChecked: localStorage.getItem('currentChecked') === 'true'})
+  }
+
   handleTheme = ({ target: { checked } }) => {
-    const { dispatch } = this.props;
-    checked
-    ? dispatch(themeChange({ currentTheme: 'dark' }))
-    : dispatch(themeChange({ currentTheme: 'light' }))
-    // this.setState({ currentTheme: checked ? 'dark' : 'light' })
-    // this.setState((previousState) => {
-    //  const themeSate = previousState === 'light' ? 'light' : 'dark'
-    //   return {currentTheme: themeSate};
-    // });
+    // =========utilizando localStorage=========
+    const { currentChecked } = this.state
+    this.setState({ currentChecked: !currentChecked }, () => {
+      localStorage.setItem('currentChecked', !currentChecked);
+      checked
+        ? localStorage.setItem('currentTheme', 'dark')
+        : localStorage.setItem('currentTheme', 'light');
+    this.setState({ currentTheme: localStorage.getItem('currentTheme')});
+    })
+
+    // =========utilizando Redux==================
+    // const { dispatch } = this.props;
+    // checked
+    // ? dispatch(themeChange({ currentTheme: 'dark' }))
+    // : dispatch(themeChange({ currentTheme: 'light' }))
   }
 
   render() {
-    const { currentTheme } = this.state
+    const { currentTheme, currentChecked } = this.state;
     const MaterialUISwitch = styled(Switch, currentTheme)(({ theme }) => ({
       width: 62,
       height: 34,
@@ -78,7 +96,8 @@ class ThemeChange extends React.Component {
     return (
       <Box>
         <FormControlLabel
-          control={<MaterialUISwitch />}
+          control={<MaterialUISwitch checked={currentChecked}/>}
+          checked={currentChecked}
           onChange={(event) => this.handleTheme(event)}
         />
       </Box>
@@ -86,4 +105,7 @@ class ThemeChange extends React.Component {
   }
 }
 
-export default connect()(ThemeChange);
+export default ThemeChange;
+
+// ======export Redux=======
+// export default connect()(ThemeChange);

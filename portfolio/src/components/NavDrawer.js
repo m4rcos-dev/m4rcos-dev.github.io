@@ -6,9 +6,12 @@ import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
 import SettingsEthernetIcon from '@mui/icons-material/SettingsEthernet';
 import { Box, styled } from "@mui/material";
 import { Link } from 'react-router-dom';
+import { connect } from "react-redux";
 
 class NavDrawer extends React.Component {
   render() {
+    const { currentTheme } = this.props;
+    const currentTypography = currentTheme === 'dark' ? 'white' : 'black'
     //=============Breackpoints MediaQuery==================
     const BoxCustom = styled(Box)(({ theme }) => ({
       [theme.breakpoints.down('md2')]: {
@@ -38,8 +41,18 @@ class NavDrawer extends React.Component {
       <BoxCustom sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <List sx={{ mb: '3rem', mt: '9rem', }}>
           {dataNav.map((nav) => (
-            <Link key={nav.linkText} to={nav.link} style={{ textDecoration: 'none', color: 'inherit' }}>
-              <ListemItemButtonCustom divider sx={{ fontFamily: 'Hack', fontSize: '1.5rem', mb: '1rem' }}>
+            <Link
+              key={nav.linkText}
+              to={nav.link}
+              style={{ textDecoration: 'none', color: 'inherit' }}>
+              <ListemItemButtonCustom
+                divider
+                sx={{
+                  fontFamily: 'Hack',
+                  fontSize: '1.5rem',
+                  mb: '1rem',
+                  color: `common.${currentTypography}`
+                }}>
                 {nav.icon}
                 {nav.linkText}
               </ListemItemButtonCustom>
@@ -51,4 +64,9 @@ class NavDrawer extends React.Component {
   }
 }
 
-export default NavDrawer;
+const mapStateToProps = (state) => ({
+  ...state.themeChange,
+  ...state.colorChange,
+});
+
+export default connect(mapStateToProps)(NavDrawer);
