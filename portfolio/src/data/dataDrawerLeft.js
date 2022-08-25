@@ -15,13 +15,13 @@ export const dataNavDrawerLeft = (currentUrl, size) => {
     {
       linkText: 'Sobre',
       link: '/about',
-      icon: <AssignmentIndIcon fontSize={size}  />,
+      icon: <AssignmentIndIcon fontSize={size} />,
       slected: currentUrl === '/about'
     },
     {
       linkText: 'Projetos',
       link: '/projects',
-      icon: <SettingsEthernetIcon fontSize={size}  />,
+      icon: <SettingsEthernetIcon fontSize={size} />,
       slected: currentUrl === '/projects'
     },
   ];
@@ -29,8 +29,18 @@ export const dataNavDrawerLeft = (currentUrl, size) => {
 
 export const dataNavSocialMedia = (size) => {
   return [
-    {icon: <LinkedInIcon fontSize={size} />},
-    {icon: <GitHubIcon fontSize={size} />},
+    {
+      id: '1c26406d-d4fe-4857-9490-093d12b398a4',
+      text: 'LinkedIn',
+      icon: <LinkedInIcon fontSize={size} />,
+      link: 'https://www.linkedin.com/in/dev-marcospaulo'
+    },
+    {
+      id: '916925e6-2e3e-48ae-a914-31161dc1a18b',
+      text: 'GitHub',
+      icon: <GitHubIcon fontSize={size} />,
+      link: 'https://github.com/m4rcos-dev'
+    },
   ]
 }
 
