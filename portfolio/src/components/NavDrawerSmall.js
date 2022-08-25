@@ -19,22 +19,23 @@ class NavDrawerSmall extends React.Component {
       },
     }));
 
-    const ListemItemButtonCustom = styled(ListItemButton)`
-    ${({ theme }) => `
-    cursor: crosshair;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    &:hover {
-      color: ${theme.palette.alternateColor1.main};
-    }
-    `}
-    `
+    const ListemItemButtonCustom = styled(ListItemButton, currentTheme)(({ theme }) => ({
+      cursor: 'crosshair',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      '&:hover': {
+        color: theme.palette.alternateColor1.main,
+      },
+      '&.MuiListItemButton-divider': {
+        borderColor: currentTheme === 'dark' ? '#ffffff1f' : '#0000001f',
+      },
+    }));
 
     const dataNav = [
-      { linkText: 'Inicio', link: '/', icon: <HomeIcon fontSize="large" /> },
-      { linkText: 'Sobre', link: '/about', icon: <AssignmentIndIcon fontSize="large" /> },
-      { linkText: 'Projetos', link: '/projects', icon: <SettingsEthernetIcon fontSize="large" /> },
+      { linkText: 'Inicio', link: '/', icon: <HomeIcon fontSize="medium" /> },
+      { linkText: 'Sobre', link: '/about', icon: <AssignmentIndIcon fontSize="medium" /> },
+      { linkText: 'Projetos', link: '/projects', icon: <SettingsEthernetIcon fontSize="medium" /> },
     ];
 
     return (
@@ -46,7 +47,7 @@ class NavDrawerSmall extends React.Component {
                 divider
                 sx={{
                   fontFamily: 'Hack',
-                  fontSize: '1.5rem',
+                  fontSize: '1.3rem',
                   mb: '1rem',
                   color: `common.${currentTypography}`
                 }}>
