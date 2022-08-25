@@ -1,6 +1,6 @@
 import { CURRENT_URL } from "../actions/actionsTypes";
 
-const INITIAL_STATE = { currentUrl: '' };
+const INITIAL_STATE = { currentUrl: '/' };
 
 const currentUrl = (state = INITIAL_STATE, action) => {
   switch (action.type) {

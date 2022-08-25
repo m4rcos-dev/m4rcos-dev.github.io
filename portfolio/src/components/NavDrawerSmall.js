@@ -28,6 +28,9 @@ class NavDrawerSmall extends React.Component {
       '&.MuiListItemButton-divider': {
         borderColor: currentTheme === 'dark' ? '#ffffff1f' : '#0000001f',
       },
+      '&.Mui-selected': {
+        color: theme.palette.alternateColor1.main,
+      }
     }));
 
     return (
@@ -36,6 +39,7 @@ class NavDrawerSmall extends React.Component {
           {dataNavDrawerLeft(currentUrl, 'medium').map((nav) => (
             <Link key={nav.linkText} to={nav.link} style={{ textDecoration: 'none', color: 'inherit' }}>
               <ListemItemButtonCustom
+                selected={nav.slected}
                 divider
                 sx={{
                   fontFamily: 'Hack',
@@ -58,6 +62,7 @@ class NavDrawerSmall extends React.Component {
 const mapStateToProps = (state) => ({
   ...state.themeChange,
   ...state.colorChange,
+  ...state.currentUrl,
 });
 
 // export default NavDrawerSmall;

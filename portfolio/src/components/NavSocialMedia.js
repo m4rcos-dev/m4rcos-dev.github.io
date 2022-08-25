@@ -21,7 +21,7 @@ class NavSoicalMedia extends React.Component {
 
     return (
       <ListItemIcon>
-        {dataNavSocialMedia('large').map((social, index) =>
+        {dataNavSocialMedia('large').map((social) =>
           <Link
             key={social.id}
             href={social.link}
