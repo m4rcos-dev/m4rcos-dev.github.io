@@ -10,7 +10,7 @@ import { connect } from "react-redux";
 
 class NavDrawer extends React.Component {
   render() {
-    const { currentTheme } = this.props;
+    const { currentTheme, currentUrl } = this.props;
     const currentTypography = currentTheme === 'dark' ? 'white' : 'black'
     //=============Breackpoints MediaQuery==================
     const BoxCustom = styled(Box)(({ theme }) => ({
@@ -18,21 +18,6 @@ class NavDrawer extends React.Component {
         display: 'none',
       },
     }));
-
-    // const ListemItemButtonCustom = styled(ListItemButton)`
-    // ${({ theme }) => `
-    // cursor: crosshair;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    // &:hover {
-    //   color: ${theme.palette.alternateColor1.main};
-    // },
-    // & .MuiListItemButton-divider: {
-    //   color: ${theme.palette.common.white}
-    // }
-    // `}
-    // `
 
     const ListemItemButtonCustom = styled(ListItemButton, currentTheme)(({ theme }) => ({
       cursor: 'crosshair',
@@ -45,12 +30,30 @@ class NavDrawer extends React.Component {
       '&.MuiListItemButton-divider': {
         borderColor: currentTheme === 'dark' ? '#ffffff1f' : '#0000001f',
       },
+      '&.Mui-selected': {
+        color: theme.palette.alternateColor1.main,
+      }
     }));
 
     const dataNav = [
-      { linkText: 'Inicio', link: '/', icon: <HomeIcon fontSize="large" /> },
-      { linkText: 'Sobre', link: '/about', icon: <AssignmentIndIcon fontSize="large" /> },
-      { linkText: 'Projetos', link: '/projects', icon: <SettingsEthernetIcon fontSize="large" /> },
+      {
+        linkText: 'Inicio',
+        link: '/',
+        icon: <HomeIcon fontSize="large" />,
+        slected: currentUrl === '/'
+      },
+      {
+        linkText: 'Sobre',
+        link: '/about',
+        icon: <AssignmentIndIcon fontSize="large" />,
+        slected: currentUrl === '/about'
+      },
+      {
+        linkText: 'Projetos',
+        link: '/projects',
+        icon: <SettingsEthernetIcon fontSize="large" />,
+        slected: currentUrl === '/projects'
+      },
     ];
 
     return (
@@ -62,6 +65,7 @@ class NavDrawer extends React.Component {
               to={nav.link}
               style={{ textDecoration: 'none', color: 'inherit' }}>
               <ListemItemButtonCustom
+                selected={nav.slected}
                 divider
                 sx={{
                   fontFamily: 'Hack',
@@ -83,6 +87,7 @@ class NavDrawer extends React.Component {
 const mapStateToProps = (state) => ({
   ...state.themeChange,
   ...state.colorChange,
+  ...state.currentUrl,
 });
 
 export default connect(mapStateToProps)(NavDrawer);
