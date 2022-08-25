@@ -33,3 +33,4 @@ export const dataNavSocialMedia = (size) => {
     {icon: <GitHubIcon fontSize={size} />},
   ]
 }
+

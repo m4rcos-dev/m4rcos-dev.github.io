@@ -4,17 +4,8 @@ import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import HomeIcon from '@mui/icons-material/Home';
-import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
-import SettingsEthernetIcon from '@mui/icons-material/SettingsEthernet';
 import { Link, styled } from "@mui/material";
-
-const arrayNavLinksText = ['Inicio', 'Sobre', 'Projetos'];
-const arrayIcons = [
-  <HomeIcon fontSize="medium" />,
-  <AssignmentIndIcon fontSize="medium" />,
-  <SettingsEthernetIcon fontSize="medium" />
-];
+import { dataAppBarTop } from "../data/dataAppBarTop";
 
 const MenuItemCustom = styled(MenuItem)`
 ${({ theme }) => `
@@ -28,7 +19,6 @@ font-family: Hack;
 
 const NavAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const arrayNavLinks = ['#home', '#about', '#projects'];
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -66,11 +56,11 @@ const NavAppBar = () => {
           display: { xs: 'block', md: 'none' },
         }}
       >
-        {arrayNavLinksText.map((page, index) => (
-          <Link key={page} href={arrayNavLinks[index]} sx={{ textDecoration: 'none', color: 'inherit' }}>
-            <MenuItemCustom key={page} onClick={handleCloseNavMenu}>
-              {arrayIcons[index]}
-              {page}
+        {dataAppBarTop('medium').map((page) => (
+          <Link key={page.id} href={page.link} sx={{ textDecoration: 'none', color: 'inherit' }}>
+            <MenuItemCustom onClick={handleCloseNavMenu}>
+              {page.icon}
+              {page.text}
             </MenuItemCustom>
           </Link>
         ))}

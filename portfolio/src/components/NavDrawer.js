@@ -4,7 +4,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 import { Box, styled } from "@mui/material";
 import { Link } from 'react-router-dom';
 import { connect } from "react-redux";
-import { dataNavDrawerLeft } from "../data/DrawerLeft";
+import { dataNavDrawerLeft } from "../data/dataDrawerLeft";
 
 class NavDrawer extends React.Component {
   render() {

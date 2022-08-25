@@ -3,7 +3,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import { styled } from "@mui/material";
 import ListItemButton from '@mui/material/ListItemButton';
 import { connect } from "react-redux";
-import { dataNavSocialMedia } from "../data/DrawerLeft";
+import { dataNavSocialMedia } from "../data/dataDrawerLeft";
 
 class NavSoicalMedia extends React.Component {
   render() {

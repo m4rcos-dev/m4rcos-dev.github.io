@@ -4,7 +4,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 import { Box, styled } from "@mui/material";
 import { Link } from 'react-router-dom';
 import { connect } from "react-redux";
-import { dataNavDrawerLeft } from "../data/DrawerLeft";
+import { dataNavDrawerLeft } from "../data/dataDrawerLeft";
 
 class NavDrawerSmall extends React.Component {
   render() {
@@ -29,7 +29,7 @@ class NavDrawerSmall extends React.Component {
         borderColor: currentTheme === 'dark' ? '#ffffff1f' : '#0000001f',
       },
     }));
-    
+
     return (
       <BoxCustom sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <List sx={{ mb: '3rem', mt: '9rem', }}>
