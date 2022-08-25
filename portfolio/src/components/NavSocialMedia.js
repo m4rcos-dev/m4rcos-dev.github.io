@@ -1,10 +1,9 @@
 import React from "react";
 import ListItemIcon from '@mui/material/ListItemIcon';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import GitHubIcon from '@mui/icons-material/GitHub';
 import { styled } from "@mui/material";
 import ListItemButton from '@mui/material/ListItemButton';
 import { connect } from "react-redux";
+import { dataNavSocialMedia } from "../data/DrawerLeft";
 
 class NavSoicalMedia extends React.Component {
   render() {
@@ -20,16 +19,12 @@ class NavSoicalMedia extends React.Component {
     `}
     `
 
-    const arraySocialIcons = [
-      <LinkedInIcon fontSize="large" />,
-      <GitHubIcon fontSize="large" />
-    ];
     return (
       <ListItemIcon>
-        {arraySocialIcons.map((social, index) => <ListemItemButtonCustom
+        {dataNavSocialMedia('large').map((social, index) => <ListemItemButtonCustom
           key={`social${index}`}
           sx={{ color: `common.${currentTypography}` }}
-        >{social}
+        >{social.icon}
         </ListemItemButtonCustom>)}
       </ListItemIcon>
     )
