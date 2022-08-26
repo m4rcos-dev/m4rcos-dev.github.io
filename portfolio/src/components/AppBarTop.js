@@ -4,7 +4,6 @@ import Box from '@mui/material/Box';
 import NavSoicalMedia from "./NavSocialMedia";
 import NavAppBar from "./NavAppBar";
 import { styled } from "@mui/material";
-import ToolbarTitleSmall from "./ToolbarTitleSmall";
 import { connect } from "react-redux";
 
 //=============Breackpoints MediaQuery==================
@@ -32,7 +31,6 @@ class AppBarTop extends React.Component {
         }}>
           <NavAppBar />
           <Toolbar />
-          <ToolbarTitleSmall />
           <NavSoicalMedia />
         </Box>
 

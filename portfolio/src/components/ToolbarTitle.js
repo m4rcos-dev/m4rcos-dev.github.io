@@ -3,15 +3,21 @@ import React from "react";
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { connect } from 'react-redux';
+import theme from "../style/Theme";
 
 class ToolbarTitle extends React.Component {
   render() {
-    const { currentTheme } = this.props;
+    const { currentTheme, currentScreen } = this.props;
+    const { breakpoints: { values } } = theme;
     const currentTypography = currentTheme === 'dark' ? 'white' : 'black'
+    const currentTypographySize = currentScreen.width <= values.md2 ? 'h4' : 'h3';
+    const currentTypographyCustomSize = currentScreen.width <= values.md2 ? theme.typography.h5 : theme.typography.h4;
+    const currentFontSize = currentScreen.width <= values.md2 ? 'small' : 'large';
+
     // ==============Animação Escrita==================
     const TypographyCustom = styled(Typography, currentTypography)`
 border-right: 2px solid;
-font-sizy: ${({ theme }) => theme.typography.h4}
+font-sizy: ${() => currentTypographyCustomSize}
 animation: blinkCursor 500ms steps(30) infinite normal, typing 1s steps(15) 1s normal both;
 overflow: hidden;
 @keyframes typing {
@@ -32,30 +38,23 @@ overflow: hidden;
   }
 }
 `
-    //=============Breackpoints MediaQuery==================
-    const ToolbarCustom = styled(Toolbar)(({ theme }) => ({
-      [theme.breakpoints.down('md2')]: {
-        display: 'none',
-      },
-    }));
-
     return (
-      <ToolbarCustom
+      <Toolbar
         sx={{
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center', p: 4,
         }}
       >
-        <ArrowBackIosIcon color='alternateColor1' fontSize="large" />
+        <ArrowBackIosIcon color='alternateColor1' fontSize={currentFontSize} />
         <Box>
           <TypographyCustom fontFamily='Hack' sx={{ color: `common.${currentTypography}` }}>
             m4rcos.Dev
           </TypographyCustom>
         </Box>
-        <Typography variant="h3" sx={{ color: 'alternateColor1.main', ml: 1 }}>/</Typography>
-        <ArrowForwardIosIcon color='alternateColor1' fontSize="large" />
-      </ToolbarCustom>
+        <Typography variant={currentTypographySize} sx={{ color: 'alternateColor1.main', ml: 1 }}>/</Typography>
+        <ArrowForwardIosIcon color='alternateColor1' fontSize={currentFontSize} />
+      </Toolbar>
     )
   }
 }
@@ -63,6 +62,7 @@ overflow: hidden;
 const mapStateToProps = (state) => ({
   ...state.themeChange,
   ...state.colorChange,
+  ...state.currentScreen,
 });
 
 export default connect(mapStateToProps)(ToolbarTitle);
