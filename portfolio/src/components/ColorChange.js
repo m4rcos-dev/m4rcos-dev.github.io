@@ -29,7 +29,7 @@ class ColorChange extends React.Component {
 
     // =========utilizando Redux==================
     const { dispatch } = this.props;
-    dispatch(colorChange({ alternateColor: name }))
+    dispatch(colorChange({ colorChange: name }))
   }
 
   render() {
