@@ -71,7 +71,7 @@ class ThemeChange extends React.Component {
         },
       },
       '& .MuiSwitch-thumb': {
-        backgroundColor: currentTheme === 'dark' ? '#003892' : '#001e3c',
+        backgroundColor: currentTheme === 'dark' ? '#003892' : '#e0cf0b',
         width: 32,
         height: 32,
         '&:before': {

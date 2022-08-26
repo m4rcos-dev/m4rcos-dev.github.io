@@ -12,10 +12,10 @@ const StyledSpeedDial = styled(SpeedDial)(({ theme }) => ({
 console.log(getSpeedDialUtilityClass);
 function ColorChange() {
   return(
-    <Box sx={{ mt: '1rem', mr: '1.5rem'}}>
+    <Box sx={{ mt: '1rem', mr: '1.2rem'}}>
        <StyledSpeedDial
           ariaLabel="SpeedDial playground example"
-          icon={<ColorLensIcon />}
+          icon={<ColorLensIcon sx={{ color: 'common.white'}}/>}
           direction='left'
           sx={{
             '& .MuiSpeedDial-fab': {
