@@ -34,7 +34,7 @@ overflow: hidden;
 
 @keyframes blinkCursor {
   from {
-    border-right-color: ${({ theme }) => `theme.palette.common.${currentTypographyColor}`};
+    border-right-color: ${() => `theme.palette.common.${currentTypographyColor}`};
   }
   to {
     border-right-color: transparent;

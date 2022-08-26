@@ -1,30 +1,30 @@
 import * as React from 'react';
 import styled from "@emotion/styled";
-import { Box, SpeedDial, SpeedDialAction } from "@mui/material";
+import { Box, getSpeedDialUtilityClass, SpeedDial, SpeedDialAction } from "@mui/material";
 import ColorLensIcon from '@mui/icons-material/ColorLens';
 import { dataColorChange } from '../data/dataControlPanel';
 
 const StyledSpeedDial = styled(SpeedDial)(({ theme }) => ({
-  // color: theme.palette.primary.dark,
-  // '&.MuiSpeedDial-fab': {
-  //   bgcolor: theme.palette.primary.light,
-  //   // bottom: theme.spacing(2),
-  //   // right: theme.spacing(2),
-  // },
-  // // '&.MuiSpeedDial-directionDown, &.MuiSpeedDial-directionRight': {
-  // //   bgcolor: theme.palette.secondary.dark,
-  // //   // top: theme.spacing(2),
-  // //   // left: theme.spacing(2),
-  // // },
+//  '&.MuiButtonBase-root-MuiFab-root-MuiSpeedDial-fab': {
+//   bgcolor: '#000000',
+//  }
 }));
-
+console.log(getSpeedDialUtilityClass);
 function ColorChange() {
   return(
-    <Box sx={{ mt: '1rem', mr: '1rem'}}>
+    <Box sx={{ mt: '1rem', mr: '1.5rem'}}>
        <StyledSpeedDial
           ariaLabel="SpeedDial playground example"
           icon={<ColorLensIcon />}
           direction='left'
+          sx={{
+            '& .MuiSpeedDial-fab': {
+              bgcolor: 'alternateColor1.main',
+            },
+            '& .MuiSpeedDial-fab:hover': {
+              bgcolor: 'alternateColor1.main',
+            },
+          }}
         >
           {dataColorChange('alternateColor1.main').map((action) => (
             <SpeedDialAction
