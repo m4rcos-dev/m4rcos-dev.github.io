@@ -16,7 +16,6 @@ class ToolbarTitle extends React.Component {
       ? theme.typography.h5
       : theme.typography.h4;
     const currentFontSize = currentScreen.width <= values.md2 ? 'small' : 'large';
-    console.log(colorChange);
     // ==============Animação Escrita==================
     const TypographyCustom = styled(Typography, currentTypographyColor)`
 border-right: 2px solid;
