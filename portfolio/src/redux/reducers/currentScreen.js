@@ -2,7 +2,7 @@ import { CURRENT_SCREEN } from "../actions/actionsTypes";
 
 const INITIAL_STATE = {
   currentScreen: {
-    width: window.screen.width, height: window.screen.height
+    width: window.innerWidth, height: window.innerHeight
   }
 };
 

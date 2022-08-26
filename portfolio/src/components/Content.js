@@ -8,24 +8,28 @@ import { connect } from "react-redux";
 
 class ContentDrawer extends React.Component {
   render() {
-    const { currentTheme } = this.props;
+    const { currentTheme, currentScreen } = this.props;
     //=============Breackpoints MediaQuery==================
     const BoxCustom = styled('div')(({ theme }) => ({
       [theme.breakpoints.down('md3')]: {
-        display: 'none',
+        marginTop: '8vh',
+        width: '100%',
+        height: '92vh',
+      },
+      [theme.breakpoints.up('md3')]: {
+        width: '80%',
+        height: '100vh',
       },
     }));
 
     return (
       <BoxCustom sx={{
-        width: '80%',
-        height: '100vh',
         bgcolor: `secondary.${currentTheme}`,
       }}>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="projects" element={<Projects />} />
+          <Route path="/" element={<Home currentScreen={currentScreen}/>} />
+          <Route path="about" element={<About currentScreen={currentScreen}/>} />
+          <Route path="projects" element={<Projects currentScreen={currentScreen}/>} />
         </Routes>
       </BoxCustom>
     )
@@ -35,6 +39,7 @@ class ContentDrawer extends React.Component {
 // =======props Redux===============================
 const mapStateToProps = (state) => ({
   ...state.themeChange,
+  ...state.currentScreen,
 });
 
 // export default ContentDrawer;

@@ -4,8 +4,9 @@ import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import { Link, styled } from "@mui/material";
+import { styled } from "@mui/material";
 import { dataAppBarTop } from "../data/dataAppBarTop";
+import { Link } from 'react-router-dom';
 
 const MenuItemCustom = styled(MenuItem)`
 ${({ theme }) => `
@@ -57,7 +58,10 @@ const NavAppBar = () => {
         }}
       >
         {dataAppBarTop('medium').map((page) => (
-          <Link key={page.id} href={page.link} sx={{ textDecoration: 'none', color: 'inherit' }}>
+          <Link
+            key={page.id}
+            to={page.link}
+            style={{ textDecoration: 'none', color: 'inherit' }}>
             <MenuItemCustom onClick={handleCloseNavMenu}>
               {page.icon}
               {page.text}

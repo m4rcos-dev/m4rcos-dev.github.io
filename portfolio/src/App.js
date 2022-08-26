@@ -1,7 +1,6 @@
 import { styled } from '@mui/material';
 import AppBarTop from './components/AppBarTop';
-import ContentAppBarTop from './components/ContentAppBarTop';
-import ContentDrawer from './components/ContentDrawer';
+import Content from './components/Content';
 import ControlPanel from './components/ControlPanel';
 import DrawerLeft from './components/DrawerLeft';
 
@@ -22,8 +21,7 @@ function App() {
     <BoxCustom sx={{ display: 'flex' }}>
       <AppBarTop />
       <DrawerLeft />
-      <ContentDrawer />
-      <ContentAppBarTop />
+      <Content />
       <ControlPanel />
     </BoxCustom>
   )

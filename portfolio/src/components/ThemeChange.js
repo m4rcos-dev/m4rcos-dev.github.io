@@ -97,8 +97,8 @@ class ThemeChange extends React.Component {
 
 
     window.onresize = () => {
-      const width = window.screen.width;
-      const height = window.screen.height;
+      const width = window.innerWidth;
+      const height = window.innerHeight;
       dispatch(currentScreen({
         currentScreen: {
           width,

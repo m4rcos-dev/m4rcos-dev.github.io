@@ -7,15 +7,18 @@ import theme from "../style/Theme";
 
 class ToolbarTitle extends React.Component {
   render() {
+    // ============BreakPoints e ChangeTheme============
     const { currentTheme, currentScreen } = this.props;
     const { breakpoints: { values } } = theme;
-    const currentTypography = currentTheme === 'dark' ? 'white' : 'black'
+    const currentTypographyColor = currentTheme === 'dark' ? 'white' : 'black'
     const currentTypographySize = currentScreen.width <= values.md2 ? 'h4' : 'h3';
-    const currentTypographyCustomSize = currentScreen.width <= values.md2 ? theme.typography.h5 : theme.typography.h4;
+    const currentTypographyCustomSize = currentScreen.width <= values.md2
+      ? theme.typography.h5
+      : theme.typography.h4;
     const currentFontSize = currentScreen.width <= values.md2 ? 'small' : 'large';
 
     // ==============Animação Escrita==================
-    const TypographyCustom = styled(Typography, currentTypography)`
+    const TypographyCustom = styled(Typography, currentTypographyColor)`
 border-right: 2px solid;
 font-sizy: ${() => currentTypographyCustomSize}
 animation: blinkCursor 500ms steps(30) infinite normal, typing 1s steps(15) 1s normal both;
@@ -31,7 +34,7 @@ overflow: hidden;
 
 @keyframes blinkCursor {
   from {
-    border-right-color: ${({ theme }) => `theme.palette.common.${currentTypography}`};
+    border-right-color: ${({ theme }) => `theme.palette.common.${currentTypographyColor}`};
   }
   to {
     border-right-color: transparent;
@@ -48,7 +51,7 @@ overflow: hidden;
       >
         <ArrowBackIosIcon color='alternateColor1' fontSize={currentFontSize} />
         <Box>
-          <TypographyCustom fontFamily='Hack' sx={{ color: `common.${currentTypography}` }}>
+          <TypographyCustom fontFamily='Hack' sx={{ color: `common.${currentTypographyColor}` }}>
             m4rcos.Dev
           </TypographyCustom>
         </Box>
