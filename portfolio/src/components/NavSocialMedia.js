@@ -1,23 +1,14 @@
 import React from "react";
 import ListItemIcon from '@mui/material/ListItemIcon';
-import { Link, styled } from "@mui/material";
+import { Link } from "@mui/material";
 import ListItemButton from '@mui/material/ListItemButton';
 import { connect } from "react-redux";
 import { dataNavSocialMedia } from "../data/dataDrawerLeft";
 
 class NavSoicalMedia extends React.Component {
   render() {
-    const { currentTheme } = this.props;
+    const { currentTheme, colorChange } = this.props;
     const currentTypography = currentTheme === 'dark' ? 'white' : 'black'
-    const ListemItemButtonCustom = styled(ListItemButton)`
-    ${({ theme }) => `
-    cursor: crosshair;
-    justify-content: center;
-    &:hover {
-      color: ${theme.palette.alternateColor1.main};
-    }
-    `}
-    `
 
     return (
       <ListItemIcon>
@@ -30,10 +21,17 @@ class NavSoicalMedia extends React.Component {
               textDecoration: 'none',
               color: 'inherit'
             }}>
-            <ListemItemButtonCustom
-              sx={{ color: `common.${currentTypography}` }}
+            <ListItemButton
+              sx={{
+                color: `common.${currentTypography}`,
+                cursor: 'crosshair',
+                justifyContent: 'center',
+                '&:hover': {
+                  color: colorChange
+                }
+              }}
             >{social.icon}
-            </ListemItemButtonCustom>
+            </ListItemButton>
           </Link>)}
       </ListItemIcon>
     )
