@@ -7,6 +7,7 @@ import { Box } from "@mui/system";
 // =====import Redux=========
 import { connect } from 'react-redux'
 import { themeChange } from "../redux/actions/changeTheme";
+import { currentScreen } from "../redux/actions/currentScreen";
 
 class ThemeChange extends React.Component {
   constructor() {
@@ -20,10 +21,10 @@ class ThemeChange extends React.Component {
   componentDidMount() {
     localStorage.getItem('currentTheme') === null
       ? this.setState({ currentTheme: 'light' })
-      : this.setState({ currentTheme: localStorage.getItem('currentTheme')});
+      : this.setState({ currentTheme: localStorage.getItem('currentTheme') });
     localStorage.getItem('currentChecked') === null
-    ? this.setState({ currentChecked: false})
-    : this.setState({ currentChecked: localStorage.getItem('currentChecked') === 'true'})
+      ? this.setState({ currentChecked: false })
+      : this.setState({ currentChecked: localStorage.getItem('currentChecked') === 'true' })
   }
 
   handleTheme = ({ target: { checked } }) => {
@@ -34,18 +35,19 @@ class ThemeChange extends React.Component {
       checked
         ? localStorage.setItem('currentTheme', 'dark')
         : localStorage.setItem('currentTheme', 'light');
-    this.setState({ currentTheme: localStorage.getItem('currentTheme')});
+      this.setState({ currentTheme: localStorage.getItem('currentTheme') });
     })
 
     // =========utilizando Redux==================
     const { dispatch } = this.props;
     checked
-    ? dispatch(themeChange({ currentTheme: 'dark' }))
-    : dispatch(themeChange({ currentTheme: 'light' }))
+      ? dispatch(themeChange({ currentTheme: 'dark' }))
+      : dispatch(themeChange({ currentTheme: 'light' }))
   }
 
   render() {
     const { currentTheme, currentChecked } = this.state;
+    const { dispatch } = this.props;
     const MaterialUISwitch = styled(Switch, currentTheme)(({ theme }) => ({
       width: 62,
       height: 34,
@@ -92,6 +94,18 @@ class ThemeChange extends React.Component {
         borderRadius: 20 / 2,
       },
     }));
+
+
+    window.onresize = () => {
+      const width = window.screen.width;
+      const height = window.screen.height;
+      dispatch(currentScreen({
+        currentScreen: {
+          width,
+          height
+        }
+      }))
+    }
 
     return (
       <Box>

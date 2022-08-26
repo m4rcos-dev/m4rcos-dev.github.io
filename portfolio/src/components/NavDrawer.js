@@ -5,18 +5,17 @@ import { Box, styled } from "@mui/material";
 import { Link } from 'react-router-dom';
 import { connect } from "react-redux";
 import { dataNavDrawerLeft } from "../data/dataDrawerLeft";
+import theme from "../style/Theme";
 
 class NavDrawer extends React.Component {
-  render() {
-    const { currentTheme, currentUrl } = this.props;
-    const currentTypography = currentTheme === 'dark' ? 'white' : 'black'
-    //=============Breackpoints MediaQuery==================
-    const BoxCustom = styled(Box)(({ theme }) => ({
-      [theme.breakpoints.down('md2')]: {
-        display: 'none',
-      },
-    }));
 
+  render() {
+    const { currentTheme, currentUrl, currentScreen } = this.props;
+    const { breakpoints: { values } } = theme;
+    const currentTypography = currentTheme === 'dark' ? 'white' : 'black'
+    const currentSizeIcons = currentScreen.width <= values.md2 ? 'medium' : 'large';
+    const currentFontSize = currentScreen.width <= values.md2 ? '1rem' : '1.5rem';
+    
     const ListemItemButtonCustom = styled(ListItemButton, currentTheme)(({ theme }) => ({
       cursor: 'crosshair',
       display: 'flex',
@@ -34,9 +33,9 @@ class NavDrawer extends React.Component {
     }));
 
     return (
-      <BoxCustom sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <List sx={{ mb: '3rem', mt: '9rem', }}>
-          {dataNavDrawerLeft(currentUrl, 'large').map((nav) => (
+          {dataNavDrawerLeft(currentUrl, currentSizeIcons, currentFontSize).map((nav) => (
             <Link
               key={nav.linkText}
               to={nav.link}
@@ -46,7 +45,7 @@ class NavDrawer extends React.Component {
                 divider
                 sx={{
                   fontFamily: 'Hack',
-                  fontSize: '1.5rem',
+                  fontSize: nav.fontSize,
                   mb: '1rem',
                   color: `common.${currentTypography}`
                 }}>
@@ -56,7 +55,7 @@ class NavDrawer extends React.Component {
             </Link>
           ))}
         </List>
-      </BoxCustom >
+      </Box>
     )
   }
 }
@@ -65,6 +64,7 @@ const mapStateToProps = (state) => ({
   ...state.themeChange,
   ...state.colorChange,
   ...state.currentUrl,
+  ...state.currentScreen,
 });
 
 export default connect(mapStateToProps)(NavDrawer);

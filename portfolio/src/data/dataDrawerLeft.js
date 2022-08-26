@@ -4,25 +4,28 @@ import SettingsEthernetIcon from '@mui/icons-material/SettingsEthernet';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
-export const dataNavDrawerLeft = (currentUrl, size) => {
+export const dataNavDrawerLeft = (currentUrl, icoSize, textSize) => {
   return [
     {
       linkText: 'Inicio',
       link: '/',
-      icon: <HomeIcon fontSize={size} />,
-      slected: currentUrl === '/'
+      icon: <HomeIcon fontSize={icoSize} />,
+      slected: currentUrl === '/',
+      fontSize: textSize
     },
     {
       linkText: 'Sobre',
       link: '/about',
-      icon: <AssignmentIndIcon fontSize={size} />,
-      slected: currentUrl === '/about'
+      icon: <AssignmentIndIcon fontSize={icoSize} />,
+      slected: currentUrl === '/about',
+      fontSize: textSize
     },
     {
       linkText: 'Projetos',
       link: '/projects',
-      icon: <SettingsEthernetIcon fontSize={size} />,
-      slected: currentUrl === '/projects'
+      icon: <SettingsEthernetIcon fontSize={icoSize} />,
+      slected: currentUrl === '/projects',
+      fontSize: textSize
     },
   ];
 }

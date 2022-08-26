@@ -5,7 +5,6 @@ import { Box } from "@mui/system";
 import NavSoicalMedia from "./NavSocialMedia";
 import { styled } from "@mui/material";
 import ToolbarTitleSmall from "./ToolbarTitleSmall";
-import NavDrawerSmall from "./NavDrawerSmall";
 import { connect } from 'react-redux';
 
 class DrawerLeft extends React.Component {
@@ -31,7 +30,6 @@ class DrawerLeft extends React.Component {
           <ToolbarTitleSmall />
         </Box>
         <NavDrawer />
-        <NavDrawerSmall />
         <Box sx={{ mt: '5rem', display: 'flex', justifyContent: 'center' }} >
           <NavSoicalMedia />
         </Box>
