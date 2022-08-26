@@ -14,7 +14,13 @@ const theme = createTheme({
     },
     alternateColor1: {
       main: '#ff5722',
-    }
+    },
+    alternateColor: {
+      orange: '#ff5722',
+      green: '#03ff42',
+      blue: '#2d03ff',
+      red: '#ff0303'
+    },
   },
   typography: {
     fontFamily: [

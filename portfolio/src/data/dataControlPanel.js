@@ -1,10 +1,26 @@
 import CircleIcon from '@mui/icons-material/Circle';
 
-export const dataColorChange = (alternateColor) => {
+export const dataColorChange = () => {
   return [
-    { icon: <CircleIcon />, name: 'Color1', color: alternateColor },
-    { icon: <CircleIcon />, name: 'Color2', color: alternateColor },
-    { icon: <CircleIcon />, name: 'Color3', color: alternateColor },
-    { icon: <CircleIcon />, name: 'Color4', color: alternateColor },
+    {
+      icon: <CircleIcon />,
+      name: 'orange',
+      color: 'alternateColor.orange'
+    },
+    {
+      icon: <CircleIcon />,
+      name: 'green',
+      color: 'alternateColor.green'
+    },
+    {
+      icon: <CircleIcon />,
+      name: 'blue',
+      color: 'alternateColor.blue'
+    },
+    {
+      icon: <CircleIcon />,
+      name: 'red',
+      color: 'alternateColor.red'
+    },
   ]
 }

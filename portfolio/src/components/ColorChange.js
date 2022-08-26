@@ -1,42 +1,81 @@
-import * as React from 'react';
-import styled from "@emotion/styled";
-import { Box, getSpeedDialUtilityClass, SpeedDial, SpeedDialAction } from "@mui/material";
+import React from 'react';
+import { Box, SpeedDial, SpeedDialAction } from "@mui/material";
 import ColorLensIcon from '@mui/icons-material/ColorLens';
 import { dataColorChange } from '../data/dataControlPanel';
 
-const StyledSpeedDial = styled(SpeedDial)(({ theme }) => ({
-//  '&.MuiButtonBase-root-MuiFab-root-MuiSpeedDial-fab': {
-//   bgcolor: '#000000',
-//  }
-}));
-console.log(getSpeedDialUtilityClass);
-function ColorChange() {
-  return(
-    <Box sx={{ mt: '1rem', mr: '1.2rem'}}>
-       <StyledSpeedDial
+
+// =====import Redux=========
+import { connect } from 'react-redux'
+import { colorChange } from "../redux/actions/changeColor";
+
+class ColorChange extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      currentColor: 'alternateColor.orange'
+    }
+  }
+
+  componentDidMount(){
+    localStorage.getItem('currentColor') === null
+    ? this.setState({ currentColor: 'alternateColor.orange'})
+    : this.setState({ currentColor: localStorage.getItem('currentColor')})
+  }
+
+  handleColor = ({ target: { name } }) => {
+    // =========utilizando localStorage==================
+    this.setState({ currentColor: name });
+    localStorage.setItem('currentColor', name);
+
+    // =========utilizando Redux==================
+    const { dispatch } = this.props;
+    dispatch(colorChange({ alternateColor: name }))
+  }
+
+  render() {
+    const { currentColor } = this.state;
+    return (
+      <Box sx={{ mt: '1rem', mr: '1.2rem' }}>
+        <SpeedDial
           ariaLabel="SpeedDial playground example"
-          icon={<ColorLensIcon sx={{ color: 'common.white'}}/>}
+          icon={<ColorLensIcon sx={{ color: 'common.white' }} />}
           direction='left'
           sx={{
             '& .MuiSpeedDial-fab': {
-              bgcolor: 'alternateColor1.main',
+              bgcolor: currentColor,
             },
             '& .MuiSpeedDial-fab:hover': {
-              bgcolor: 'alternateColor1.main',
+              bgcolor: currentColor,
             },
           }}
         >
-          {dataColorChange('alternateColor1.main').map((action) => (
+          {dataColorChange().map((action) => (
             <SpeedDialAction
               key={action.name}
               icon={action.icon}
               tooltipTitle={action.name}
-              sx={{ color: action.color, bgcolor: action.color }}
+              name={action.color}
+              sx={{
+                color: action.color,
+                bgcolor: action.color,
+                '&:hover': {
+                  bgcolor: action.color,
+                  opacity: 0.5
+                },
+                '& .MuiSvgIcon-root': {
+                  display: 'none'
+                },
+              }}
+              onClick={(event) => this.handleColor(event)}
             />
           ))}
-        </StyledSpeedDial>
-    </Box>
-  );
+        </SpeedDial>
+      </Box>
+    )
+  }
 }
 
-export default ColorChange;
+// export default ColorChange;
+
+// ======export Redux=======
+export default connect()(ColorChange);
