@@ -35,7 +35,7 @@ class ColorChange extends React.Component {
   render() {
     const { currentColor } = this.state;
     return (
-      <Box sx={{ mt: '1rem', mr: '1.2rem' }}>
+      <Box sx={{ mt: '0.5rem', mr: '1.6rem' }}>
         <SpeedDial
           ariaLabel="SpeedDial playground example"
           icon={<ColorLensIcon sx={{ color: 'common.white' }} />}
@@ -43,6 +43,8 @@ class ColorChange extends React.Component {
           sx={{
             '& .MuiSpeedDial-fab': {
               bgcolor: currentColor,
+              width: '2.25rem',
+              height: '2.25rem',
             },
             '& .MuiSpeedDial-fab:hover': {
               bgcolor: currentColor,
@@ -58,6 +60,8 @@ class ColorChange extends React.Component {
               sx={{
                 color: action.color,
                 bgcolor: action.color,
+                width: '2.25rem',
+              height: '2.25rem',
                 '&:hover': {
                   bgcolor: action.color,
                   opacity: 0.5

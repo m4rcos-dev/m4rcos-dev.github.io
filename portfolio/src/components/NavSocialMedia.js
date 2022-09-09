@@ -1,6 +1,6 @@
 import React from "react";
 import ListItemIcon from '@mui/material/ListItemIcon';
-import { Link } from "@mui/material";
+import { Link, styled } from "@mui/material";
 import ListItemButton from '@mui/material/ListItemButton';
 import { connect } from "react-redux";
 import { dataNavSocialMedia } from "../data/dataDrawerLeft";
@@ -9,9 +9,15 @@ class NavSoicalMedia extends React.Component {
   render() {
     const { currentTheme, colorChange } = this.props;
     const currentTypography = currentTheme === 'dark' ? 'white' : 'black'
+    //=============Breackpoints MediaQuery==================
+    const ListItemIconCustom = styled(ListItemIcon)(({ theme }) => ({
+      [theme.breakpoints.down('md3')]: {
+        flexDirection: 'column',
+      },
+    }));
 
     return (
-      <ListItemIcon>
+      <ListItemIconCustom>
         {dataNavSocialMedia('large').map((social) =>
           <Link
             key={social.id}
@@ -33,7 +39,7 @@ class NavSoicalMedia extends React.Component {
             >{social.icon}
             </ListItemButton>
           </Link>)}
-      </ListItemIcon>
+      </ListItemIconCustom>
     )
   }
 }

@@ -7,6 +7,7 @@ import MenuItem from '@mui/material/MenuItem';
 import { styled } from "@mui/material";
 import { dataAppBarTop } from "../data/dataAppBarTop";
 import { Link } from 'react-router-dom';
+import { connect } from "react-redux";
 
 const MenuItemCustom = styled(MenuItem)`
 ${({ theme }) => `
@@ -18,59 +19,79 @@ font-family: Hack;
 `}
 `
 
-const NavAppBar = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
+class NavAppBar extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      anchorElNav: null,
+    }
+  }
+
+  handleOpenNavMenu = (event) => {
+    this.setState({ anchorElNav: event.currentTarget });
   };
 
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
+  handleCloseNavMenu = () => {
+    this.setState({ anchorElNav: null })
   };
-  return (
-    <Box sx={{ display: 'flex' }}>
-      <IconButton
-        size="large"
-        aria-label="account of current user"
-        aria-controls="menu-appbar"
-        aria-haspopup="true"
-        onClick={handleOpenNavMenu}
-        color="inherit"
-      >
-        <MenuIcon sx={{ color: 'alternateColor1.main' }} />
-      </IconButton>
-      <Menu
-        id="menu-appbar"
-        anchorEl={anchorElNav}
-        anchorOrigin={{
-          vertical: 'bottom',
-          horizontal: 'left',
-        }}
-        keepMounted
-        transformOrigin={{
-          vertical: 'top',
-          horizontal: 'left',
-        }}
-        open={Boolean(anchorElNav)}
-        onClose={handleCloseNavMenu}
-        sx={{
-          display: { xs: 'block', md: 'none' },
-        }}
-      >
-        {dataAppBarTop('medium').map((page) => (
-          <Link
-            key={page.id}
-            to={page.link}
-            style={{ textDecoration: 'none', color: 'inherit' }}>
-            <MenuItemCustom onClick={handleCloseNavMenu}>
-              {page.icon}
-              {page.text}
-            </MenuItemCustom>
-          </Link>
-        ))}
-      </Menu>
-    </Box>
-  )
+
+  render() {
+    const { anchorElNav } = this.state;
+    const { colorChange } = this.props;
+    return (
+      <Box sx={{ display: 'flex' }}>
+        <IconButton
+          size="large"
+          aria-label="account of current user"
+          aria-controls="menu-appbar"
+          aria-haspopup="true"
+          onClick={this.handleOpenNavMenu}
+          color="inherit"
+        >
+          <MenuIcon sx={{ color: colorChange }} />
+        </IconButton>
+        <Menu
+          id="menu-appbar"
+          anchorEl={anchorElNav}
+          anchorOrigin={{
+            vertical: 'bottom',
+            horizontal: 'left',
+          }}
+          keepMounted
+          transformOrigin={{
+            vertical: 'top',
+            horizontal: 'left',
+          }}
+          open={Boolean(anchorElNav)}
+          onClose={this.handleCloseNavMenu}
+          sx={{
+            display: { xs: 'block', md: 'none' },
+          }}
+        >
+          {dataAppBarTop('medium').map((page) => (
+            <Link
+              key={page.id}
+              to={page.link}
+              style={{ textDecoration: 'none', color: 'inherit' }}>
+              <MenuItemCustom onClick={this.handleCloseNavMenu}>
+                {page.icon}
+                {page.text}
+              </MenuItemCustom>
+            </Link>
+          ))}
+        </Menu>
+      </Box>
+    )
+  }
 }
 
-export default NavAppBar;
+const mapStateToProps = (state) => ({
+  ...state.themeChange,
+  ...state.colorChange,
+  ...state.currentUrl,
+  ...state.currentScreen,
+});
+
+// export default NavAppBar;
+
+export default connect(mapStateToProps)(NavAppBar);

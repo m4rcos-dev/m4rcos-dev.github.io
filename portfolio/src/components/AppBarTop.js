@@ -1,10 +1,10 @@
 import React from "react";
 import Toolbar from "./ToolbarTitle";
 import Box from '@mui/material/Box';
-import NavSoicalMedia from "./NavSocialMedia";
 import NavAppBar from "./NavAppBar";
 import { styled } from "@mui/material";
 import { connect } from "react-redux";
+import NavSocialMedia from "./NavSocialMedia";
 
 //=============Breackpoints MediaQuery==================
 const BoxCustom = styled('div')(({ theme }) => ({
@@ -31,7 +31,7 @@ class AppBarTop extends React.Component {
         }}>
           <NavAppBar />
           <Toolbar />
-          <NavSoicalMedia />
+          {/* <NavSocialMedia /> */}
         </Box>
 
       </BoxCustom>
