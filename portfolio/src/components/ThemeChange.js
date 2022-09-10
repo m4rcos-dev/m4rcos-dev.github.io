@@ -8,6 +8,7 @@ import { Box } from "@mui/system";
 import { connect } from 'react-redux'
 import { themeChange } from "../redux/actions/changeTheme";
 import { currentScreen } from "../redux/actions/currentScreen";
+import { Grow } from "@mui/material";
 
 class ThemeChange extends React.Component {
   constructor() {
@@ -109,11 +110,16 @@ class ThemeChange extends React.Component {
 
     return (
       <Box>
+        <Grow
+        in
+        timeout={1500}
+        >
         <FormControlLabel
           control={<MaterialUISwitch />}
           checked={currentChecked}
           onChange={(event) => this.handleTheme(event)}
         />
+        </Grow>
       </Box>
     )
   }

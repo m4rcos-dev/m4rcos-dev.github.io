@@ -1,6 +1,6 @@
 import React from "react";
 import ListItemIcon from '@mui/material/ListItemIcon';
-import { Link, styled } from "@mui/material";
+import { Grow, Link, styled } from "@mui/material";
 import ListItemButton from '@mui/material/ListItemButton';
 import { connect } from "react-redux";
 import { dataNavSocialMedia } from "../data/dataDrawerLeft";
@@ -19,26 +19,31 @@ class NavSoicalMedia extends React.Component {
     return (
       <ListItemIconCustom>
         {dataNavSocialMedia('large').map((social) =>
-          <Link
-            key={social.id}
-            href={social.link}
-            target="_blank"
-            sx={{
-              textDecoration: 'none',
-              color: 'inherit'
-            }}>
-            <ListItemButton
+          <Grow
+          in
+          timeout={2000}
+          >
+            <Link
+              key={social.id}
+              href={social.link}
+              target="_blank"
               sx={{
-                color: `common.${currentTypography}`,
-                cursor: 'crosshair',
-                justifyContent: 'center',
-                '&:hover': {
-                  color: colorChange
-                }
-              }}
-            >{social.icon}
-            </ListItemButton>
-          </Link>)}
+                textDecoration: 'none',
+                color: 'inherit'
+              }}>
+              <ListItemButton
+                sx={{
+                  color: `common.${currentTypography}`,
+                  cursor: 'crosshair',
+                  justifyContent: 'center',
+                  '&:hover': {
+                    color: colorChange
+                  }
+                }}
+              >{social.icon}
+              </ListItemButton>
+            </Link>
+          </Grow>)}
       </ListItemIconCustom>
     )
   }

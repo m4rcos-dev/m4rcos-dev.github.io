@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, SpeedDial, SpeedDialAction } from "@mui/material";
+import { Box, Grow, SpeedDial, SpeedDialAction } from "@mui/material";
 import ColorLensIcon from '@mui/icons-material/ColorLens';
 import { dataColorChange } from '../data/dataControlPanel';
 
@@ -36,6 +36,10 @@ class ColorChange extends React.Component {
     const { currentColor } = this.state;
     return (
       <Box sx={{ mt: '0.5rem', mr: '1.6rem' }}>
+        <Grow
+        in
+        timeout={2000}
+        >
         <SpeedDial
           ariaLabel="SpeedDial playground example"
           icon={<ColorLensIcon sx={{ color: 'common.white' }} />}
@@ -74,6 +78,7 @@ class ColorChange extends React.Component {
             />
           ))}
         </SpeedDial>
+        </Grow>
       </Box>
     )
   }
