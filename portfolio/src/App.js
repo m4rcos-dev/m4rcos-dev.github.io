@@ -1,4 +1,4 @@
-import { styled } from '@mui/material';
+import { Box, styled } from '@mui/material';
 import AppBarTop from './components/AppBarTop';
 import Content from './components/Content';
 import ControlPanel from './components/ControlPanel';
@@ -22,7 +22,9 @@ function App() {
       <AppBarTop />
       <DrawerLeft />
       <Content />
-      <ControlPanel />
+      <Box>
+        <ControlPanel />
+      </Box>
     </BoxCustom>
   )
 }
