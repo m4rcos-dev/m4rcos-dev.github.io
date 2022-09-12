@@ -2,7 +2,7 @@ import { CHANGE_COLOR } from "../actions/actionsTypes";
 
 const INITIAL_STATE = {
   colorChange: localStorage.getItem('currentColor') === null
-  ? 'alternateColr.orange'
+  ? 'alternateColor.orange'
   : localStorage.getItem('currentColor')
 };
 
