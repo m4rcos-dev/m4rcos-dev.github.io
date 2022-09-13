@@ -21,14 +21,55 @@ class Home extends React.Component {
     dispatch(currentUrl({ currentUrl: window.location.pathname }))
   }
   render() {
+    // ============BreakPoints e ChangeTheme============
     const { currentScreen, currentTheme, colorChange } = this.props;
     const { breakpoints: { values } } = theme;
     const currentSlideDirection = currentScreen.width <= values.md3 ? 'up' : 'left';
+    const titleTypographySize = currentScreen.width <= values.md2 ? 'h4' : 'h2';
+    const subTitleTypographySize = currentScreen.width <= values.md2 ? 'h6' : 'h4';
+    const textTypographySize = currentScreen.width <= values.md2 ? 'h8' : 'h6';
     const currentTypographyColor = currentTheme === 'dark' ? 'white' : 'black'
+    //=============Breackpoints MediaQuery==================
+    const BoxCustomText = styled('div')(({ theme }) => ({
+      [theme.breakpoints.down('md3')]: {
+        width: '100%',
+        height: 'auto',
+      },
+    }));
 
+    const BoxCustomImage = styled('div')(({ theme }) => ({
+      [theme.breakpoints.down('md3')]: {
+        width: '100%',
+        height: 'auto',
+      },
+    }));
+
+    const ButtonCustom = styled(Button)(() => ({
+      [theme.breakpoints.down('md2')]: {
+        width: '40%',
+        fontSize: '0.8rem',
+      },
+      [theme.breakpoints.down('md3')]: {
+        width: '60%',
+        fontSize: '1rem',
+      },
+    }));
+
+    const ImgCustomAvatar = styled('img')(() => ({
+      [theme.breakpoints.down('md2')]: {
+        width: '412px',
+      },
+      [theme.breakpoints.down('md3')]: {
+
+      },
+    }));
+
+    //==============styled Custom=============================
     const TypographyCustom = styled(Typography)(() => ({
       margin: '0rem 0rem 2rem 0rem'
     }));
+
+
 
     return (
       <Slide direction={currentSlideDirection} in mountOnEnter unmountOnExit>
@@ -38,7 +79,7 @@ class Home extends React.Component {
             flexWrap: 'wrap'
           }}
         >
-          <Box
+          <BoxCustomText
             sx={{
               width: '50%',
               height: '100vh',
@@ -50,26 +91,26 @@ class Home extends React.Component {
           >
             <TypographyCustom
               fontFamily='Hack'
-              variant="h2"
+              variant={titleTypographySize}
               color={currentTypographyColor}
             >
               Olá! Eu sou o
             </TypographyCustom>
             <TypographyCustom
               fontFamily='Hack'
-              variant="h4"
+              variant={subTitleTypographySize}
               color={colorChange}
             >
               Marcos Paulo Pereira
             </TypographyCustom>
             <TypographyCustom
               fontFamily='Hack'
-              variant="h6"
+              variant={textTypographySize}
               color={currentTypographyColor}
             >
               Desenvolvedor Front-end, com muita disposição e vontade de aprender, acrescentar e evoluir. Cursando Back-end e almejando o desenvolvimento Full Stack.
             </TypographyCustom>
-            <Button
+            <ButtonCustom
               variant="contained"
               sx={{
                 width: '30%',
@@ -77,15 +118,16 @@ class Home extends React.Component {
                 color: currentTypographyColor,
                 fontFamily: 'Hack',
                 fontWeight: 'bolder',
+                zIndex: 'mobileStepper',
                 '&:hover': {
                   bgcolor: colorChange,
                 }
               }}
             >
               Baixar Curriculo
-            </Button>
-          </Box>
-          <Box
+            </ButtonCustom>
+          </BoxCustomText>
+          <BoxCustomImage
             sx={{
               width: '50%',
               height: '100vh',
@@ -93,24 +135,46 @@ class Home extends React.Component {
               flexDirection: 'column',
             }}
           >
-            <img class="vibrate-1 jello-horizontal" style={{
-              maxWidth: '119px',
-              position: 'fixed',
-              margin: '13rem 0rem 0rem 0rem',
-            }} src={ImageInsta} alt="insta" />
-            <img class="vibrate-2 jello-horizontal" style={{
-              maxWidth: '119px',
-              position: 'fixed',
-              margin: '8rem 0rem 0rem 28rem',
-            }} src={ImageYoutube} alt="youtube" />
-            <img class="vibrate-3 jello-horizontal" style={{
-              maxWidth: '119px',
-              position: 'fixed',
-              margin: '47rem 0rem 0rem 6rem',
-            }} src={ImageTwitter} alt="twitter" />
+            {currentScreen.width > values.md2
+              && <img class="vibrate-1 jello-horizontal" style={{
+                margin: '13rem 0rem 0rem 0rem',
+                position: 'absolute',
+              }} src={ImageInsta} alt="insta" />}
+            {currentScreen.width <= values.md2
+              && <img class="vibrate-1 jello-horizontal" style={{
+                margin: '13rem 0rem 0rem 0rem',
+                position: 'absolute',
+              }} src={ImageInsta} alt="insta" />}
+
+            {currentScreen.width > values.md2
+              && <img class="vibrate-2 jello-horizontal" style={{
+                maxWidth: '119px',
+                position: 'absolute',
+                margin: '8rem 0rem 0rem 28rem',
+              }} src={ImageYoutube} alt="youtube" />}
+            {currentScreen.width <= values.md2
+              && <img class="vibrate-2 jello-horizontal" style={{
+                maxWidth: '119px',
+                position: 'absolute',
+                margin: '8rem 0rem 0rem 20rem',
+              }} src={ImageYoutube} alt="youtube" />}
+
+            {currentScreen.width > values.md2
+              && <img class="vibrate-3 jello-horizontal" style={{
+                maxWidth: '119px',
+                position: 'absolute',
+                margin: '47rem 0rem 0rem 6rem',
+              }} src={ImageTwitter} alt="twitter" />}
+            {currentScreen.width <= values.md2
+              && <img class="vibrate-3 jello-horizontal" style={{
+                maxWidth: '119px',
+                position: 'absolute',
+                margin: '5rem 0rem 0rem 6rem',
+              }} src={ImageTwitter} alt="twitter" />}
+
 
             {colorChange === 'alternateColor.orange'
-              && <img style={{
+              && <ImgCustomAvatar style={{
                 maxWidth: '612px',
                 margin: '10rem 0rem 0rem 0rem',
               }} src={ImageOrange} alt="img Portifólio" />}
@@ -129,7 +193,7 @@ class Home extends React.Component {
                 maxWidth: '612px',
                 margin: '10rem 0rem 0rem 0rem',
               }} src={ImageBlue} alt="img Portifólio2" />}
-          </Box>
+          </BoxCustomImage>
         </Box>
       </Slide>
     )
