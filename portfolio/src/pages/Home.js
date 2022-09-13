@@ -6,6 +6,10 @@ import ImageOrange from "../assets/orange.svg"
 import ImageRed from "../assets/red.svg"
 import ImageGreen from "../assets/green.svg"
 import ImageBlue from "../assets/blue.svg"
+import ImageInsta from "../assets/insta.svg"
+import ImageYoutube from "../assets/youtube.svg"
+import ImageTwitter from "../assets/twitter.svg"
+import "../style/HomeAnimation.css"
 
 // =====import Redux=========
 import { connect } from 'react-redux'
@@ -29,10 +33,10 @@ class Home extends React.Component {
     return (
       <Slide direction={currentSlideDirection} in mountOnEnter unmountOnExit>
         <Box
-        sx={{
-          display: 'flex',
-          flexWrap: 'wrap'
-        }}
+          sx={{
+            display: 'flex',
+            flexWrap: 'wrap'
+          }}
         >
           <Box
             sx={{
@@ -54,7 +58,7 @@ class Home extends React.Component {
             <TypographyCustom
               fontFamily='Hack'
               variant="h4"
-              color={ colorChange }
+              color={colorChange}
             >
               Marcos Paulo Pereira
             </TypographyCustom>
@@ -82,19 +86,49 @@ class Home extends React.Component {
             </Button>
           </Box>
           <Box
-          sx={{
-            width: '50%',
-            height: '100vh',
-            display: 'flex',
-            flexDirection: 'column',
-            // bgcolor: '#ff0000',
-          }}
+            sx={{
+              width: '50%',
+              height: '100vh',
+              display: 'flex',
+              flexDirection: 'column',
+            }}
           >
-            <Typography>IMAGEM</Typography>
-            {colorChange === 'alternateColor.orange' && <img src={ImageOrange} alt="img Portifólio"/>}
-            {colorChange === 'alternateColor.red' && <img src={ImageRed} alt="img Portifólio2"/>}
-            {colorChange === 'alternateColor.green' && <img src={ImageGreen} alt="img Portifólio2"/>}
-            {colorChange === 'alternateColor.blue' && <img src={ImageBlue} alt="img Portifólio2"/>}
+            <img class="vibrate-1 jello-horizontal" style={{
+              maxWidth: '119px',
+              position: 'fixed',
+              margin: '13rem 0rem 0rem 0rem',
+            }} src={ImageInsta} alt="insta" />
+            <img class="vibrate-2 jello-horizontal" style={{
+              maxWidth: '119px',
+              position: 'fixed',
+              margin: '8rem 0rem 0rem 28rem',
+            }} src={ImageYoutube} alt="youtube" />
+            <img class="vibrate-3 jello-horizontal" style={{
+              maxWidth: '119px',
+              position: 'fixed',
+              margin: '47rem 0rem 0rem 6rem',
+            }} src={ImageTwitter} alt="twitter" />
+
+            {colorChange === 'alternateColor.orange'
+              && <img style={{
+                maxWidth: '612px',
+                margin: '10rem 0rem 0rem 0rem',
+              }} src={ImageOrange} alt="img Portifólio" />}
+            {colorChange === 'alternateColor.red'
+              && <img style={{
+                maxWidth: '612px',
+                margin: '10rem 0rem 0rem 0rem',
+              }} src={ImageRed} alt="img Portifólio2" />}
+            {colorChange === 'alternateColor.green'
+              && <img style={{
+                maxWidth: '612px',
+                margin: '10rem 0rem 0rem 0rem',
+              }} src={ImageGreen} alt="img Portifólio2" />}
+            {colorChange === 'alternateColor.blue'
+              && <img style={{
+                maxWidth: '612px',
+                margin: '10rem 0rem 0rem 0rem',
+              }} src={ImageBlue} alt="img Portifólio2" />}
           </Box>
         </Box>
       </Slide>
