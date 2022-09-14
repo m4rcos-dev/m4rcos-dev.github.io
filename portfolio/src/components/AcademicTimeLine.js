@@ -6,6 +6,7 @@ import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
+import SchoolIcon from '@mui/icons-material/School';
 import { connect } from 'react-redux';
 
 class AcademicTimeLine extends Component {
@@ -13,45 +14,73 @@ class AcademicTimeLine extends Component {
     const { colorChange, currentTheme } = this.props;
     const currentTypographyColor = currentTheme === 'dark' ? 'white' : 'black'
     return (
-      <Box
-        sx={{
-          width: '30%',
-          m: '2rem',
-          bgcolor: `primary.${currentTheme}`,
-        }}
-      >
-        <Timeline>
-          <TimelineItem
+      <Box sx={{
+        width: '30%',
+        m: '2rem 0rem 0rem 1rem',
+      }}>
+        <Box sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center'
+        }}>
+          <SchoolIcon sx={{
+            color: colorChange,
+          }}
+          fontSize='large'
+          />
+          <Typography
+            variant='h4'
+            fontFamily='Hack'
             sx={{
-              '&::before': {
-                display: 'none',
-              },
+              width: '30%',
+              m: '0rem 0rem 0rem 1rem',
+              color: colorChange,
             }}
-          >
-            <TimelineSeparator>
-              <TimelineDot sx={{
-                bgcolor: colorChange,
-              }} />
-              <TimelineConnector
-                sx={{
+          >Educação</Typography>
+        </Box>
+        <Box
+          sx={{
+            m: '0.5rem 0rem 0rem 2rem',
+            bgcolor: `primary.${currentTheme}`,
+            borderRadius: '0.7rem',
+            boxShadow: '2'
+          }}
+        >
+          <Timeline>
+            <TimelineItem
+              sx={{
+                '&::before': {
+                  display: 'none',
+                },
+              }}
+            >
+              <TimelineSeparator>
+                <TimelineDot sx={{
                   bgcolor: colorChange,
-                }}
-              />
-            </TimelineSeparator>
-            <TimelineContent>
-              <Typography
-                sx={{
-                  color: colorChange,
-                }}
-              >Teste</Typography>
-              <Typography
-                sx={{
-                  color: `common.${currentTypographyColor}`,
-                }}
-              >Teste2</Typography>
-            </TimelineContent>
-          </TimelineItem>
-        </Timeline>
+                }} />
+                <TimelineConnector
+                  sx={{
+                    bgcolor: colorChange,
+                  }}
+                />
+              </TimelineSeparator>
+              <TimelineContent>
+                <Typography
+                  fontFamily='Hack'
+                  sx={{
+                    color: colorChange,
+                  }}
+                >Teste</Typography>
+                <Typography
+                  fontFamily='Hack'
+                  sx={{
+                    color: `common.${currentTypographyColor}`,
+                  }}
+                >Teste2</Typography>
+              </TimelineContent>
+            </TimelineItem>
+          </Timeline>
+        </Box>
       </Box>
     )
   }
