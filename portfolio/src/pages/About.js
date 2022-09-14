@@ -9,6 +9,7 @@ import { connect } from 'react-redux'
 import { currentUrl } from "../redux/actions/currentUrl";
 import { activeTransition } from "../redux/actions/activeTransition";
 import ExperienceTimeLine from "../components/ExperienceTimeLine";
+import AvatarCardAbout from "../components/AvatarCardAbout";
 
 
 class About extends React.Component {
@@ -36,15 +37,26 @@ class About extends React.Component {
           mountOnEnter
           unmountOnExit>
           <Box
-          sx={{
-            width: '100%',
-            height: '100vh',
-            display: 'flex',
-            justifyContent: 'space-evenly',
-          }}
+            sx={{
+              width: '100%',
+              height: '100vh',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+            }}
           >
-            <AcademicTimeLine />
-            <ExperienceTimeLine />
+            <AvatarCardAbout />
+            <Box
+              sx={{
+                width: '100%',
+                height: '100vh',
+                display: 'flex',
+                justifyContent: 'space-evenly',
+              }}
+            >
+              <AcademicTimeLine />
+              <ExperienceTimeLine />
+            </Box>
           </Box>
         </Slide>
       </Box>

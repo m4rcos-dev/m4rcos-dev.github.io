@@ -36,7 +36,7 @@ class ExperienceTimeLine extends Component {
               m: '0rem 0rem 0rem 1rem',
               color: colorChange,
             }}
-          >Experiência Profissional</Typography>
+          >Experiência</Typography>
         </Box>
         <Box
           sx={{
