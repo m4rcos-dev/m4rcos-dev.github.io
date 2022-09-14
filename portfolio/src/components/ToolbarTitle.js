@@ -19,7 +19,7 @@ class ToolbarTitle extends React.Component {
     // ==============Animação Escrita==================
     const TypographyCustom = styled(Typography, currentTypographyColor)`
 border-right: 2px solid;
-animation: blinkCursor 500ms steps(30) infinite normal, typing 1s steps(15) 1s 1 normal both;
+animation: blinkCursor 500ms steps(30) infinite normal, typing 1s steps(15) 1s normal;
 overflow: hidden;
 @keyframes typing {
   from {
