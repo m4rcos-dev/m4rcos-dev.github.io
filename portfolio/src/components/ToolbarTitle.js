@@ -13,14 +13,13 @@ class ToolbarTitle extends React.Component {
     const currentTypographyColor = currentTheme === 'dark' ? 'white' : 'black'
     const currentTypographySize = currentScreen.width <= values.md2 ? 'h4' : 'h3';
     const currentTypographyCustomSize = currentScreen.width <= values.md2
-      ? theme.typography.h5
-      : theme.typography.h4;
+      ? 'h5'
+      : 'h4';
     const currentFontSize = currentScreen.width <= values.md2 ? 'small' : 'large';
     // ==============Animação Escrita==================
     const TypographyCustom = styled(Typography, currentTypographyColor)`
 border-right: 2px solid;
-font-sizy: ${() => currentTypographyCustomSize}
-animation: blinkCursor 500ms steps(30) infinite normal, typing 1s steps(15) 1s normal both;
+animation: blinkCursor 500ms steps(30) infinite normal, typing 1s steps(15) 1s 1 normal both;
 overflow: hidden;
 @keyframes typing {
   from {
@@ -54,6 +53,7 @@ overflow: hidden;
         <Box>
           <TypographyCustom
             fontFamily='Hack'
+            variant={currentTypographyCustomSize}
             sx={{ color: `common.${currentTypographyColor}` }}
           >
             m4rcos.Dev

@@ -5,9 +5,14 @@ import { Box } from "@mui/material";
 import { Link } from 'react-router-dom';
 import { connect } from "react-redux";
 import { dataNavDrawerLeft } from "../data/dataDrawerLeft";
+import { activeTransition } from "../redux/actions/activeTransition"
 import theme from "../style/Theme";
 
 class NavDrawer extends React.Component {
+  handleTransition = () => {
+    const { dispatch } = this.props;
+    dispatch(activeTransition(true))
+  }
 
   render() {
     const { currentTheme, currentUrl, currentScreen, colorChange } = this.props;
@@ -27,6 +32,7 @@ class NavDrawer extends React.Component {
               style={{ textDecoration: 'none', color: 'inherit' }}>
               <ListItemButton
                 selected={nav.slected}
+                onClick={ this.handleTransition }
                 divider
                 sx={{
                   cursor: 'crosshair',

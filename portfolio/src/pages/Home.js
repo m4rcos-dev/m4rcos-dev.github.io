@@ -14,15 +14,22 @@ import "../style/HomeAnimation.css"
 // =====import Redux=========
 import { connect } from 'react-redux'
 import { currentUrl } from "../redux/actions/currentUrl";
+import { activeTransition } from "../redux/actions/activeTransition";
 
 class Home extends React.Component {
   componentDidMount() {
     const { dispatch } = this.props;
     dispatch(currentUrl({ currentUrl: window.location.pathname }))
   }
+
+  handleTransition = () => {
+    const { dispatch } = this.props;
+    dispatch(activeTransition(false))
+  }
+
   render() {
     // ============BreakPoints e ChangeTheme============
-    const { currentScreen, currentTheme, colorChange } = this.props;
+    const { currentScreen, currentTheme, colorChange, isTransition } = this.props;
     const { breakpoints: { values } } = theme;
     const currentSlideDirection = currentScreen.width <= values.md3 ? 'up' : 'left';
     const titleTypographySize = currentScreen.width <= values.md2 ? 'h4' : 'h2';
@@ -72,7 +79,13 @@ class Home extends React.Component {
 
 
     return (
-      <Slide direction={currentSlideDirection} in mountOnEnter unmountOnExit>
+      <Slide
+        direction={currentSlideDirection}
+        in
+        appear={isTransition}
+        addEndListener={this.handleTransition}
+        mountOnEnter
+        unmountOnExit>
         <Box
           sx={{
             display: 'flex',
@@ -118,7 +131,6 @@ class Home extends React.Component {
                 color: currentTypographyColor,
                 fontFamily: 'Hack',
                 fontWeight: 'bolder',
-                zIndex: 'mobileStepper',
                 '&:hover': {
                   bgcolor: colorChange,
                 }
@@ -204,6 +216,7 @@ const mapStateToProps = (state) => ({
   ...state.themeChange,
   ...state.colorChange,
   ...state.currentScreen,
+  ...state.activeTransition,
 });
 
 // export default Home;
