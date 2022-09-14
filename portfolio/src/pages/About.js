@@ -8,6 +8,7 @@ import AcademicTimeLine from "../components/AcademicTimeLine";
 import { connect } from 'react-redux'
 import { currentUrl } from "../redux/actions/currentUrl";
 import { activeTransition } from "../redux/actions/activeTransition";
+import ExperienceTimeLine from "../components/ExperienceTimeLine";
 
 
 class About extends React.Component {
@@ -37,10 +38,13 @@ class About extends React.Component {
           <Box
           sx={{
             width: '100%',
-            height: '100vh'
+            height: '100vh',
+            display: 'flex',
+            justifyContent: 'space-evenly',
           }}
           >
             <AcademicTimeLine />
+            <ExperienceTimeLine />
           </Box>
         </Slide>
       </Box>

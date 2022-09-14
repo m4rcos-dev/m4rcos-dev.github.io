@@ -6,10 +6,10 @@ import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
-import SchoolIcon from '@mui/icons-material/School';
+import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
 import { connect } from 'react-redux';
 
-class AcademicTimeLine extends Component {
+class ExperienceTimeLine extends Component {
   render() {
     const { colorChange, currentTheme } = this.props;
     const currentTypographyColor = currentTheme === 'dark' ? 'white' : 'black'
@@ -23,10 +23,10 @@ class AcademicTimeLine extends Component {
           justifyContent: 'center',
           alignItems: 'center'
         }}>
-          <SchoolIcon sx={{
+          <AssignmentIndIcon sx={{
             color: colorChange,
           }}
-          fontSize='large'
+            fontSize='large'
           />
           <Typography
             variant='h4'
@@ -36,7 +36,7 @@ class AcademicTimeLine extends Component {
               m: '0rem 0rem 0rem 1rem',
               color: colorChange,
             }}
-          >Educação</Typography>
+          >Experiência Profissional</Typography>
         </Box>
         <Box
           sx={{
@@ -93,7 +93,8 @@ const mapStateToProps = (state) => ({
   ...state.activeTransition,
 });
 
-// export default AcademicTimeLine;
+// export default ExperienceTimeLine;
 
 // ======export Redux=======
-export default connect(mapStateToProps)(AcademicTimeLine);
+export default connect(mapStateToProps)(ExperienceTimeLine);
+
