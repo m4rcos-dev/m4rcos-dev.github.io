@@ -1,12 +1,14 @@
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import React from "react";
 import Slide from '@mui/material/Slide'
 import theme from "../style/Theme";
+import AcademicTimeLine from "../components/AcademicTimeLine";
 
 // =====import Redux=========
 import { connect } from 'react-redux'
 import { currentUrl } from "../redux/actions/currentUrl";
 import { activeTransition } from "../redux/actions/activeTransition";
+
 
 class About extends React.Component {
   componentDidMount() {
@@ -38,9 +40,7 @@ class About extends React.Component {
             height: '100vh'
           }}
           >
-            <Typography>
-              About
-            </Typography>
+            <AcademicTimeLine />
           </Box>
         </Slide>
       </Box>
