@@ -21,6 +21,7 @@ class AvatarCardAbout extends Component {
           alignItems: 'center',
         }}
       >
+
         <Box
           sx={{
             m: '1rem 0rem 0rem 2rem'
@@ -44,19 +45,35 @@ class AvatarCardAbout extends Component {
           </Box>
           <Box
             sx={{
-              m: '0.5rem 0rem 1rem 0rem'
+              display: 'flex',
+              m: '0rem 0rem 0rem 0rem',
             }}
           >
             <Typography
               fontFamily='Hack'
               variant='h7'
+              paragraph={true}
               sx={{
                 color: `common.${currentTypographyColor}`,
               }}
             >
-              {dataAvatarCardAbout().text1}
+              <p>{dataAvatarCardAbout().text1.slice(0, 349)}</p>
+              <p>{dataAvatarCardAbout().text1.slice(349, 483)}</p>
+              <p>{dataAvatarCardAbout().text1.slice(484, 533)}</p>
             </Typography>
+            <Avatar
+              alt="avatar"
+              variant="rounded"
+              src={dataAvatarCardAbout().avatarImage}
+              sx={{
+                width: '190px',
+                height: '190px',
+                m: '0rem 2rem 0rem 2rem',
+                boxShadow: '9',
+              }}
+            />
           </Box>
+
           <Box sx={{
             display: 'flex',
             justifyContent: 'center',
@@ -85,24 +102,15 @@ class AvatarCardAbout extends Component {
                 className='drop-shadow-svg'
                 src={icon.src}
                 style={{
-                  width: '50px',
-                  height: '50px',
+                  width: '40px',
+                  height: '40px',
+                  margin: '0rem 0.2rem 0rem 0.2rem'
                 }}
               />
             ))}
           </Box>
+
         </Box>
-        <Avatar
-          alt="avatar"
-          variant="rounded"
-          src={dataAvatarCardAbout().avatarImage}
-          sx={{
-            width: '190px',
-            height: '190px',
-            m: '0rem 2rem 0rem 2rem',
-            boxShadow: '9',
-          }}
-        />
       </Box>
     )
   }
