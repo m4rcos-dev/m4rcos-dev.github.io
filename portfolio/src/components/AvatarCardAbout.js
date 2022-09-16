@@ -5,8 +5,10 @@ import AvatarImg from '../assets/avatarImg.png'
 import LogoHtml from '../assets/logoHtml.svg'
 import LogoCss from '../assets/logoCss.svg'
 import LogoJavaScript from '../assets/logoJavaScript.svg'
-import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
+// import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
+import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
 import ComputerIcon from '@mui/icons-material/Computer';
+import '../style/IconsTechnologies.css'
 
 class AvatarCardAbout extends Component {
   render() {
@@ -35,13 +37,13 @@ class AvatarCardAbout extends Component {
             justifyContent: 'center',
             alignItems: 'center'
           }}>
-            <EmojiEmotionsIcon sx={{
+            <LibraryBooksIcon sx={{
               color: colorChange,
             }}
-              fontSize='medium'
+              fontSize='large'
             />
             <Typography
-              variant='h5'
+              variant='h4'
               fontFamily='Hack'
               sx={{
                 width: '100%',
@@ -77,10 +79,10 @@ class AvatarCardAbout extends Component {
             <ComputerIcon sx={{
               color: colorChange,
             }}
-              fontSize='medium'
+              fontSize='large'
             />
             <Typography
-              variant='h5'
+              variant='h4'
               fontFamily='Hack'
               sx={{
                 width: '100%',
@@ -95,24 +97,26 @@ class AvatarCardAbout extends Component {
             }}
           >
             <img
-              alt='html
-            logo' src={LogoHtml}
+              alt='html logo'
+              class='drop-shadow-svg'
+              src={LogoHtml}
               style={{
                 width: '50px',
                 height: '50px',
               }}
             />
             <img
-              alt='css
-            logo' src={LogoCss}
+              alt='css logo' src={LogoCss}
+              class='drop-shadow-svg'
               style={{
                 width: '50px',
                 height: '50px',
               }}
             />
             <img
-              alt='javaScript
-            logo' src={LogoJavaScript}
+              alt='javaScript logo'
+              src={LogoJavaScript}
+              class='drop-shadow-svg'
               style={{
                 width: '50px',
                 height: '50px',
