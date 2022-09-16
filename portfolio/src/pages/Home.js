@@ -148,37 +148,37 @@ class Home extends React.Component {
             }}
           >
             {currentScreen.width > values.md2
-              && <img class="vibrate-1 jello-horizontal" style={{
+              && <img className="vibrate-1 jello-horizontal" style={{
                 margin: '13rem 0rem 0rem 0rem',
                 position: 'absolute',
               }} src={ImageInsta} alt="insta" />}
             {currentScreen.width <= values.md2
-              && <img class="vibrate-1 jello-horizontal" style={{
+              && <img className="vibrate-1 jello-horizontal" style={{
                 margin: '13rem 0rem 0rem 0rem',
                 position: 'absolute',
               }} src={ImageInsta} alt="insta" />}
 
             {currentScreen.width > values.md2
-              && <img class="vibrate-2 jello-horizontal" style={{
+              && <img className="vibrate-2 jello-horizontal" style={{
                 maxWidth: '119px',
                 position: 'absolute',
                 margin: '8rem 0rem 0rem 28rem',
               }} src={ImageYoutube} alt="youtube" />}
             {currentScreen.width <= values.md2
-              && <img class="vibrate-2 jello-horizontal" style={{
+              && <img className="vibrate-2 jello-horizontal" style={{
                 maxWidth: '119px',
                 position: 'absolute',
                 margin: '8rem 0rem 0rem 20rem',
               }} src={ImageYoutube} alt="youtube" />}
 
             {currentScreen.width > values.md2
-              && <img class="vibrate-3 jello-horizontal" style={{
+              && <img className="vibrate-3 jello-horizontal" style={{
                 maxWidth: '119px',
                 position: 'absolute',
                 margin: '47rem 0rem 0rem 6rem',
               }} src={ImageTwitter} alt="twitter" />}
             {currentScreen.width <= values.md2
-              && <img class="vibrate-3 jello-horizontal" style={{
+              && <img className="vibrate-3 jello-horizontal" style={{
                 maxWidth: '119px',
                 position: 'absolute',
                 margin: '5rem 0rem 0rem 6rem',

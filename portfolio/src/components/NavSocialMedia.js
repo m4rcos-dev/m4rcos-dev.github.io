@@ -20,11 +20,11 @@ class NavSoicalMedia extends React.Component {
       <ListItemIconCustom>
         {dataNavSocialMedia('large').map((social) =>
           <Grow
+          key={social.id}
           in
           timeout={2000}
           >
             <Link
-              key={social.id}
               href={social.link}
               target="_blank"
               sx={{

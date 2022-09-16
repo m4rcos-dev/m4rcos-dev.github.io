@@ -1,14 +1,8 @@
 import { Avatar, Box, Typography } from '@mui/material';
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
-import AvatarImg from '../assets/avatarImg.png'
-import LogoHtml from '../assets/logoHtml.svg'
-import LogoCss from '../assets/logoCss.svg'
-import LogoJavaScript from '../assets/logoJavaScript.svg'
-// import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
-import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
-import ComputerIcon from '@mui/icons-material/Computer';
 import '../style/IconsTechnologies.css'
+import { dataAvatarCardAbout } from '../data/dataPageAbout';
 
 class AvatarCardAbout extends Component {
   render() {
@@ -37,11 +31,7 @@ class AvatarCardAbout extends Component {
             justifyContent: 'center',
             alignItems: 'center'
           }}>
-            <LibraryBooksIcon sx={{
-              color: colorChange,
-            }}
-              fontSize='large'
-            />
+            {dataAvatarCardAbout(colorChange, 'large').icon1}
             <Typography
               variant='h4'
               fontFamily='Hack'
@@ -50,7 +40,7 @@ class AvatarCardAbout extends Component {
                 m: '0rem 0rem 0rem 1rem',
                 color: colorChange,
               }}
-            >Bio</Typography>
+            >{dataAvatarCardAbout().title1}</Typography>
           </Box>
           <Box
             sx={{
@@ -64,11 +54,7 @@ class AvatarCardAbout extends Component {
                 color: `common.${currentTypographyColor}`,
               }}
             >
-              Facinado por desafio, encontrei na TI a área ideal, estudando e trabalhando na area desde os 15 anos de idade, já foi professor, técnico em informática, empreendedor, técnico em eletronica e reparo em celularers, streamer, criador de conteúdo digital, e atualmente desenvolvedor Front-End cursando Back-end e almejando o desenvolvimento Full Stack.
-              <br />
-              Casado, pai de dois filhos que me motivam todos os dias a dar o meu máximo e claro um sonhador correndo atras de seus objetivos....
-              <br />
-              Precisa de um DEV? Vamos trabalhar juntos....
+              {dataAvatarCardAbout().text1}
             </Typography>
           </Box>
           <Box sx={{
@@ -76,11 +62,7 @@ class AvatarCardAbout extends Component {
             justifyContent: 'center',
             alignItems: 'center'
           }}>
-            <ComputerIcon sx={{
-              color: colorChange,
-            }}
-              fontSize='large'
-            />
+            {dataAvatarCardAbout(colorChange, 'large').icon2}
             <Typography
               variant='h4'
               fontFamily='Hack'
@@ -89,45 +71,31 @@ class AvatarCardAbout extends Component {
                 m: '0rem 0rem 0rem 1rem',
                 color: colorChange,
               }}
-            >Tecnologias</Typography>
+            >{dataAvatarCardAbout().title2}</Typography>
           </Box>
           <Box
             sx={{
               m: '1rem 0rem 1rem 0rem'
             }}
           >
-            <img
-              alt='html logo'
-              class='drop-shadow-svg'
-              src={LogoHtml}
-              style={{
-                width: '50px',
-                height: '50px',
-              }}
-            />
-            <img
-              alt='css logo' src={LogoCss}
-              class='drop-shadow-svg'
-              style={{
-                width: '50px',
-                height: '50px',
-              }}
-            />
-            <img
-              alt='javaScript logo'
-              src={LogoJavaScript}
-              class='drop-shadow-svg'
-              style={{
-                width: '50px',
-                height: '50px',
-              }}
-            />
+            {dataAvatarCardAbout().icosTechnologies.map((icon) => (
+              <img
+                key={icon.alt}
+                alt={icon.alt}
+                className='drop-shadow-svg'
+                src={icon.src}
+                style={{
+                  width: '50px',
+                  height: '50px',
+                }}
+              />
+            ))}
           </Box>
         </Box>
         <Avatar
           alt="avatar"
           variant="rounded"
-          src={AvatarImg}
+          src={dataAvatarCardAbout().avatarImage}
           sx={{
             width: '190px',
             height: '190px',
