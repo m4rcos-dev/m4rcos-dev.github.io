@@ -2,6 +2,7 @@ import { Avatar, Box, Typography } from '@mui/material';
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import '../style/IconsTechnologies.css'
+import '../style/AboutAnimation.css'
 import { dataAvatarCardAbout } from '../data/dataPageAbout';
 
 class AvatarCardAbout extends Component {
@@ -62,6 +63,7 @@ class AvatarCardAbout extends Component {
               <p>{dataAvatarCardAbout().text1.slice(484, 533)}</p>
             </Typography>
             <Avatar
+              className='shadow-pop-br rotate-in-2-cw'
               alt="avatar"
               variant="rounded"
               src={dataAvatarCardAbout().avatarImage}

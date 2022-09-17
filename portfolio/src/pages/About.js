@@ -39,7 +39,7 @@ class About extends React.Component {
           <Box
             sx={{
               width: '100%',
-              height: '100vh',
+              height: '',
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
@@ -49,7 +49,7 @@ class About extends React.Component {
             <Box
               sx={{
                 width: '100%',
-                height: '100vh',
+                height: '',
                 display: 'flex',
                 justifyContent: 'space-evenly',
               }}

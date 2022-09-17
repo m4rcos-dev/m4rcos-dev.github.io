@@ -9,8 +9,9 @@ import LogoRedux from '../assets/logoRedux.svg'
 import LogoMaterialUI from '../assets/logoMaterialUI.svg'
 // import LogoBash from '../assets/logoBash.svg'
 import AvatarImg from '../assets/avatarImg.png'
+import SchoolIcon from '@mui/icons-material/School';
 
-export const dataAvatarCardAbout = (colorIcon, sizeIcon, innerHtml ) => {
+export const dataAvatarCardAbout = (colorIcon, sizeIcon, innerHtml) => {
   return {
     avatarImage: AvatarImg,
     title1: 'Bio',
@@ -68,6 +69,55 @@ export const dataAvatarCardAbout = (colorIcon, sizeIcon, innerHtml ) => {
       {
         alt: 'Material-UI logo',
         src: LogoMaterialUI,
+      },
+    ]
+  }
+}
+
+export const dataAcademicTimeLine = (colorIcon, sizeIcon) => {
+  return {
+    head: [
+      {
+        icon: <SchoolIcon sx={{ color: colorIcon, }} fontSize={sizeIcon} />,
+        title: 'Formação',
+      }
+    ],
+    body: [
+      {
+        title: 'Maio 2022 - atual',
+        subTitle: 'Desenvolvimento Web Full Stack',
+        institution: 'Trybe - Cursando',
+        text:
+          `A Trybe é uma escola para pessoas que querem construir uma carreira de sucesso em tecnologia e que se compromete integralmente com seus estudantes, pois as pessoas só pagam quando conseguirem um bom trabalho.
+            O programa conta com mais 1.500 horas de aulas presencias e online e aborda introdução ao desenvolvimento de software, front-end, back-end, ciência da computação, engenharia de software, metodologias ágeis e habilidades comportamentais.`,
+      },
+      {
+        title: 'Abril 2021 - Dezembro 2021',
+        subTitle: 'Reparo de Placas Notebooks, Desktop e Video, Solda BGA',
+        institution: 'André Cisp / Global Eletonics',
+        text:
+          `Eletrônica aplicada a notebook, desktop e placa de video, leitura e interpretação de esquemas elétricos, analise e conserto de placa mãe e solda BGA`,
+      },
+      {
+        title: 'Fevereiro 2020 - Agosto 2020',
+        subTitle: 'Manutenção e Conserto de Celulares',
+        institution: 'André Cisp',
+        text:
+          `Conserto de Celulares básico ao avançado, Troca de Vidro na cola UV e OCA, Hard Reset e Instalação de Software e Rom, Reparo Avançado em Placas`,
+      },
+      {
+        title: 'Março 2013 - Novembro 2017',
+        subTitle: 'Bacharelado em Tecnologia da Informação / Sistema da informação',
+        institution: 'Centro Universitário do Cerrado - UNICERP',
+        text:
+          `Curso Trancado / Interrompido`,
+      },
+      {
+        title: 'Maio 2011 - Junho 2012',
+        subTitle: 'Instalação e Manutenção de Computadores / Técnico em informática',
+        institution: 'Centro de Educação Profissional Bit Company',
+        text:
+          `Informática Básica e Avançada, Digitação, Excel, Word, Analista de Hadware e Redes, Administrador de Banco de Dados SQL, Design Gráfico, Administrador de Redes Linux, Profissional Cad/Autocad, Programação, Tecnologia e Robótica.`
       },
     ]
   }

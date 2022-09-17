@@ -17,8 +17,9 @@ class ContentDrawer extends React.Component {
         height: 'auto',
       },
       [theme.breakpoints.up('md3')]: {
+        marginLeft: '20%',
         width: '80%',
-        height: '100vh',
+        height: 'auto',
       },
     }));
 

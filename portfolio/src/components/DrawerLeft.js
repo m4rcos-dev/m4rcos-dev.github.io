@@ -23,6 +23,7 @@ class DrawerLeft extends React.Component {
         bgcolor: `primary.${currentTheme}`,
         borderRight: 1,
         borderColor: 'divider',
+        position: 'fixed',
       }}>
         <Box sx={{ mt: '4rem' }}>
           <ToolbarTitle />
