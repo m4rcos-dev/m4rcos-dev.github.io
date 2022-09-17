@@ -59,8 +59,8 @@ class AvatarCardAbout extends Component {
               }}
             >
               <p>{dataAvatarCardAbout().text1.slice(0, 349)}</p>
-              <p>{dataAvatarCardAbout().text1.slice(349, 483)}</p>
-              <p>{dataAvatarCardAbout().text1.slice(484, 533)}</p>
+              <p>{dataAvatarCardAbout().text1.slice(349, 507)}</p>
+              <p>{dataAvatarCardAbout().text1.slice(508, 557)}</p>
             </Typography>
             <Avatar
               className='shadow-pop-br rotate-in-2-cw'
