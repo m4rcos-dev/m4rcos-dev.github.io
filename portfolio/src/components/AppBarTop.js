@@ -27,7 +27,8 @@ class AppBarTop extends React.Component {
           borderBottom: 1,
           borderColor: 'divider',
           display: 'flex',
-          justifyContent: 'space-around'
+          justifyContent: 'space-around',
+          zIndex: 'tooltip',
         }}>
           <NavAppBar />
           <Toolbar />

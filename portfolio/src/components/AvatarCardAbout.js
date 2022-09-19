@@ -1,16 +1,37 @@
-import { Avatar, Box, Tooltip, Typography } from '@mui/material';
+import { Avatar, Box, styled, Tooltip, Typography } from '@mui/material';
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import '../style/IconsTechnologies.css'
 import '../style/AboutAnimation.css'
 import { dataAvatarCardAbout } from '../data/dataPageAbout';
+import theme from "../style/Theme";
 
 class AvatarCardAbout extends Component {
   render() {
-    const { currentTheme, colorChange } = this.props;
+    //=============Breackpoints MediaQuery==================
+    const AvatarCustom = styled(Avatar)(({ theme }) => ({
+      [theme.breakpoints.down('md2')]: {
+        width: '90px',
+        height: '90px',
+      },
+      [theme.breakpoints.down('md3')]: {
+        display: 'none',
+      },
+    }));
+
+    const BoxCustom = styled(Box)(({ theme }) => ({
+      [theme.breakpoints.down('md2')]: {
+        height: 'auto',
+      },
+    }));
+    const { currentTheme, colorChange, currentScreen } = this.props;
+    const { breakpoints: { values } } = theme;
     const currentTypographyColor = currentTheme === 'dark' ? 'white' : 'black'
+    const currentTypographySize = currentScreen.width <= values.md2 ? 'body2' : 'h7';
+    const currentTypographyTitleSize = currentScreen.width <= values.md2 ? 'h5' : 'h4';
+    const currentIconTitleSize = currentScreen.width <= values.md2 ? 'medium' : 'large';
     return (
-      <Box
+      <BoxCustom
         sx={{
           maxWidth: '87%',
           height: '50vh',
@@ -33,9 +54,9 @@ class AvatarCardAbout extends Component {
             justifyContent: 'center',
             alignItems: 'center'
           }}>
-            {dataAvatarCardAbout(colorChange, 'large').icon1}
+            {dataAvatarCardAbout(colorChange, currentIconTitleSize).icon1}
             <Typography
-              variant='h4'
+              variant={currentTypographyTitleSize}
               fontFamily='Hack'
               sx={{
                 width: '100%',
@@ -52,7 +73,7 @@ class AvatarCardAbout extends Component {
           >
             <Typography
               fontFamily='Hack'
-              variant='h7'
+              variant={currentTypographySize}
               paragraph={true}
               sx={{
                 color: `common.${currentTypographyColor}`,
@@ -62,7 +83,7 @@ class AvatarCardAbout extends Component {
               <p>{dataAvatarCardAbout().text1.slice(350, 509)}</p>
               <p>{dataAvatarCardAbout().text1.slice(510, 559)}</p>
             </Typography>
-            <Avatar
+            <AvatarCustom
               className='shadow-pop-br rotate-in-2-cw'
               alt="avatar"
               variant="rounded"
@@ -81,9 +102,9 @@ class AvatarCardAbout extends Component {
             justifyContent: 'center',
             alignItems: 'center'
           }}>
-            {dataAvatarCardAbout(colorChange, 'large').icon2}
+            {dataAvatarCardAbout(colorChange, currentIconTitleSize).icon2}
             <Typography
-              variant='h4'
+              variant={currentTypographyTitleSize}
               fontFamily='Hack'
               sx={{
                 width: '100%',
@@ -115,7 +136,7 @@ class AvatarCardAbout extends Component {
           </Box>
 
         </Box>
-      </Box>
+      </BoxCustom>
     )
   }
 }

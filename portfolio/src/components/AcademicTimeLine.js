@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material';
+import { Box, styled, Typography } from '@mui/material';
 import React, { Component } from 'react'
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';
@@ -8,17 +8,31 @@ import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import { connect } from 'react-redux';
 import { dataAcademicTimeLine } from '../data/dataPageAbout';
+import theme from "../style/Theme";
 
 class AcademicTimeLine extends Component {
   render() {
-    const { colorChange, currentTheme } = this.props;
+    //=============Breackpoints MediaQuery==================
+    const BoxCustom = styled(Box)(({ theme }) => ({
+      [theme.breakpoints.down('md2')]: {
+        width: '87%',
+      },
+      [theme.breakpoints.down('md3')]: {
+
+      },
+    }));
+    const { colorChange, currentTheme, currentScreen } = this.props;
+    const { breakpoints: { values } } = theme;
     const currentTypographyColor = currentTheme === 'dark' ? 'white' : 'black'
+    const currentTypographySize = currentScreen.width <= values.md2 ? 'body2' : 'h7';
+    const currentTypographyTitleSize = currentScreen.width <= values.md2 ? 'h5' : 'h4';
+    const currentIconTitleSize = currentScreen.width <= values.md2 ? 'medium' : 'large';
     return (
-      <Box sx={{
+      <BoxCustom sx={{
         width: '40%',
         m: '2rem 0rem 0rem 1rem',
       }}>
-        {dataAcademicTimeLine(colorChange, 'large').head.map((academic) => (
+        {dataAcademicTimeLine(colorChange, currentIconTitleSize).head.map((academic) => (
           <Box sx={{
             display: 'flex',
             justifyContent: 'center',
@@ -26,7 +40,7 @@ class AcademicTimeLine extends Component {
           }}>
             {academic.icon}
             <Typography
-              variant='h4'
+              variant={currentTypographyTitleSize}
               fontFamily='Hack'
               sx={{
                 width: '100%',
@@ -88,6 +102,7 @@ class AcademicTimeLine extends Component {
                     }}
                   >{academic.institution}</Typography>
                   <Typography
+                    variant={currentTypographySize}
                     fontFamily='Hack'
                     sx={{
                       color: `common.${currentTypographyColor}`,
@@ -98,7 +113,7 @@ class AcademicTimeLine extends Component {
             </Timeline>
           ))}
         </Box>
-      </Box>
+      </BoxCustom>
     )
   }
 }

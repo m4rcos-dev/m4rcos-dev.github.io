@@ -10,6 +10,7 @@ import { currentUrl } from "../redux/actions/currentUrl";
 import { activeTransition } from "../redux/actions/activeTransition";
 import ExperienceTimeLine from "../components/ExperienceTimeLine";
 import AvatarCardAbout from "../components/AvatarCardAbout";
+import styled from "@emotion/styled";
 
 
 class About extends React.Component {
@@ -24,6 +25,16 @@ class About extends React.Component {
   }
 
   render() {
+    //=============Breackpoints MediaQuery==================
+    const BoxCustom = styled(Box)(({ theme }) => ({
+      [theme.breakpoints.down('md2')]: {
+        flexDirection: 'column',
+        alignItems: 'center',
+      },
+      [theme.breakpoints.down('md3')]: {
+
+      },
+    }));
     const { currentScreen, isTransition } = this.props;
     const { breakpoints: { values } } = theme;
     const currentSlideDirection = currentScreen.width <= values.md3 ? 'up' : 'left';
@@ -46,7 +57,7 @@ class About extends React.Component {
             }}
           >
             <AvatarCardAbout />
-            <Box
+            <BoxCustom
               sx={{
                 width: '100%',
                 height: '',
@@ -56,7 +67,7 @@ class About extends React.Component {
             >
               <AcademicTimeLine />
               <ExperienceTimeLine />
-            </Box>
+            </BoxCustom>
           </Box>
         </Slide>
       </Box>
