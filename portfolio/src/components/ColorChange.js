@@ -16,10 +16,10 @@ class ColorChange extends React.Component {
     }
   }
 
-  componentDidMount(){
+  componentDidMount() {
     localStorage.getItem('currentColor') === null
-    ? this.setState({ currentColor: 'alternateColor.orange'})
-    : this.setState({ currentColor: localStorage.getItem('currentColor')})
+      ? this.setState({ currentColor: 'alternateColor.orange' })
+      : this.setState({ currentColor: localStorage.getItem('currentColor') })
   }
 
   handleColor = ({ target: { name } }) => {
@@ -37,47 +37,47 @@ class ColorChange extends React.Component {
     return (
       <Box sx={{ mt: '0.5rem', mr: '1.6rem' }}>
         <Grow
-        in
-        timeout={2000}
+          in
+          timeout={2000}
         >
-        <SpeedDial
-          ariaLabel="SpeedDial playground example"
-          icon={<ColorLensIcon sx={{ color: 'common.white' }} />}
-          direction='left'
-          sx={{
-            '& .MuiSpeedDial-fab': {
-              bgcolor: currentColor,
-              width: '2.25rem',
-              height: '2.25rem',
-            },
-            '& .MuiSpeedDial-fab:hover': {
-              bgcolor: currentColor,
-            },
-          }}
-        >
-          {dataColorChange().map((action) => (
-            <SpeedDialAction
-              key={action.name}
-              icon={action.icon}
-              tooltipTitle={action.name}
-              name={action.color}
+            <SpeedDial
+              ariaLabel="SpeedDial playground example"
+              icon={<ColorLensIcon sx={{ color: 'common.white' }} />}
+              direction='left'
               sx={{
-                color: action.color,
-                bgcolor: action.color,
-                width: '2.25rem',
-              height: '2.25rem',
-                '&:hover': {
-                  bgcolor: action.color,
-                  opacity: 0.5
+                '& .MuiSpeedDial-fab': {
+                  bgcolor: currentColor,
+                  width: '2.25rem',
+                  height: '2.25rem',
                 },
-                '& .MuiSvgIcon-root': {
-                  display: 'none'
+                '& .MuiSpeedDial-fab:hover': {
+                  bgcolor: currentColor,
                 },
               }}
-              onClick={(event) => this.handleColor(event)}
-            />
-          ))}
-        </SpeedDial>
+            >
+              {dataColorChange().map((action) => (
+                <SpeedDialAction
+                  key={action.name}
+                  icon={action.icon}
+                  tooltipTitle={action.name}
+                  name={action.color}
+                  sx={{
+                    color: action.color,
+                    bgcolor: action.color,
+                    width: '2.25rem',
+                    height: '2.25rem',
+                    '&:hover': {
+                      bgcolor: action.color,
+                      opacity: 0.5
+                    },
+                    '& .MuiSvgIcon-root': {
+                      display: 'none'
+                    },
+                  }}
+                  onClick={(event) => this.handleColor(event)}
+                />
+              ))}
+            </SpeedDial>
         </Grow>
       </Box>
     )

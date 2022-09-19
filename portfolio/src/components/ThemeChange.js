@@ -8,7 +8,7 @@ import { Box } from "@mui/system";
 import { connect } from 'react-redux'
 import { themeChange } from "../redux/actions/changeTheme";
 import { currentScreen } from "../redux/actions/currentScreen";
-import { Grow } from "@mui/material";
+import { Grow, Tooltip } from "@mui/material";
 
 class ThemeChange extends React.Component {
   constructor() {
@@ -111,14 +111,16 @@ class ThemeChange extends React.Component {
     return (
       <Box>
         <Grow
-        in
-        timeout={1500}
+          in
+          timeout={1500}
         >
-        <FormControlLabel
-          control={<MaterialUISwitch />}
-          checked={currentChecked}
-          onChange={(event) => this.handleTheme(event)}
-        />
+          <Tooltip title={currentTheme === 'light' ? 'Mudar para Dark Mode' : 'Mudar para Light Mode'}>
+            <FormControlLabel
+              control={<MaterialUISwitch />}
+              checked={currentChecked}
+              onChange={(event) => this.handleTheme(event)}
+            />
+          </Tooltip>
         </Grow>
       </Box>
     )
