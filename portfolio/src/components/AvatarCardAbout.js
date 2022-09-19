@@ -58,9 +58,9 @@ class AvatarCardAbout extends Component {
                 color: `common.${currentTypographyColor}`,
               }}
             >
-              <p>{dataAvatarCardAbout().text1.slice(0, 349)}</p>
-              <p>{dataAvatarCardAbout().text1.slice(349, 507)}</p>
-              <p>{dataAvatarCardAbout().text1.slice(508, 557)}</p>
+              <p>{dataAvatarCardAbout().text1.slice(0, 350)}</p>
+              <p>{dataAvatarCardAbout().text1.slice(350, 509)}</p>
+              <p>{dataAvatarCardAbout().text1.slice(510, 559)}</p>
             </Typography>
             <Avatar
               className='shadow-pop-br rotate-in-2-cw'

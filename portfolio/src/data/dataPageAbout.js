@@ -17,8 +17,8 @@ export const dataAvatarCardAbout = (colorIcon, sizeIcon) => {
     avatarImage: AvatarImg,
     title1: 'Bio',
     icon1: <LibraryBooksIcon sx={{ color: colorIcon }} fontSize={sizeIcon} />,
-    text1: `Facinado por desafio, encontrei na TI a área ideal, estudando e trabalhando na area desde os 15 anos de idade, já foi professor, técnico em informática, empreendedor, técnico em eletronica e reparo em celularers, streamer, criador de conteúdo digital, e atualmente desenvolvedor Front-End cursando Back-end e almejando o desenvolvimento Full Stack.
-    Mineiro, nascido em 93, casado, pai de dois filhos que me motivam todos os dias a dar o meu máximo e claro um sonhador correndo atras de seus objetivos....
+    text1: `Fascinado por desafio, encontrei na (TI) a área ideal, estudando e trabalhando na área desde os 15 anos de idade, já foi professor, técnico em informática, empreendedor, técnico em eletrônica e reparo em celulares, streamer, criador de conteúdo digital, e atualmente desenvolvedor Front-End cursando Back-end e almejando o desenvolvimento Full Stack.
+    Mineiro, nascido em 93, casado, pai de dois filhos que me motivam todos os dias a dar o meu máximo e claro um sonhador correndo atrás de seus objetivos....
     Precisa de um DEV? Vamos trabalhar juntos....`,
     title2: 'Tecnologias',
     icon2: <ComputerIcon sx={{ color: colorIcon }} fontSize={sizeIcon} />,
@@ -116,7 +116,7 @@ export const dataAcademicTimeLine = (colorIcon, sizeIcon) => {
         subTitle: 'Manutenção e Conserto de Celulares',
         institution: 'André Cisp',
         text:
-          `Conserto de Celulares básico ao avançado, Troca de Vidro na cola UV e OCA, Hard Reset e Instalação de Software e Rom, Reparo Avançado em Placas`,
+          `Conserto de Celulares do básico ao avançado, Troca de Vidro na cola UV e OCA, Hard Reset e Instalação de Software e Rom, Reparo Avançado em Placas`,
       },
       {
         title: 'Março 2013 - Novembro 2017',
@@ -150,28 +150,28 @@ export const dataExperienceTimeLine = (colorIcon, sizeIcon) => {
         subTitle: 'Técnico de TI',
         institution: 'F5 Tecnologia',
         text:
-          `Responsável por atender toda demanda empresarial ou particular para conserto técnico em hardware ou software ou prevenção, de forma física ou remota. Manutenção em computadores e notebooks, conserto eletrotônico em placa mães de computadores e notebooks, atendimento ao cliente, pessoalmente ou de forma remota.`,
+          `Responsável por atender toda demanda empresarial ou particular para conserto técnico em hardware, software, ou prevenção, de forma física e remota. Manutenção em computadores e notebooks, conserto eletrônicos em placa mães de computadores e notebooks, atendimento ao cliente.`,
       },
       {
         title: 'Janeiro 2020 - Fevereiro 2021',
         subTitle: 'Streamer',
         institution: 'NimoTv - Plataforma de streamer de Games',
         text:
-          `Integrante do primeiro time de e-sports de GTA-RP "HardTeam", da plataforma, criador de conteudo com mais de dez mil inscritos no canal e uma média de duas mil visualizações mensais`,
+          `Integrante do primeiro time de e-sports de GTA-RP "HardTeam", da plataforma, criador de conteúdo com mais de dez mil inscritos no canal e uma média de duas mil visualizações mensais`,
       },
       {
         title: 'Agosto 2012 - Janeiro 2020',
         subTitle: 'Proprietário',
         institution: 'SkyNet informática e Tecnologia',
         text:
-          `Criada em 2012, especializada em assistência técnica em computadores, notebooks e celulares, manutenção de impressoras e recarga de cartuchos e tonners. Venda de computadores e periféricos.`,
+          `Criada em 2012, especializada em assistência técnica em computadores, notebooks e celulares, manutenção de impressoras e recarga de cartuchos e toner. Venda de computadores e periféricos.`,
       },
       {
         title: 'Fevereiro 2010 - Abril 2012',
         subTitle: 'Professor',
         institution: 'Centro de Educação Profissional Bit Company',
         text:
-          `Professor Técnico do Curo Básico de informática, Pacote Office, Montagem e manutenção de computadores, Redes, AutoCad, Designer gráfico pacote Adobe, WebDesign`,
+          `Professor Técnico dos Curos, Básico de informática, Pacote Office, Montagem e manutenção de computadores, Redes, AutoCad, Designer gráfico pacote Adobe, WebDesign`,
       },
     ]
   }
