@@ -1,4 +1,4 @@
-import { Avatar, Box, Typography } from '@mui/material';
+import { Avatar, Box, Tooltip, Typography } from '@mui/material';
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import '../style/IconsTechnologies.css'
@@ -98,17 +98,19 @@ class AvatarCardAbout extends Component {
             }}
           >
             {dataAvatarCardAbout().icosTechnologies.map((icon) => (
-              <img
-                key={icon.alt}
-                alt={icon.alt}
-                className='drop-shadow-svg'
-                src={icon.src}
-                style={{
-                  width: '40px',
-                  height: '40px',
-                  margin: '0rem 0.2rem 0rem 0.2rem'
-                }}
-              />
+              <Tooltip title={icon.name}>
+                <img
+                  key={icon.alt}
+                  alt={icon.alt}
+                  className='drop-shadow-svg'
+                  src={icon.src}
+                  style={{
+                    width: '40px',
+                    height: '40px',
+                    margin: '0rem 0.2rem 0rem 0.2rem'
+                  }}
+                />
+              </Tooltip>
             ))}
           </Box>
 

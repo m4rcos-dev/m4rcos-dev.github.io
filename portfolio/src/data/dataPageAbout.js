@@ -24,50 +24,62 @@ export const dataAvatarCardAbout = (colorIcon, sizeIcon) => {
     icon2: <ComputerIcon sx={{ color: colorIcon }} fontSize={sizeIcon} />,
     icosTechnologies: [
       {
+        name: 'Unix & Bash',
         alt: 'Bash logo',
         src: 'https://upload.wikimedia.org/wikipedia/commons/4/4b/Bash_Logo_Colored.svg',
       },
       {
+        name: 'Git & GitHub',
         alt: 'GitHub logo',
         src: 'https://upload.wikimedia.org/wikipedia/commons/c/c6/Font_Awesome_5_brands_github-square.svg',
       },
       {
+        name: 'Html 5',
         alt: 'html logo',
         src: 'https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg',
       },
       {
+        name: 'Css 3',
         alt: 'css logo',
         src: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg',
       },
       {
+        name: 'JavaScipt',
         alt: 'javaScript logo',
         src: 'https://upload.wikimedia.org/wikipedia/commons/d/d4/Javascript-shield.svg',
       },
       {
+        name: 'Ecma Script',
         alt: 'ecmaScript logo',
         src: 'http://www.bobbyberberyan.com/wp-content/uploads/2016/12/ES6LOGO.svg',
       },
       {
+        name: 'API',
         alt: 'API logo',
         src: LogoApi,
       },
       {
+        name: 'Jest',
         alt: 'JEST logo',
         src: LogoJest,
       },
       {
+        name: 'React',
         alt: 'React logo',
         src: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg',
       },
       {
+        name: 'React testing library',
         alt: 'React testing library logo',
         src: 'https://testing-library.com/img/octopus-128x128.png',
       },
       {
+        name: 'Redux',
         alt: 'Redux logo',
         src: LogoRedux,
       },
       {
+        name: 'Material-UI',
         alt: 'Material-UI logo',
         src: LogoMaterialUI,
       },
