@@ -13,6 +13,7 @@ export const dataPageHome = () => {
     subTitleInfo: 'Marcos Paulo Pereira',
     textInfo: 'Desenvolvedor Front-end, com muita disposição e vontade de aprender, acrescentar e evoluir. Cursando Back-end e almejando o desenvolvimento Full Stack.',
     buttonInfo: 'Baixar Curriculo',
+    buttonLink: 'https://www.google.com.br',
     avatarInfo: [
       {
         id: uuidv4(),
@@ -46,11 +47,11 @@ export const dataPageHome = () => {
     socialImage: [
       {
         id: uuidv4(),
-        alt: 'Insta',
+        alt: 'Instagram',
         src: ImageInsta,
         margin1: '13rem 0rem 0rem 0rem',
         margin2: '13rem 0rem 0rem 0rem',
-        link: '',
+        link: 'https://www.instagram.com/m4rcos.dev/',
       },
       {
         id: uuidv4(),
@@ -58,7 +59,7 @@ export const dataPageHome = () => {
         src: ImageYoutube,
         margin1: '8rem 0rem 0rem 28rem',
         margin2: '8rem 0rem 0rem 20rem',
-        link: '',
+        link: 'https://www.youtube.com/channel/UCCvsP5S0-X83n4n8h1zCjcA',
       },
       {
         id: uuidv4(),
@@ -66,7 +67,7 @@ export const dataPageHome = () => {
         src: ImageTwitter,
         margin1: '47rem 0rem 0rem 6rem',
         margin2: '5rem 0rem 0rem 6rem',
-        link: '',
+        link: 'https://twitter.com/m4rcos_dev',
       },
     ],
   }

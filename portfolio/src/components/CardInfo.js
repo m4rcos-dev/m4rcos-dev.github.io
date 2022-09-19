@@ -1,4 +1,4 @@
-import { Button, styled, Typography } from '@mui/material';
+import { Button, Link, styled, Typography } from '@mui/material';
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import { dataPageHome } from '../data/dataPageHome';
@@ -69,21 +69,29 @@ class CardInfo extends Component {
         >
           {dataPageHome().textInfo}
         </TypographyCustom>
-        <ButtonCustom
-          variant="contained"
+        <Link
+          href={dataPageHome().buttonLink}
+          target="_blank"
           sx={{
-            width: '30%',
-            bgcolor: colorChange,
-            color: currentTypographyColor,
-            fontFamily: 'Hack',
-            fontWeight: 'bolder',
-            '&:hover': {
+            textDecoration: 'none',
+            color: 'inherit'
+          }}>
+          <ButtonCustom
+            variant="contained"
+            sx={{
+              width: '30%',
               bgcolor: colorChange,
-            }
-          }}
-        >
-          {dataPageHome().buttonInfo}
-        </ButtonCustom>
+              color: currentTypographyColor,
+              fontFamily: 'Hack',
+              fontWeight: 'bolder',
+              '&:hover': {
+                bgcolor: colorChange,
+              }
+            }}
+          >
+            {dataPageHome().buttonInfo}
+          </ButtonCustom>
+        </Link>
       </BoxCustomText>
     )
   }

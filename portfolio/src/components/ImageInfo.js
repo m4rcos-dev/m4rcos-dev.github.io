@@ -1,4 +1,4 @@
-import { styled } from '@mui/material';
+import { Link, styled, Tooltip } from '@mui/material';
 import React, { Component } from 'react'
 import theme from "../style/Theme";
 import "../style/HomeAnimation.css"
@@ -38,20 +38,42 @@ class ImageInfo extends Component {
       >
         {dataPageHome().socialImage.map((imageSocial) => (
           currentScreen.width > values.md2
-          && <img className="vibrate-2 jello-horizontal" style={{
-            maxWidth: '119px',
-            position: 'absolute',
-            margin: imageSocial.margin1,
-          }} src={imageSocial.src} alt={imageSocial.alt} key={imageSocial.id} />
+          && <Link
+            key={imageSocial.id}
+            href={imageSocial.link}
+            target="_blank"
+            sx={{
+              textDecoration: 'none',
+              color: 'inherit'
+            }}>
+            <Tooltip title={imageSocial.alt}>
+              <img className="vibrate-2 jello-horizontal" style={{
+                maxWidth: '119px',
+                position: 'absolute',
+                margin: imageSocial.margin1,
+              }} src={imageSocial.src} alt={imageSocial.alt} />
+            </Tooltip>
+          </Link>
         ))}
 
         {dataPageHome().socialImage.map((imageSocial) => (
           currentScreen.width <= values.md2
-          && <img className="vibrate-2 jello-horizontal" style={{
-            maxWidth: '119px',
-            position: 'absolute',
-            margin: imageSocial.margin2,
-          }} src={imageSocial.src} alt={imageSocial.alt} key={imageSocial.id}/>
+          && <Link
+            key={imageSocial.id}
+            href={imageSocial.link}
+            target="_blank"
+            sx={{
+              textDecoration: 'none',
+              color: 'inherit'
+            }}>
+            <Tooltip title={imageSocial.alt}>
+              <img className="vibrate-2 jello-horizontal" style={{
+                maxWidth: '119px',
+                position: 'absolute',
+                margin: imageSocial.margin2,
+              }} src={imageSocial.src} alt={imageSocial.alt} key={imageSocial.id} />
+            </Tooltip>
+          </Link>
         ))}
 
         {dataPageHome().avatarInfo.map((image) => (
@@ -59,7 +81,7 @@ class ImageInfo extends Component {
           && <ImgCustomAvatar style={{
             maxWidth: image.maxWidth,
             margin: image.margin,
-          }} src={image.src} alt="img Portifólio2" key={image.id}/>
+          }} src={image.src} alt="img Portifólio2" key={image.id} />
         ))}
       </BoxCustomImage>
     )

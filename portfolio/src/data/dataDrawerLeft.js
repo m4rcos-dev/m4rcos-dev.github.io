@@ -35,6 +35,7 @@ export const dataNavSocialMedia = (size) => {
     {
       id: '1c26406d-d4fe-4857-9490-093d12b398a4',
       text: 'LinkedIn',
+      display: 'none',
       icon: <LinkedInIcon fontSize={size} />,
       link: 'https://www.linkedin.com/in/dev-marcospaulo'
     },
@@ -42,6 +43,7 @@ export const dataNavSocialMedia = (size) => {
       id: '916925e6-2e3e-48ae-a914-31161dc1a18b',
       text: 'GitHub',
       icon: <GitHubIcon fontSize={size} />,
+      display: 'none',
       link: 'https://github.com/m4rcos-dev'
     },
   ]
