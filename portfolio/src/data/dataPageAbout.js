@@ -11,6 +11,7 @@ import LogoMaterialUI from '../assets/logoMaterialUI.svg'
 import AvatarImg from '../assets/avatarImg.png'
 import SchoolIcon from '@mui/icons-material/School';
 import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
+import { v4 as uuidv4 } from 'uuid';
 
 export const dataAvatarCardAbout = (colorIcon, sizeIcon) => {
   return {
@@ -91,12 +92,14 @@ export const dataAcademicTimeLine = (colorIcon, sizeIcon) => {
   return {
     head: [
       {
+        id: uuidv4(),
         icon: <SchoolIcon sx={{ color: colorIcon, }} fontSize={sizeIcon} />,
         title: 'Formação Acadêmica',
       }
     ],
     body: [
       {
+        id: uuidv4(),
         title: 'Maio 2022 - atual',
         subTitle: 'Desenvolvimento Web Full Stack',
         institution: 'Trybe - Cursando',
@@ -105,6 +108,7 @@ export const dataAcademicTimeLine = (colorIcon, sizeIcon) => {
             O programa conta com mais 1.500 horas de aulas presencias e online e aborda introdução ao desenvolvimento de software, front-end, back-end, ciência da computação, engenharia de software, metodologias ágeis e habilidades comportamentais.`,
       },
       {
+        id: uuidv4(),
         title: 'Abril 2021 - Dezembro 2021',
         subTitle: 'Reparo de Placas Notebooks, Desktop e Video, Solda BGA',
         institution: 'André Cisp / Global Eletonics',
@@ -112,6 +116,7 @@ export const dataAcademicTimeLine = (colorIcon, sizeIcon) => {
           `Eletrônica aplicada a notebook, desktop e placa de video, leitura e interpretação de esquemas elétricos, analise e conserto de placa mãe e solda BGA`,
       },
       {
+        id: uuidv4(),
         title: 'Fevereiro 2018 - Julho 2019',
         subTitle: 'Manutenção e Conserto de Celulares',
         institution: 'André Cisp',
@@ -119,6 +124,7 @@ export const dataAcademicTimeLine = (colorIcon, sizeIcon) => {
           `Conserto de Celulares do básico ao avançado, Troca de Vidro na cola UV e OCA, Hard Reset e Instalação de Software e Rom, Reparo Avançado em Placas`,
       },
       {
+        id: uuidv4(),
         title: 'Março 2013 - Novembro 2017',
         subTitle: 'Bacharelado em Tecnologia da Informação / Sistema da informação',
         institution: 'Centro Universitário do Cerrado - UNICERP',
@@ -126,6 +132,7 @@ export const dataAcademicTimeLine = (colorIcon, sizeIcon) => {
           `Curso Trancado / Interrompido`,
       },
       {
+        id: uuidv4(),
         title: 'Maio 2011 - Junho 2012',
         subTitle: 'Instalação e Manutenção de Computadores / Técnico em informática',
         institution: 'Centro de Educação Profissional Bit Company',

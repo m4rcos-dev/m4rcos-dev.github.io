@@ -5,6 +5,7 @@ import ImageBlue from "../assets/blue.svg"
 import ImageInsta from "../assets/insta.svg"
 import ImageYoutube from "../assets/youtube.svg"
 import ImageTwitter from "../assets/twitter.svg"
+import Curriculo from "../assets/CurriculoMarcosPaulo.pdf"
 import { v4 as uuidv4 } from 'uuid';
 
 export const dataPageHome = () => {
@@ -13,7 +14,8 @@ export const dataPageHome = () => {
     subTitleInfo: 'Marcos Paulo Pereira',
     textInfo: 'Desenvolvedor Front-end, com muita disposição e vontade de aprender, acrescentar e evoluir. Cursando Back-end e almejando o desenvolvimento Full Stack.',
     buttonInfo: 'Baixar Curriculo',
-    buttonLink: 'https://www.google.com.br',
+    buttonLink: Curriculo,
+    donwload: 'CurriculoMarcosPaulo.pdf',
     avatarInfo: [
       {
         id: uuidv4(),

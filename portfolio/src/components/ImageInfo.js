@@ -62,6 +62,7 @@ class ImageInfo extends Component {
             key={imageSocial.id}
             href={imageSocial.link}
             target="_blank"
+            rel="noopener"
             sx={{
               textDecoration: 'none',
               color: 'inherit'

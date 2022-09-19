@@ -74,7 +74,6 @@ class AvatarCardAbout extends Component {
             <Typography
               fontFamily='Hack'
               variant={currentTypographySize}
-              paragraph={true}
               sx={{
                 color: `common.${currentTypographyColor}`,
               }}
@@ -119,9 +118,8 @@ class AvatarCardAbout extends Component {
             }}
           >
             {dataAvatarCardAbout().icosTechnologies.map((icon) => (
-              <Tooltip title={icon.name}>
+              <Tooltip title={icon.name} key={icon.alt}>
                 <img
-                  key={icon.alt}
                   alt={icon.alt}
                   className='drop-shadow-svg'
                   src={icon.src}

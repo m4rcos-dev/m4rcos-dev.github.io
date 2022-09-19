@@ -42,7 +42,7 @@ class ExperienceTimeLine extends Component {
         m: '2rem 0rem 0rem 1rem',
       }}>
         {dataExperienceTimeLine(colorChange, currentIconTitleSize).head.map((academic) => (
-          <Box sx={{
+          <Box key={`${academic.title}:${academic.id}`} sx={{
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center'
@@ -71,7 +71,7 @@ class ExperienceTimeLine extends Component {
           }}
         >
           {dataExperienceTimeLine().body.map((academic) => (
-            <Timeline>
+            <Timeline key={`${academic.title}:${academic.id}`}>
               <TimelineItem
                 sx={{
                   '&::before': {

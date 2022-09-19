@@ -71,6 +71,7 @@ class CardInfo extends Component {
         </TypographyCustom>
         <Link
           href={dataPageHome().buttonLink}
+          download={dataPageHome().donwload}
           target="_blank"
           sx={{
             textDecoration: 'none',

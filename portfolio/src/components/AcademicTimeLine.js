@@ -33,7 +33,7 @@ class AcademicTimeLine extends Component {
         m: '2rem 0rem 0rem 1rem',
       }}>
         {dataAcademicTimeLine(colorChange, currentIconTitleSize).head.map((academic) => (
-          <Box sx={{
+          <Box key={academic.id} sx={{
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center'
@@ -61,7 +61,7 @@ class AcademicTimeLine extends Component {
           }}
         >
           {dataAcademicTimeLine().body.map((academic) => (
-            <Timeline>
+            <Timeline key={academic.id}>
               <TimelineItem
                 sx={{
                   '&::before': {
