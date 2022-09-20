@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import React from "react";
 import Slide from '@mui/material/Slide'
 import theme from "../style/Theme";
@@ -7,6 +7,7 @@ import theme from "../style/Theme";
 import { connect } from 'react-redux'
 import { currentUrl } from "../redux/actions/currentUrl";
 import { activeTransition } from "../redux/actions/activeTransition";
+import CardProjectsVanila from "../components/CardProjectsVanila";
 
 class Projects extends React.Component {
   componentDidMount() {
@@ -35,12 +36,12 @@ class Projects extends React.Component {
           <Box
             sx={{
               width: '100%',
-              height: '100vh'
+              height: '100vh',
+              display: 'flex',
+              flexDirection: 'column',
             }}
           >
-            <Typography>
-              Projects
-            </Typography>
+            <CardProjectsVanila />
           </Box>
         </Slide>
       </Box>

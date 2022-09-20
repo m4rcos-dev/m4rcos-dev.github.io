@@ -1,4 +1,3 @@
-import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
 import ComputerIcon from '@mui/icons-material/Computer';
 // import LogoHtml from '../assets/logoHtml.svg'
 // import LogoCss from '../assets/logoCss.svg'
@@ -10,14 +9,15 @@ import LogoMaterialUI from '../assets/logoMaterialUI.svg'
 // import LogoBash from '../assets/logoBash.svg'
 import AvatarImg from '../assets/avatarImg.png'
 import SchoolIcon from '@mui/icons-material/School';
-import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
+import BusinessIcon from '@mui/icons-material/Business';
+import BadgeIcon from '@mui/icons-material/Badge';
 import { v4 as uuidv4 } from 'uuid';
 
 export const dataAvatarCardAbout = (colorIcon, sizeIcon) => {
   return {
     avatarImage: AvatarImg,
     title1: 'Bio',
-    icon1: <LibraryBooksIcon sx={{ color: colorIcon }} fontSize={sizeIcon} />,
+    icon1: <BadgeIcon sx={{ color: colorIcon }} fontSize={sizeIcon} />,
     text1: `Fascinado por desafio, encontrei na (TI) a área ideal, estudando e trabalhando na área desde os 15 anos de idade, já foi professor, técnico em informática, empreendedor, técnico em eletrônica e reparo em celulares, streamer, criador de conteúdo digital, e atualmente desenvolvedor Front-End cursando Back-end e almejando o desenvolvimento Full Stack.
     Mineiro, nascido em 93, casado, pai de dois filhos que me motivam todos os dias a dar o meu máximo e claro um sonhador correndo atrás de seus objetivos....
     Precisa de um DEV? Vamos trabalhar juntos....`,
@@ -147,7 +147,7 @@ export const dataExperienceTimeLine = (colorIcon, sizeIcon) => {
   return {
     head: [
       {
-        icon: <AssignmentIndIcon sx={{ color: colorIcon, }} fontSize={sizeIcon} />,
+        icon: <BusinessIcon sx={{ color: colorIcon, }} fontSize={sizeIcon} />,
         title: 'Experiência Profissionais',
       }
     ],

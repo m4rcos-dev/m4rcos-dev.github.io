@@ -62,12 +62,12 @@ class ExperienceTimeLine extends Component {
 
         <BoxCustomBg
           sx={{
-            height: '1238px',
+            height: '1220px',
             m: '0.5rem 0rem 2rem 0rem',
             p: '0rem 0rem 1rem 0rem',
             bgcolor: `primary.${currentTheme}`,
             borderRadius: '0.7rem',
-            boxShadow: '2'
+            boxShadow: '2',
           }}
         >
           {dataExperienceTimeLine().body.map((academic) => (

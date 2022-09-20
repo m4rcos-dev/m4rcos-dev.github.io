@@ -6,19 +6,19 @@ import { CssBaseline, ThemeProvider } from '@mui/material'
 import theme from './style/Theme';
 import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux';
-import store from './redux/store/store'
+import store from './redux/store/store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <BrowserRouter>
-        <Provider store={store}>
-          <App />
-        </Provider>
-      </BrowserRouter>
-    </ThemeProvider>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <BrowserRouter>
+          <Provider store={store}>
+            <App />
+          </Provider>
+        </BrowserRouter>
+      </ThemeProvider>
   </React.StrictMode>
 );
 
