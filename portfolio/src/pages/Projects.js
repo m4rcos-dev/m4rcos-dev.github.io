@@ -7,7 +7,7 @@ import theme from "../style/Theme";
 import { connect } from 'react-redux'
 import { currentUrl } from "../redux/actions/currentUrl";
 import { activeTransition } from "../redux/actions/activeTransition";
-import CardProjectsVanila from "../components/CardProjectsVanila";
+import CardProjects from "../components/CardProjects";
 
 class Projects extends React.Component {
   componentDidMount() {
@@ -41,7 +41,7 @@ class Projects extends React.Component {
               flexDirection: 'column',
             }}
           >
-            <CardProjectsVanila />
+            <CardProjects />
           </Box>
         </Slide>
       </Box>

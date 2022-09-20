@@ -4,8 +4,9 @@ import { connect } from 'react-redux';
 import theme from '../style/Theme';
 import IconsProgress from './IconsProgress';
 import { dataProjectsVanila } from '../data/dataPageProjects';
+import { v4 as uuidv4 } from 'uuid';
 
-class CardProjectsVanila extends Component {
+class CardProjects extends Component {
   render() {
     const { colorChange, currentTheme, currentScreen } = this.props;
     const { breakpoints: { values } } = theme;
@@ -15,10 +16,12 @@ class CardProjectsVanila extends Component {
     const currentIconTitleSize = currentScreen.width <= values.md2 ? 'medium' : 'large';
     return (
       dataProjectsVanila(colorChange, currentIconTitleSize).map((dataVanila) => (
-        <Box sx={{
-          width: '100%',
-          m: '2rem 1rem 0rem 1rem',
-        }}>
+        <Box
+          key={uuidv4()}
+          sx={{
+            width: '100%',
+            m: '2rem 1rem 0rem 1rem',
+          }}>
           <Box sx={{
             display: 'flex',
             justifyContent: 'center',
@@ -44,17 +47,19 @@ class CardProjectsVanila extends Component {
             }}
           >
             {dataVanila.body.map((dataVanilabody) => (
-              <Box sx={{
-                width: '45%',
-                height: 'auto',
-                m: '0.5rem 1rem 0.5rem 0rem',
-                p: '0rem 1rem 1rem 0rem',
-                display: 'flex',
-                flexDirection: 'column',
-                bgcolor: `primary.${currentTheme}`,
-                borderRadius: '0.7rem',
-                boxShadow: '2'
-              }}
+              <Box
+                key={uuidv4()}
+                sx={{
+                  width: '45%',
+                  height: 'auto',
+                  m: '0.5rem 1rem 0.5rem 0rem',
+                  p: '0rem 1rem 1rem 0rem',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  bgcolor: `primary.${currentTheme}`,
+                  borderRadius: '0.7rem',
+                  boxShadow: '2'
+                }}
               >
 
                 <Typography
@@ -75,6 +80,7 @@ class CardProjectsVanila extends Component {
                 >
                   {dataVanilabody.technologiesProgress.map((dataTech) => (
                     <IconsProgress
+                      key={uuidv4()}
                       name={dataTech.name}
                       progress={dataTech.progress}
                       src={dataTech.src}
@@ -165,4 +171,4 @@ const mapStateToProps = (state) => ({
 // export default CardProjectsVanila
 
 // ======export Redux=======
-export default connect(mapStateToProps)(CardProjectsVanila);
+export default connect(mapStateToProps)(CardProjects);
