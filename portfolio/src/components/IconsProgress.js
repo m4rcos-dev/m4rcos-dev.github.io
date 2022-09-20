@@ -1,11 +1,10 @@
 import { Box, CircularProgress, Typography } from '@mui/material'
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
-import { dataAvatarCardAbout } from '../data/dataPageAbout'
 
 class IconsProgress extends Component {
   render() {
-    const { colorChange, currentTheme } = this.props;
+    const { colorChange, currentTheme, name, progress, src } = this.props;
     const currentTypographyColor = currentTheme === 'dark' ? 'white' : 'black'
     return (
       <Box
@@ -50,7 +49,7 @@ class IconsProgress extends Component {
                 color: currentTypographyColor,
               }}
             >
-              75%
+              {`${progress}%`}
             </Typography>
           </Box>
           <Box
@@ -67,7 +66,7 @@ class IconsProgress extends Component {
           >
             <CircularProgress
               variant="determinate"
-              value={70}
+              value={progress}
               size='45px'
               sx={{
                 color: colorChange,
@@ -76,8 +75,8 @@ class IconsProgress extends Component {
           </Box>
         </Box>
         <img
-          alt='icon'
-          src={dataAvatarCardAbout().icosTechnologies[2].src}
+          alt={name}
+          src={src}
           style={{
             width: '35px',
             height: '35px',

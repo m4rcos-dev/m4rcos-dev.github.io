@@ -36,7 +36,7 @@ class Projects extends React.Component {
           <Box
             sx={{
               width: '100%',
-              height: '100vh',
+              height: 'auto',
               display: 'flex',
               flexDirection: 'column',
             }}
