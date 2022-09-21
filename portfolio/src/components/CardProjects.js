@@ -14,6 +14,7 @@ class CardProjects extends Component {
     super()
     this.state = {
       open: false,
+      arrayMedia: [],
       currentImage: 0,
       currentLengthImage: 0,
     }
@@ -30,10 +31,12 @@ class CardProjects extends Component {
       .map((body) => body.filter((image) => image.title === target.alt))
       .filter((arrayObj) => arrayObj.length > 0);
     const cleanFilterr = { ...resultData[0][0] };
-    const { allImagesProject } = cleanFilterr;
-    const lengthAllImages = allImagesProject.length;
-    console.log(lengthAllImages);
-    this.setState({ open: !open, currentLengthImage: lengthAllImages })
+    const { allImagesProject, video } = cleanFilterr;
+    const fullArray = video !== '' ? [...allImagesProject, video]
+      : [...allImagesProject];
+    const lengthAllImages = fullArray.length;
+    console.log(fullArray);
+    this.setState({ open: !open, currentLengthImage: lengthAllImages, arrayMedia: fullArray })
   };
 
   incraseCurrentImage = () => {
@@ -55,7 +58,7 @@ class CardProjects extends Component {
   }
 
   render() {
-    const { open, currentImage, currentLengthImage } = this.state;
+    const { open, currentImage, currentLengthImage, arrayMedia } = this.state;
     const { colorChange, currentTheme, currentScreen } = this.props;
     const { breakpoints: { values } } = theme;
     const currentTypographyColor = currentTheme === 'dark' ? 'white' : 'black'
@@ -164,16 +167,21 @@ class CardProjects extends Component {
                       />
                     }
 
-                    <img
-                      src={dataVanilabody.allImagesProject[currentImage]}
-                      alt={dataVanilabody.title}
-                      style={{
-                        width: '60%',
-                        height: '64vh',
-                        borderRadius: '5px',
-                        margin: '0rem 1rem 0rem 1rem'
-                      }}
-                    />
+                    {currentImage > 0
+                      && currentImage === currentLengthImage - 1 ?
+                      <iframe width="1143" height="644.469" src={arrayMedia[currentLengthImage -1]} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      : <img
+                        src={dataVanilabody.allImagesProject[currentImage]}
+                        alt={dataVanilabody.title}
+                        style={{
+                          width: '60%',
+                          height: '64vh',
+                          borderRadius: '5px',
+                          margin: '0rem 1rem 0rem 1rem'
+                        }}
+                      />
+                    }
+
 
                     {currentImage !== currentLengthImage - 1 &&
                       <ArrowForwardIosIcon
