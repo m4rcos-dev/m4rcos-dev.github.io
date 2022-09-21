@@ -1,4 +1,4 @@
-import { Backdrop, Box, Button, Link, Typography } from '@mui/material'
+import { Backdrop, Box, Button, Link, styled, Typography } from '@mui/material'
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import theme from '../style/Theme';
@@ -66,6 +66,18 @@ class CardProjects extends Component {
     const currentTypographySize = currentScreen.width <= values.md2 ? 'body2' : 'h7';
     const currentTypographyTitleSize = currentScreen.width <= values.md2 ? 'h5' : 'h4';
     const currentIconTitleSize = currentScreen.width <= values.md2 ? 'medium' : 'large';
+    //=============Breackpoints MediaQuery==================
+    const BoxCards = styled('div')(({ theme }) => ({
+      [theme.breakpoints.down('md2')]: {
+        width: '95%',
+      },
+    }));
+
+    const BoxImageText = styled('div')(({ theme }) => ({
+      [theme.breakpoints.down('md3')]: {
+        flexDirection: 'column'
+      },
+    }));
 
     return (
       dataProjects(colorChange, currentIconTitleSize).map((dataVanila) => (
@@ -100,7 +112,7 @@ class CardProjects extends Component {
             }}
           >
             {dataVanila.body.map((dataVanilabody) => (
-              <Box
+              <BoxCards
                 key={uuidv4()}
                 sx={{
                   width: '45%',
@@ -141,7 +153,7 @@ class CardProjects extends Component {
                   ))}
                 </Box>
 
-                <Box
+                <BoxImageText
                   sx={{
                     width: '100%',
                     display: 'flex',
@@ -175,15 +187,14 @@ class CardProjects extends Component {
 
                     {currentImage > 0
                       && currentImage === currentLengthImage - 1 ?
-                      <Box>
                         <iframe width="1143" height="644.469" src={arrayMedia[currentLengthImage - 1]} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-                      </Box>
-                      : <img
+                      :
+                      <img
                         src={dataVanilabody.allImagesProject[currentImage]}
                         alt={dataVanilabody.title}
                         style={{
                           width: '60%',
-                          height: '64vh',
+                          height: 'auto',
                           borderRadius: '5px',
                           margin: '0rem 1rem 0rem 1rem',
                         }}
@@ -221,7 +232,7 @@ class CardProjects extends Component {
                     }}>
                     {dataVanilabody.text}
                   </Typography>
-                </Box>
+                </BoxImageText>
 
                 <Box
                   sx={{
@@ -277,7 +288,7 @@ class CardProjects extends Component {
                     </Button>
                   </Link>
                 </Box>
-              </Box>
+              </BoxCards>
             ))}
           </Box>
 

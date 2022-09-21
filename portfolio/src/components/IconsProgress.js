@@ -11,6 +11,7 @@ class IconsProgress extends Component {
         sx={{
           m: '0.5rem 0rem 0rem 1rem',
           display: 'flex',
+          flexWrap: 'wrap',
           alignItems: 'center',
         }}
       >
