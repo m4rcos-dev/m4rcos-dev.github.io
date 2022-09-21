@@ -14,6 +14,7 @@ class CardProjects extends Component {
     super()
     this.state = {
       open: false,
+      currrentAlt: '',
       arrayMedia: [],
       currentImage: 0,
       currentLengthImage: 0,
@@ -31,12 +32,17 @@ class CardProjects extends Component {
       .map((body) => body.filter((image) => image.title === target.alt))
       .filter((arrayObj) => arrayObj.length > 0);
     const cleanFilterr = { ...resultData[0][0] };
-    const { allImagesProject, video } = cleanFilterr;
+    const { allImagesProject, video, title } = cleanFilterr;
     const fullArray = video !== '' ? [...allImagesProject, video]
       : [...allImagesProject];
     const lengthAllImages = fullArray.length;
     console.log(fullArray);
-    this.setState({ open: !open, currentLengthImage: lengthAllImages, arrayMedia: fullArray })
+    this.setState({
+      open: !open,
+      currentLengthImage: lengthAllImages,
+      arrayMedia: fullArray,
+      currrentAlt: title,
+    })
   };
 
   incraseCurrentImage = () => {
@@ -59,11 +65,11 @@ class CardProjects extends Component {
 
   render() {
     // ============BreakPoints e ChangeTheme============
-    const { open, currentImage, currentLengthImage, arrayMedia } = this.state;
+    const { open, currentImage, currentLengthImage, arrayMedia, currrentAlt } = this.state;
     const { colorChange, currentTheme, currentScreen } = this.props;
     const { breakpoints: { values } } = theme;
     const currentTypographyColor = currentTheme === 'dark' ? 'white' : 'black'
-    const currentTypographySize = currentScreen.width <= values.md2 ? 'body2' : 'h7';
+    // const currentTypographySize = currentScreen.width <= values.md2 ? 'body2' : 'h7';
     const currentTypographyTitleSize = currentScreen.width <= values.md2 ? 'h5' : 'h4';
     const currentIconTitleSize = currentScreen.width <= values.md2 ? 'medium' : 'large';
     //=============Breackpoints MediaQuery==================
@@ -128,7 +134,7 @@ class CardProjects extends Component {
               >
 
                 <Typography
-                  variant={currentTypographySize}
+                  variant='h6'
                   fontFamily='Hack'
                   sx={{
                     width: '100%',
@@ -187,11 +193,11 @@ class CardProjects extends Component {
 
                     {currentImage > 0
                       && currentImage === currentLengthImage - 1 ?
-                        <iframe width="1143" height="644.469" src={arrayMedia[currentLengthImage - 1]} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                      <iframe width="1143" height="644.469" src={arrayMedia[currentLengthImage - 1]} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
                       :
                       <img
-                        src={dataVanilabody.allImagesProject[currentImage]}
-                        alt={dataVanilabody.title}
+                        src={arrayMedia[currentImage]}
+                        alt={currrentAlt}
                         style={{
                           width: '60%',
                           height: 'auto',

@@ -80,6 +80,7 @@ class IconsProgress extends Component {
         </Box>
         <Tooltip title={name}>
           <img
+            className='drop-shadow-svg'
             alt={name}
             src={src}
             style={{
