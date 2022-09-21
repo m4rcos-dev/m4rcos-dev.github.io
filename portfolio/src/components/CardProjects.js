@@ -58,6 +58,7 @@ class CardProjects extends Component {
   }
 
   render() {
+    // ============BreakPoints e ChangeTheme============
     const { open, currentImage, currentLengthImage, arrayMedia } = this.state;
     const { colorChange, currentTheme, currentScreen } = this.props;
     const { breakpoints: { values } } = theme;
@@ -65,6 +66,7 @@ class CardProjects extends Component {
     const currentTypographySize = currentScreen.width <= values.md2 ? 'body2' : 'h7';
     const currentTypographyTitleSize = currentScreen.width <= values.md2 ? 'h5' : 'h4';
     const currentIconTitleSize = currentScreen.width <= values.md2 ? 'medium' : 'large';
+
     return (
       dataProjects(colorChange, currentIconTitleSize).map((dataVanila) => (
         <Box
@@ -154,6 +156,7 @@ class CardProjects extends Component {
                       width: '40%',
                       height: 'auto',
                       borderRadius: '5px',
+                      cursor: 'pointer',
                     }}
                   />
                   <Backdrop
@@ -162,6 +165,9 @@ class CardProjects extends Component {
                   >
                     {currentImage > 0 &&
                       <ArrowBackIosIcon
+                        sx={{
+                          cursor: 'pointer',
+                        }}
                         onClick={this.decraseCurrentImage}
                         fontSize='large'
                       />
@@ -169,7 +175,9 @@ class CardProjects extends Component {
 
                     {currentImage > 0
                       && currentImage === currentLengthImage - 1 ?
-                      <iframe width="1143" height="644.469" src={arrayMedia[currentLengthImage -1]} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      <Box>
+                        <iframe width="1143" height="644.469" src={arrayMedia[currentLengthImage - 1]} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                      </Box>
                       : <img
                         src={dataVanilabody.allImagesProject[currentImage]}
                         alt={dataVanilabody.title}
@@ -177,7 +185,7 @@ class CardProjects extends Component {
                           width: '60%',
                           height: '64vh',
                           borderRadius: '5px',
-                          margin: '0rem 1rem 0rem 1rem'
+                          margin: '0rem 1rem 0rem 1rem',
                         }}
                       />
                     }
@@ -185,6 +193,9 @@ class CardProjects extends Component {
 
                     {currentImage !== currentLengthImage - 1 &&
                       <ArrowForwardIosIcon
+                        sx={{
+                          cursor: 'pointer',
+                        }}
                         onClick={this.incraseCurrentImage}
                         fontSize='large'
                       />
@@ -192,7 +203,8 @@ class CardProjects extends Component {
 
                     <CloseIcon
                       sx={{
-                        m: '0rem 0rem 45rem 0rem'
+                        m: '0rem 0rem 45rem 0rem',
+                        cursor: 'pointer',
                       }}
                       fontSize='large'
                       onClick={this.handleClose}
