@@ -3,9 +3,9 @@ import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 import ImageProjeto1 from '../assets/Projeto1.png'
 import { dataAvatarCardAbout } from './dataPageAbout';
 
-export const dataProjectsVanila = (iconColor, iconSize) => {
+export const dataProjects = (iconColor, iconSize) => {
   return [
-    // PART 1
+    // Front END
     {
       head: {
         title: 'Front End',
@@ -32,7 +32,8 @@ export const dataProjectsVanila = (iconColor, iconSize) => {
               src: dataAvatarCardAbout().icosTechnologies[4].src,
             },
           ],
-          imageProject: ImageProjeto1,
+          mainImageProject: ImageProjeto1,
+          allImagesProject: [ImageProjeto1, 'https://youtu.be/lJIrF4YjHfQ', 'teste2'],
           text: `Projeto 1 - TybeWallet TybeWallet TybeWallet kkkkkTybeWallet TybeWallet TybeWallet TybeWallet TybeWallet TybeWallet TybeWallet TybeWallet TybeWallet TybeWallet TybeWallet TybeWallet TybeWallet TybeWallet TybeWallet TybeWallet`,
           linkGitHub: 'https://www.google.com.br',
           linkApp: 'https://www.google.com.br',
@@ -57,7 +58,8 @@ export const dataProjectsVanila = (iconColor, iconSize) => {
               src: dataAvatarCardAbout().icosTechnologies[4].src,
             },
           ],
-          imageProject: ImageProjeto1,
+          mainImageProject: ImageProjeto1,
+          allImagesProject: [ImageProjeto1],
           text: `Projeto 2 - TybeWallet TybeWallet TybeWallet kkkkkTybeWallet TybeWallet TybeWallet TybeWallet TybeWallet TybeWallet TybeWallet TybeWallet TybeWallet TybeWallet TybeWallet TybeWallet TybeWallet TybeWallet TybeWallet TybeWallet`,
           linkGitHub: 'https://www.google.com.br',
           linkApp: 'https://www.google.com.br',
@@ -82,14 +84,15 @@ export const dataProjectsVanila = (iconColor, iconSize) => {
               src: dataAvatarCardAbout().icosTechnologies[4].src,
             },
           ],
-          imageProject: ImageProjeto1,
+          mainImageProject: ImageProjeto1,
+          allImagesProject: [ImageProjeto1],
           text: `Projeto 2 - TybeWallet TybeWallet TybeWallet kkkkkTybeWallet TybeWallet TybeWallet TybeWallet TybeWallet TybeWallet TybeWallet TybeWallet TybeWallet TybeWallet TybeWallet TybeWallet TybeWallet TybeWallet TybeWallet TybeWallet`,
           linkGitHub: 'https://www.google.com.br',
           linkApp: 'https://www.google.com.br',
         },
       ]
     },
-    // PART 2
+    // Vanila
     {
       head: {
         title: 'HTML, CSS, JAVASCRIPT',
@@ -105,7 +108,8 @@ export const dataProjectsVanila = (iconColor, iconSize) => {
               src: dataAvatarCardAbout().icosTechnologies[2].src,
             },
           ],
-          imageProject: ImageProjeto1,
+          mainImageProject: ImageProjeto1,
+          allImagesProject: [ImageProjeto1],
           text: `Projeto 1 - TybeWallet TybeWallet TybeWallet kkkkkTybeWallet TybeWallet TybeWallet TybeWallet TybeWallet TybeWallet TybeWallet TybeWallet TybeWallet TybeWallet TybeWallet TybeWallet TybeWallet TybeWallet TybeWallet TybeWallet`,
           linkGitHub: 'https://www.google.com.br',
           linkApp: 'https://www.google.com.br',

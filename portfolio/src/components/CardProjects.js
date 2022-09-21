@@ -1,13 +1,61 @@
-import { Box, Button, Typography } from '@mui/material'
+import { Backdrop, Box, Button, Typography } from '@mui/material'
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import theme from '../style/Theme';
 import IconsProgress from './IconsProgress';
-import { dataProjectsVanila } from '../data/dataPageProjects';
+import { dataProjects } from '../data/dataPageProjects';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import CloseIcon from '@mui/icons-material/Close';
 import { v4 as uuidv4 } from 'uuid';
 
 class CardProjects extends Component {
+  constructor() {
+    super()
+    this.state = {
+      open: false,
+      currentImage: 0,
+      currentLengthImage: 0,
+    }
+  }
+
+  handleClose = () => {
+    this.setState({ open: false, currentImage: 0 })
+  };
+
+  handleToggle = ({ target }) => {
+    const { open } = this.state;
+    const resultData = dataProjects()
+      .map((item) => item.body)
+      .map((body) => body.filter((image) => image.title === target.alt))
+      .filter((arrayObj) => arrayObj.length > 0);
+    const cleanFilterr = { ...resultData[0][0] };
+    const { allImagesProject } = cleanFilterr;
+    const lengthAllImages = allImagesProject.length;
+    console.log(lengthAllImages);
+    this.setState({ open: !open, currentLengthImage: lengthAllImages })
+  };
+
+  incraseCurrentImage = () => {
+    const { currentImage, currentLengthImage } = this.state;
+    if (currentImage < currentLengthImage - 1) {
+      this.setState((prevState) => ({
+        currentImage: prevState.currentImage + 1
+      }))
+    }
+  }
+
+  decraseCurrentImage = () => {
+    const { currentImage } = this.state;
+    if (currentImage !== 0) {
+      this.setState((prevState) => ({
+        currentImage: prevState.currentImage - 1
+      }))
+    }
+  }
+
   render() {
+    const { open, currentImage, currentLengthImage } = this.state;
     const { colorChange, currentTheme, currentScreen } = this.props;
     const { breakpoints: { values } } = theme;
     const currentTypographyColor = currentTheme === 'dark' ? 'white' : 'black'
@@ -15,7 +63,7 @@ class CardProjects extends Component {
     const currentTypographyTitleSize = currentScreen.width <= values.md2 ? 'h5' : 'h4';
     const currentIconTitleSize = currentScreen.width <= values.md2 ? 'medium' : 'large';
     return (
-      dataProjectsVanila(colorChange, currentIconTitleSize).map((dataVanila) => (
+      dataProjects(colorChange, currentIconTitleSize).map((dataVanila) => (
         <Box
           key={uuidv4()}
           sx={{
@@ -95,7 +143,8 @@ class CardProjects extends Component {
                   }}
                 >
                   <img
-                    src={dataVanilabody.imageProject}
+                    onClick={(event) => this.handleToggle(event)}
+                    src={dataVanilabody.mainImageProject}
                     alt={dataVanilabody.title}
                     style={{
                       margin: '0.5rem 0rem 0rem 1rem',
@@ -104,6 +153,44 @@ class CardProjects extends Component {
                       borderRadius: '5px',
                     }}
                   />
+                  <Backdrop
+                    sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
+                    open={open}
+                  >
+                    {currentImage > 0 &&
+                      <ArrowBackIosIcon
+                        onClick={this.decraseCurrentImage}
+                        fontSize='large'
+                      />
+                    }
+
+                    <img
+                      src={dataVanilabody.allImagesProject[currentImage]}
+                      alt={dataVanilabody.title}
+                      style={{
+                        width: '60%',
+                        height: '64vh',
+                        borderRadius: '5px',
+                        margin: '0rem 1rem 0rem 1rem'
+                      }}
+                    />
+
+                    {currentImage !== currentLengthImage - 1 &&
+                      <ArrowForwardIosIcon
+                        onClick={this.incraseCurrentImage}
+                        fontSize='large'
+                      />
+                    }
+
+                    <CloseIcon
+                      sx={{
+                        m: '0rem 0rem 45rem 0rem'
+                      }}
+                      fontSize='large'
+                      onClick={this.handleClose}
+                    />
+
+                  </Backdrop>
                   <Typography
                     variant='body2'
                     fontFamily='Hack'
