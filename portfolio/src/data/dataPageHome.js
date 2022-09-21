@@ -61,7 +61,7 @@ export const dataPageHome = () => {
         src: ImageYoutube,
         margin1: '8rem 0rem 0rem 28rem',
         margin2: '8rem 0rem 0rem 20rem',
-        link: 'https://www.youtube.com/channel/UCCvsP5S0-X83n4n8h1zCjcA',
+        link: 'https://www.youtube.com/channel/UCAbpHW3KJu0S_bFF5fMqvNw',
       },
       {
         id: uuidv4(),
