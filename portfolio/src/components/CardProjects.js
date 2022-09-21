@@ -1,4 +1,4 @@
-import { Backdrop, Box, Button, Typography } from '@mui/material'
+import { Backdrop, Box, Button, Link, Typography } from '@mui/material'
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import theme from '../style/Theme';
@@ -230,32 +230,52 @@ class CardProjects extends Component {
                     display: 'flex',
                   }}
                 >
-                  <Button
-                    variant="contained"
+                  <Link
+                    href={dataVanilabody.linkGitHub}
+                    target="_blank"
                     sx={{
-                      width: '30%',
+                      widht: '100%',
                       m: '0rem 1rem 0rem 0rem',
-                      bgcolor: colorChange,
-                      color: currentTypographyColor,
-                      fontFamily: 'Hack',
-                      fontWeight: 'bolder',
-                      '&:hover': {
+                      textDecoration: 'none',
+                      color: 'inherit'
+                    }}>
+                    <Button
+                      variant="contained"
+                      sx={{
+                        width: '100%',
+                        m: '0rem 3rem 0rem 0rem',
                         bgcolor: colorChange,
-                      }
-                    }}>GitHub</Button>
-                  <Button
-                    variant="contained"
+                        color: currentTypographyColor,
+                        fontFamily: 'Hack',
+                        fontWeight: 'bolder',
+                        '&:hover': {
+                          bgcolor: colorChange,
+                        }
+                      }}>GitHub</Button>
+                  </Link>
+                  <Link
+                    href={dataVanilabody.linkApp}
+                    target="_blank"
                     sx={{
-                      width: '30%',
-                      bgcolor: colorChange,
-                      color: currentTypographyColor,
-                      fontFamily: 'Hack',
-                      fontWeight: 'bolder',
-                      '&:hover': {
+                      widht: '100%',
+                      textDecoration: 'none',
+                      color: 'inherit'
+                    }}>
+                    <Button
+                      variant="contained"
+                      sx={{
+                        width: '100%',
+                        m: '0rem 2rem 0rem 0rem',
                         bgcolor: colorChange,
-                      }
-                    }}>Aplicação
-                  </Button>
+                        color: currentTypographyColor,
+                        fontFamily: 'Hack',
+                        fontWeight: 'bolder',
+                        '&:hover': {
+                          bgcolor: colorChange,
+                        }
+                      }}>Aplicação
+                    </Button>
+                  </Link>
                 </Box>
               </Box>
             ))}
