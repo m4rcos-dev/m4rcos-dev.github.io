@@ -1,4 +1,4 @@
-import { Box, CircularProgress, Typography } from '@mui/material'
+import { Box, CircularProgress, Tooltip, Typography } from '@mui/material'
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 
@@ -22,6 +22,7 @@ class IconsProgress extends Component {
           height: '45px',
           m: '0rem 0.6rem 0rem 0rem',
         }}>
+
           <CircularProgress
             variant="determinate"
             value={100}
@@ -64,24 +65,28 @@ class IconsProgress extends Component {
               justifyContent: 'center',
             }}
           >
-            <CircularProgress
-              variant="determinate"
-              value={progress}
-              size='45px'
-              sx={{
-                color: colorChange,
-              }}
-            />
+            <Tooltip title={name}>
+              <CircularProgress
+                variant="determinate"
+                value={progress}
+                size='45px'
+                sx={{
+                  color: colorChange,
+                }}
+              />
+            </Tooltip>
           </Box>
         </Box>
-        <img
-          alt={name}
-          src={src}
-          style={{
-            width: '35px',
-            height: '35px',
-          }} />
-      </Box>
+        <Tooltip title={name}>
+          <img
+            alt={name}
+            src={src}
+            style={{
+              width: '35px',
+              height: '35px',
+            }} />
+        </Tooltip>
+      </Box >
     )
   }
 }
