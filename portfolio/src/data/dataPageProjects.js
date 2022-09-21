@@ -45,7 +45,7 @@ export const dataProjects = (iconColor, iconSize) => {
           ],
           text: `Simula uma loja online, utilizando API do Mercado Livre. Com busca de produtos e um carrinho que armazena os produtos que são adicionados, somando o total, possibilitando excluir ou adicionar produtos. Projeto feito sem nenhum Framework, apenas com html, javascript e css puros.`,
           linkGitHub: 'https://github.com/m4rcos-dev/project-shopping-cart-trybe.git',
-          linkApp: 'https://m4rcos-dev.github.io/trybe-projetos/shopping-cart/',
+          linkApp: 'https://trybe-shopping-cart.netlify.app/',
         },
         // PROJETO Trybe Wallet
         {
@@ -64,7 +64,7 @@ export const dataProjects = (iconColor, iconSize) => {
             {
               name: 'Material-UI',
               progress: 37,
-              src: dataAvatarCardAbout().icosTechnologies[11].src,
+              src: dataAvatarCardAbout().icosTechnologies[10].src,
             },
           ],
           mainImageProject: 'https://imgcloud.com.br/share/EoZJThkfH2iHFsjK',
@@ -141,7 +141,7 @@ export const dataProjects = (iconColor, iconSize) => {
           ],
           text: `O projeto renderiza uma tabela de pixels onde é possível redefinir o tamanho e quantidade de pixels, escolher uma cor para pintar e criar sua própria arte pixelada. Projeto feito sem nenhum framework, utiliza htlm, javascript, css e manipulação do DOM puros.`,
           linkGitHub: 'https://github.com/m4rcos-dev/project-pixel-art.git',
-          linkApp: 'https://m4rcos-dev.github.io/trybe-projetos/pixels-art/',
+          linkApp: 'https://trybe-pixel-art.netlify.app/',
         },
       ]
     },

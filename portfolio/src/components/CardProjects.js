@@ -36,7 +36,6 @@ class CardProjects extends Component {
     const fullArray = video !== '' ? [...allImagesProject, video]
       : [...allImagesProject];
     const lengthAllImages = fullArray.length;
-    console.log(fullArray);
     this.setState({
       open: !open,
       currentLengthImage: lengthAllImages,

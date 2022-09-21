@@ -50,11 +50,6 @@ export const dataAvatarCardAbout = (colorIcon, sizeIcon) => {
         src: 'https://upload.wikimedia.org/wikipedia/commons/d/d4/Javascript-shield.svg',
       },
       {
-        name: 'Ecma Script',
-        alt: 'ecmaScript logo',
-        src: 'http://www.bobbyberberyan.com/wp-content/uploads/2016/12/ES6LOGO.svg',
-      },
-      {
         name: 'API',
         alt: 'API logo',
         src: LogoApi,
