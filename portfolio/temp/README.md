@@ -1,0 +1,1 @@
+# Pasta temporária contendo ideias.
