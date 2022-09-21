@@ -13,7 +13,7 @@ root.render(
   <React.StrictMode>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <BrowserRouter>
+        <BrowserRouter basename="/">
           <Provider store={store}>
             <App />
           </Provider>
