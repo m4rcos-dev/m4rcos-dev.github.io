@@ -28,7 +28,7 @@ export const dataProjects = (iconColor, iconSize) => {
             {
               name: 'API',
               progress: 15,
-              src: dataAvatarCardAbout().icosTechnologies[6].src,
+              src: dataAvatarCardAbout().icosTechnologies[5].src,
             },
             {
               name: 'JavaScript',
@@ -54,12 +54,12 @@ export const dataProjects = (iconColor, iconSize) => {
             {
               name: 'React',
               progress: 63,
-              src: dataAvatarCardAbout().icosTechnologies[8].src,
+              src: dataAvatarCardAbout().icosTechnologies[7].src,
             },
             {
               name: 'API',
               progress: 10,
-              src: dataAvatarCardAbout().icosTechnologies[6].src,
+              src: dataAvatarCardAbout().icosTechnologies[5].src,
             },
             {
               name: 'Material-UI',
@@ -84,7 +84,7 @@ export const dataProjects = (iconColor, iconSize) => {
             {
               name: 'React',
               progress: 90,
-              src: dataAvatarCardAbout().icosTechnologies[8].src,
+              src: dataAvatarCardAbout().icosTechnologies[7].src,
             },
             {
               name: 'CSS',
