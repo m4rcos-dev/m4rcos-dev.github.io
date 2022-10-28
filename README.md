@@ -1,3 +1,5 @@
+#### EN - English [(Versão em Português Brasil aqui)](https://github.com/m4rcos-dev/m4rcos-dev.github.io/blob/main/README_pt-br.md)
+
 <h1 align='center'> 🎉 Welcome to my personal portfolio repository </h1>
 
 ![demo portfólio](demo-portf%C3%B3lio.gif)
