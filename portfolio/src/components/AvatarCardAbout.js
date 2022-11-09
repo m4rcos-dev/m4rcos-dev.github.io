@@ -96,43 +96,6 @@ class AvatarCardAbout extends Component {
             />
           </Box>
 
-          {/* <Box sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center'
-          }}>
-            {dataAvatarCardAbout(colorChange, currentIconTitleSize).icon2}
-            <Typography
-              variant={currentTypographyTitleSize}
-              fontFamily='Hack'
-              sx={{
-                width: '100%',
-                m: '0rem 0rem 0rem 1rem',
-                color: colorChange,
-              }}
-            >{dataAvatarCardAbout().title2}</Typography>
-          </Box>
-          <Box
-            sx={{
-              m: '1rem 0rem 1rem 0rem'
-            }}
-          >
-            {dataAvatarCardAbout().icosTechnologies.map((icon) => (
-              <Tooltip title={icon.name} key={icon.alt}>
-                <img
-                  alt={icon.alt}
-                  className='drop-shadow-svg'
-                  src={icon.src}
-                  style={{
-                    width: '40px',
-                    height: '40px',
-                    margin: '0rem 0.2rem 0rem 0.2rem'
-                  }}
-                />
-              </Tooltip>
-            ))}
-          </Box> */}
-
         </Box>
       </BoxCustom>
     )
