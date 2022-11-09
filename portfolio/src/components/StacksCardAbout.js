@@ -12,9 +12,19 @@ export class StacksCardAbout extends Component {
     const currentTypographyTitleSize = currentScreen.width <= values.md2 ? 'h5' : 'h4';
     const currentIconTitleSize = currentScreen.width <= values.md2 ? 'medium' : 'large';
     return (
-      <Box>
+      <Box
+      sx={{
+        width: '87%',
+        m: '2rem 0rem 0rem 0rem',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+      }}
+      >
         {dataStackCardAbout(colorChange, currentIconTitleSize).head.map((head) => (
           <Box key={head.id} sx={{
+            m: '0rem 0rem 0rem 1rem',
+            width: '100%',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center'
@@ -34,13 +44,15 @@ export class StacksCardAbout extends Component {
 
         <Box
         sx={{
+          width: '100%',
           display: 'flex',
         }}
         >
           {dataStackCardAbout().languagesAndTools.map((tools) => (
             <Box
               sx={{
-                m: '0.5rem 0rem 0rem 0rem',
+                width: '33%',
+                m: '2rem 2rem 0rem 0rem',
                 p: '0rem 0rem 1rem 0rem',
                 bgcolor: `primary.${currentTheme}`,
                 borderRadius: '0.7rem',
@@ -56,12 +68,14 @@ export class StacksCardAbout extends Component {
                   variant={currentTypographyTitleSize}
                   fontFamily='Hack'
                   sx={{
+                    textAlign: 'center',
                     width: '100%',
                     m: '0rem 1rem 0rem 1rem',
                     color: colorChange,
                   }}
                 >{tools.title}</Typography>
               </Box>
+
               {tools.icons.map((icon) => (
                 <Box
                   sx={{
@@ -88,7 +102,8 @@ export class StacksCardAbout extends Component {
           {dataStackCardAbout().frontEnd.map((tools) => (
             <Box
               sx={{
-                m: '0.5rem 0rem 0rem 0rem',
+                width: '33%',
+                m: '2rem 2rem 0rem 0rem',
                 p: '0rem 0rem 1rem 0rem',
                 bgcolor: `primary.${currentTheme}`,
                 borderRadius: '0.7rem',
@@ -104,6 +119,7 @@ export class StacksCardAbout extends Component {
                   variant={currentTypographyTitleSize}
                   fontFamily='Hack'
                   sx={{
+                    textAlign: 'center',
                     width: '100%',
                     m: '0rem 1rem 0rem 1rem',
                     color: colorChange,
@@ -136,7 +152,8 @@ export class StacksCardAbout extends Component {
           {dataStackCardAbout().backEnd.map((tools) => (
             <Box
               sx={{
-                m: '0.5rem 0rem 0rem 0rem',
+                width: '33%',
+                m: '2rem 0rem 0rem 0rem',
                 p: '0rem 0rem 1rem 0rem',
                 bgcolor: `primary.${currentTheme}`,
                 borderRadius: '0.7rem',
@@ -152,6 +169,7 @@ export class StacksCardAbout extends Component {
                   variant={currentTypographyTitleSize}
                   fontFamily='Hack'
                   sx={{
+                    textAlign: 'center',
                     width: '100%',
                     m: '0rem 1rem 0rem 1rem',
                     color: colorChange,

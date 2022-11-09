@@ -1,4 +1,4 @@
-import { Avatar, Box, styled, Tooltip, Typography } from '@mui/material';
+import { Avatar, Box, styled, Typography } from '@mui/material';
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import '../style/IconsTechnologies.css'
@@ -34,7 +34,7 @@ class AvatarCardAbout extends Component {
       <BoxCustom
         sx={{
           maxWidth: '87%',
-          height: '50vh',
+          height: '35vh',
           m: '2rem 0rem 0rem 0rem',
           bgcolor: `primary.${currentTheme}`,
           borderRadius: '0.7rem',
@@ -96,7 +96,7 @@ class AvatarCardAbout extends Component {
             />
           </Box>
 
-          <Box sx={{
+          {/* <Box sx={{
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center'
@@ -131,7 +131,7 @@ class AvatarCardAbout extends Component {
                 />
               </Tooltip>
             ))}
-          </Box>
+          </Box> */}
 
         </Box>
       </BoxCustom>
