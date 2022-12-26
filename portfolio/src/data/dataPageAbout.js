@@ -156,19 +156,49 @@ export const dataStackCardAbout = (colorIcon, sizeIcon) => {
         title: 'Front-End',
         icons: [
           {
-            name: 'Unix & Bash',
-            alt: 'Bash logo',
-            src: 'https://upload.wikimedia.org/wikipedia/commons/4/4b/Bash_Logo_Colored.svg',
-          },
-          {
-            name: 'Git & GitHub',
-            alt: 'GitHub logo',
-            src: 'https://upload.wikimedia.org/wikipedia/commons/c/c6/Font_Awesome_5_brands_github-square.svg',
-          },
-          {
             name: 'Html 5',
-            alt: 'html logo',
-            src: 'https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg',
+            alt: 'Html logo',
+            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
+          },
+          {
+            name: 'Css 3',
+            alt: 'Css logo',
+            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
+          },
+          {
+            name: 'React',
+            alt: 'React logo',
+            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+          },
+          {
+            name: 'Redux',
+            alt: 'Redux logo',
+            src: 'https://user-images.githubusercontent.com/104791582/197048613-1a8a1db3-5e57-407e-ace3-1f9ee2001f9a.svg',
+          },
+          {
+            name: 'Jest',
+            alt: 'Jest logo',
+            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg',
+          },
+          {
+            name: 'React Testing Library',
+            alt: 'RTL logo',
+            src: 'https://user-images.githubusercontent.com/104791582/197048284-18140464-e1f6-47a0-a5fc-c7f2ec502e47.png',
+          },
+          {
+            name: 'Material-UI',
+            alt: 'Material-UI logo',
+            src: 'https://user-images.githubusercontent.com/104791582/197049212-1f44d95a-d9d0-4d66-a181-6510ad36bc7a.png',
+          },
+          {
+            name: 'Bootstrap',
+            alt: 'Bootstrap logo',
+            src: 'https://user-images.githubusercontent.com/104791582/198681666-d9f1568f-e51a-439c-bdb6-516c5d5d1bda.svg',
+          },
+          {
+            name: 'SASS',
+            alt: 'SASS logo',
+            src: 'https://user-images.githubusercontent.com/104791582/209569202-f5b10dc4-54e1-464f-8ce2-50fe6cfd898f.png',
           },
         ]
       }
