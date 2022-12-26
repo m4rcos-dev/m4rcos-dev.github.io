@@ -209,19 +209,29 @@ export const dataStackCardAbout = (colorIcon, sizeIcon) => {
         title: 'Back-End',
         icons: [
           {
-            name: 'Unix & Bash',
-            alt: 'Bash logo',
-            src: 'https://upload.wikimedia.org/wikipedia/commons/4/4b/Bash_Logo_Colored.svg',
+            name: 'Node JS',
+            alt: 'NodeJS logo',
+            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
           },
           {
-            name: 'Git & GitHub',
-            alt: 'GitHub logo',
-            src: 'https://upload.wikimedia.org/wikipedia/commons/c/c6/Font_Awesome_5_brands_github-square.svg',
+            name: 'Express',
+            alt: 'Express logo',
+            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg',
           },
           {
-            name: 'Html 5',
-            alt: 'html logo',
-            src: 'https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg',
+            name: 'Mocha',
+            alt: 'Mocha logo',
+            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mocha/mocha-plain.svg',
+          },
+          {
+            name: 'MySql',
+            alt: 'MySql logo',
+            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
+          },
+          {
+            name: 'Mongo DB',
+            alt: 'MongoDB logo',
+            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
           },
         ]
       }
