@@ -68,7 +68,7 @@ class AvatarCardAbout extends Component {
           <Box
             sx={{
               display: 'flex',
-              m: '0rem 0rem 0rem 0rem',
+              m: '0rem 1rem 0rem 0rem',
             }}
           >
             <Typography
