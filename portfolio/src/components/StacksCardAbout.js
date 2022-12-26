@@ -70,6 +70,7 @@ export class StacksCardAbout extends Component {
         >
           {dataStackCardAbout().languagesAndTools.map((tools) => (
             <BoxCustomBackgroundCards
+              key={tools.id}
               sx={{
                 width: '33%',
                 m: '2rem 2rem 0rem 0rem',
@@ -107,6 +108,7 @@ export class StacksCardAbout extends Component {
               >
                 {tools.icons.map((icon) => (
                   <Box
+                    key={icon.name}
                     sx={{
                       m: '1rem 0rem 1rem 1rem',
                     }}
@@ -131,6 +133,7 @@ export class StacksCardAbout extends Component {
 
           {dataStackCardAbout().frontEnd.map((tools) => (
             <BoxCustomBackgroundCards
+              key={tools.id}
               sx={{
                 width: '33%',
                 m: '2rem 2rem 0rem 0rem',
@@ -167,6 +170,7 @@ export class StacksCardAbout extends Component {
               >
                 {tools.icons.map((icon) => (
                   <Box
+                    key={icon.name}
                     sx={{
                       m: '1rem 0rem 1rem 1rem'
                     }}
@@ -191,6 +195,7 @@ export class StacksCardAbout extends Component {
 
           {dataStackCardAbout().backEnd.map((tools) => (
             <BoxCustomBackgroundCards
+              key={tools.id}
               sx={{
                 width: '33%',
                 m: '2rem 0rem 0rem 0rem',
@@ -227,6 +232,7 @@ export class StacksCardAbout extends Component {
               >
                 {tools.icons.map((icon) => (
                   <Box
+                    key={icon.name}
                     sx={{
                       m: '1rem 0rem 1rem 1rem'
                     }}
