@@ -12,6 +12,7 @@ import SchoolIcon from '@mui/icons-material/School';
 import BusinessIcon from '@mui/icons-material/Business';
 import BadgeIcon from '@mui/icons-material/Badge';
 import { v4 as uuidv4 } from 'uuid';
+import { dataIconStacks } from './dataIconsStacks';
 
 export const dataAvatarCardAbout = (colorIcon, sizeIcon) => {
   return {
@@ -100,52 +101,52 @@ export const dataStackCardAbout = (colorIcon, sizeIcon) => {
           {
             name: 'VS Code',
             alt: 'VsCode logo',
-            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg',
+            src: dataIconStacks().languagesAndTolls.vsCode,
           },
           {
             name: 'Java Script',
             alt: 'JavaScript logo',
-            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+            src: dataIconStacks().languagesAndTolls.javaScript,
           },
           {
             name: 'Type Script',
             alt: 'TypeScript logo',
-            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
+            src: dataIconStacks().languagesAndTolls.typeScript,
           },
           {
             name: 'Linux',
             alt: 'Linux logo',
-            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg',
+            src: dataIconStacks().languagesAndTolls.linux,
           },
           {
             name: 'Unix & Bash',
             alt: 'Bash logo',
-            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg',
+            src: dataIconStacks().languagesAndTolls.bash,
           },
           {
             name: 'Git',
             alt: 'Git logo',
-            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
+            src: dataIconStacks().languagesAndTolls.git,
           },
           {
             name: 'GitHub',
             alt: 'GitHub logo',
-            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
+            src: dataIconStacks().languagesAndTolls.gitHub,
           },
           {
             name: 'Docker',
             alt: 'Docker logo',
-            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg',
+            src: dataIconStacks().languagesAndTolls.docker,
           },
           {
             name: 'Trello',
             alt: 'Trello logo',
-            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg',
+            src: dataIconStacks().languagesAndTolls.trello,
           },
           {
             name: 'Scrum',
             alt: 'Scrum logo',
-            src: 'https://user-images.githubusercontent.com/104791582/209566973-f3d0c5ca-e922-497e-abba-b21ec7a06cab.svg',
+            src: dataIconStacks().languagesAndTolls.scrum,
           },
         ]
       }
@@ -158,47 +159,47 @@ export const dataStackCardAbout = (colorIcon, sizeIcon) => {
           {
             name: 'Html 5',
             alt: 'Html logo',
-            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
+            src: dataIconStacks().frontEnd.html,
           },
           {
             name: 'Css 3',
             alt: 'Css logo',
-            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
+            src: dataIconStacks().frontEnd.css,
           },
           {
             name: 'React',
             alt: 'React logo',
-            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+            src: dataIconStacks().frontEnd.react,
           },
           {
             name: 'Redux',
             alt: 'Redux logo',
-            src: 'https://user-images.githubusercontent.com/104791582/197048613-1a8a1db3-5e57-407e-ace3-1f9ee2001f9a.svg',
+            src: dataIconStacks().frontEnd.redux,
           },
           {
             name: 'Jest',
             alt: 'Jest logo',
-            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg',
+            src: dataIconStacks().frontEnd.jest,
           },
           {
             name: 'React Testing Library',
             alt: 'RTL logo',
-            src: 'https://user-images.githubusercontent.com/104791582/197048284-18140464-e1f6-47a0-a5fc-c7f2ec502e47.png',
+            src: dataIconStacks().frontEnd.rtl,
           },
           {
             name: 'Material-UI',
             alt: 'Material-UI logo',
-            src: 'https://user-images.githubusercontent.com/104791582/197049212-1f44d95a-d9d0-4d66-a181-6510ad36bc7a.png',
+            src: dataIconStacks().frontEnd.materialUI,
           },
           {
             name: 'Bootstrap',
             alt: 'Bootstrap logo',
-            src: 'https://user-images.githubusercontent.com/104791582/198681666-d9f1568f-e51a-439c-bdb6-516c5d5d1bda.svg',
+            src: dataIconStacks().frontEnd.bootStrap,
           },
           {
             name: 'SASS',
             alt: 'SASS logo',
-            src: 'https://user-images.githubusercontent.com/104791582/209569202-f5b10dc4-54e1-464f-8ce2-50fe6cfd898f.png',
+            src: dataIconStacks().frontEnd.sass,
           },
         ]
       }
@@ -211,27 +212,27 @@ export const dataStackCardAbout = (colorIcon, sizeIcon) => {
           {
             name: 'Node JS',
             alt: 'NodeJS logo',
-            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+            src: dataIconStacks().backEnd.nodeJs,
           },
           {
             name: 'Express',
             alt: 'Express logo',
-            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg',
+            src: dataIconStacks().backEnd.express,
           },
           {
             name: 'Mocha',
             alt: 'Mocha logo',
-            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mocha/mocha-plain.svg',
+            src: dataIconStacks().backEnd.mocha,
           },
           {
             name: 'MySql',
             alt: 'MySql logo',
-            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
+            src: dataIconStacks().backEnd.mySql,
           },
           {
             name: 'Mongo DB',
             alt: 'MongoDB logo',
-            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
+            src: dataIconStacks().backEnd.mongoDB,
           },
         ]
       }
