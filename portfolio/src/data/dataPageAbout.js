@@ -94,73 +94,108 @@ export const dataStackCardAbout = (colorIcon, sizeIcon) => {
     ],
     languagesAndTools: [
       {
-      id: uuidv4(),
-      title: 'Linguagens & Ferramentas',
-      icons: [
-        {
-          name: 'Unix & Bash',
-          alt: 'Bash logo',
-          src: 'https://upload.wikimedia.org/wikipedia/commons/4/4b/Bash_Logo_Colored.svg',
-        },
-        {
-          name: 'Git & GitHub',
-          alt: 'GitHub logo',
-          src: 'https://upload.wikimedia.org/wikipedia/commons/c/c6/Font_Awesome_5_brands_github-square.svg',
-        },
-        {
-          name: 'Html 5',
-          alt: 'html logo',
-          src: 'https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg',
-        },
-      ]
-    }
-  ],
+        id: uuidv4(),
+        title: 'Linguagens & Ferramentas',
+        icons: [
+          {
+            name: 'VS Code',
+            alt: 'VsCode logo',
+            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg',
+          },
+          {
+            name: 'Java Script',
+            alt: 'JavaScript logo',
+            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+          },
+          {
+            name: 'Type Script',
+            alt: 'TypeScript logo',
+            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
+          },
+          {
+            name: 'Linux',
+            alt: 'Linux logo',
+            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg',
+          },
+          {
+            name: 'Unix & Bash',
+            alt: 'Bash logo',
+            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg',
+          },
+          {
+            name: 'Git',
+            alt: 'Git logo',
+            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
+          },
+          {
+            name: 'GitHub',
+            alt: 'GitHub logo',
+            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
+          },
+          {
+            name: 'Docker',
+            alt: 'Docker logo',
+            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg',
+          },
+          {
+            name: 'Trello',
+            alt: 'Trello logo',
+            src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg',
+          },
+          {
+            name: 'Scrum',
+            alt: 'Scrum logo',
+            src: 'https://user-images.githubusercontent.com/104791582/209566973-f3d0c5ca-e922-497e-abba-b21ec7a06cab.svg',
+          },
+        ]
+      }
+    ],
     frontEnd: [
       {
-      id: uuidv4(),
-      title: 'Front-End',
-      icons: [
-        {
-          name: 'Unix & Bash',
-          alt: 'Bash logo',
-          src: 'https://upload.wikimedia.org/wikipedia/commons/4/4b/Bash_Logo_Colored.svg',
-        },
-        {
-          name: 'Git & GitHub',
-          alt: 'GitHub logo',
-          src: 'https://upload.wikimedia.org/wikipedia/commons/c/c6/Font_Awesome_5_brands_github-square.svg',
-        },
-        {
-          name: 'Html 5',
-          alt: 'html logo',
-          src: 'https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg',
-        },
-      ]
-    }
-  ],
+        id: uuidv4(),
+        title: 'Front-End',
+        icons: [
+          {
+            name: 'Unix & Bash',
+            alt: 'Bash logo',
+            src: 'https://upload.wikimedia.org/wikipedia/commons/4/4b/Bash_Logo_Colored.svg',
+          },
+          {
+            name: 'Git & GitHub',
+            alt: 'GitHub logo',
+            src: 'https://upload.wikimedia.org/wikipedia/commons/c/c6/Font_Awesome_5_brands_github-square.svg',
+          },
+          {
+            name: 'Html 5',
+            alt: 'html logo',
+            src: 'https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg',
+          },
+        ]
+      }
+    ],
     backEnd: [
       {
-      id: uuidv4(),
-      title: 'Back-End',
-      icons: [
-        {
-          name: 'Unix & Bash',
-          alt: 'Bash logo',
-          src: 'https://upload.wikimedia.org/wikipedia/commons/4/4b/Bash_Logo_Colored.svg',
-        },
-        {
-          name: 'Git & GitHub',
-          alt: 'GitHub logo',
-          src: 'https://upload.wikimedia.org/wikipedia/commons/c/c6/Font_Awesome_5_brands_github-square.svg',
-        },
-        {
-          name: 'Html 5',
-          alt: 'html logo',
-          src: 'https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg',
-        },
-      ]
-    }
-  ],
+        id: uuidv4(),
+        title: 'Back-End',
+        icons: [
+          {
+            name: 'Unix & Bash',
+            alt: 'Bash logo',
+            src: 'https://upload.wikimedia.org/wikipedia/commons/4/4b/Bash_Logo_Colored.svg',
+          },
+          {
+            name: 'Git & GitHub',
+            alt: 'GitHub logo',
+            src: 'https://upload.wikimedia.org/wikipedia/commons/c/c6/Font_Awesome_5_brands_github-square.svg',
+          },
+          {
+            name: 'Html 5',
+            alt: 'html logo',
+            src: 'https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg',
+          },
+        ]
+      }
+    ],
   }
 }
 
