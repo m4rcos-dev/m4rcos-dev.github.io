@@ -28,7 +28,8 @@ export const dataIconStacks = () => {
       express: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg',
       mocha: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mocha/mocha-plain.svg',
       mySql: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
-      mongoDB: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg'
+      mongoDB: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
+      api: 'https://user-images.githubusercontent.com/104791582/209579992-f06b83cf-13c4-452c-81bc-1aad0d02f7bb.svg',
     }
   }
 }

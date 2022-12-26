@@ -234,6 +234,11 @@ export const dataStackCardAbout = (colorIcon, sizeIcon) => {
             alt: 'MongoDB logo',
             src: dataIconStacks().backEnd.mongoDB,
           },
+          {
+            name: 'API',
+            alt: 'API logo',
+            src: dataIconStacks().backEnd.api,
+          },
         ]
       }
     ],

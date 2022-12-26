@@ -1,5 +1,6 @@
 import RocketIcon from '@mui/icons-material/Rocket';
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
+import { dataIconStacks } from './dataIconsStacks';
 import { dataAvatarCardAbout } from './dataPageAbout';
 
 export const dataProjects = (iconColor, iconSize) => {
@@ -16,24 +17,24 @@ export const dataProjects = (iconColor, iconSize) => {
           title: 'Shopping cart',
           technologiesProgress: [
             {
+              name: 'JavaScript',
+              progress: 50,
+              src: dataIconStacks().languagesAndTolls.javaScript,
+            },
+            {
               name: 'HTML',
-              progress: 22,
-              src: dataAvatarCardAbout().icosTechnologies[2].src,
+              progress: 20,
+              src: dataIconStacks().frontEnd.html,
             },
             {
               name: 'CSS',
               progress: 38,
-              src: dataAvatarCardAbout().icosTechnologies[3].src,
+              src: dataIconStacks().frontEnd.css,
             },
             {
               name: 'API',
-              progress: 15,
-              src: dataAvatarCardAbout().icosTechnologies[5].src,
-            },
-            {
-              name: 'JavaScript',
-              progress: 50,
-              src: dataAvatarCardAbout().icosTechnologies[4].src,
+              progress: 2,
+              src: dataIconStacks().backEnd.api,
             },
           ],
           mainImageProject: 'https://imgcloud.com.br/share/kTNpIDyNjyh2fGXL',
