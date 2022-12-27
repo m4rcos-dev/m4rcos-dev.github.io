@@ -201,6 +201,11 @@ export const dataStackCardAbout = (colorIcon, sizeIcon) => {
             alt: 'SASS logo',
             src: dataIconStacks().frontEnd.sass,
           },
+          {
+            name: 'Responsive Page',
+            alt: 'ResponsivePage logo',
+            src: dataIconStacks().frontEnd.responsivePage,
+          },
         ]
       }
     ],

@@ -21,7 +21,8 @@ export const dataIconStacks = () => {
       rtl: 'https://user-images.githubusercontent.com/104791582/197048284-18140464-e1f6-47a0-a5fc-c7f2ec502e47.png',
       materialUI: 'https://user-images.githubusercontent.com/104791582/197049212-1f44d95a-d9d0-4d66-a181-6510ad36bc7a.png',
       bootStrap: 'https://user-images.githubusercontent.com/104791582/198681666-d9f1568f-e51a-439c-bdb6-516c5d5d1bda.svg',
-      sass: 'https://user-images.githubusercontent.com/104791582/209569202-f5b10dc4-54e1-464f-8ce2-50fe6cfd898f.png'
+      sass: 'https://user-images.githubusercontent.com/104791582/209569202-f5b10dc4-54e1-464f-8ce2-50fe6cfd898f.png',
+      responsivePage: 'https://user-images.githubusercontent.com/104791582/209659152-9e59b79b-a3b6-48c1-a6b9-edeb235e6da7.svg',
     },
     backEnd: {
       nodeJs: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
