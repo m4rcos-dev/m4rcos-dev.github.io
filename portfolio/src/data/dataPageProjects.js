@@ -55,28 +55,33 @@ export const dataProjects = (iconColor, iconSize) => {
             {
               name: 'React',
               progress: 63,
-              src: dataAvatarCardAbout().icosTechnologies[7].src,
-            },
-            {
-              name: 'API',
-              progress: 10,
-              src: dataAvatarCardAbout().icosTechnologies[5].src,
+              src: dataIconStacks().frontEnd.react,
             },
             {
               name: 'Material-UI',
-              progress: 37,
-              src: dataAvatarCardAbout().icosTechnologies[10].src,
+              progress: 32,
+              src: dataIconStacks().frontEnd.materialUI,
+            },
+            {
+              name: 'API',
+              progress: 5,
+              src: dataIconStacks().backEnd.api,
+            },
+            {
+              name: 'Responsive Page',
+              progress: 100,
+              src: dataIconStacks().frontEnd.responsivePage,
             },
           ],
-          mainImageProject: 'https://imgcloud.com.br/share/EoZJThkfH2iHFsjK',
+          mainImageProject: 'https://user-images.githubusercontent.com/104791582/199237032-c637911e-2063-41eb-9586-105bae4d88f2.gif',
           video: 'https://www.youtube.com/embed/dX5W9jHAaSM',
           allImagesProject: [
-            'https://imgcloud.com.br/share/EoZJThkfH2iHFsjK',
-            'https://imgcloud.com.br/share/EbinnP8yhrWLIcrg',
+            'https://user-images.githubusercontent.com/104791582/209661079-cc8915e5-909f-4576-a89e-0b177a5b95ea.png',
+            'https://user-images.githubusercontent.com/104791582/209661137-e92532ce-216b-4d5c-9bfe-01150017171d.png',
           ],
           text: `Carteira virtual com cotação de moedas em tempo real utilizando API, podendo adicionar despesas, editar e excluir, com cálculo total convertido pela cotação da moeda escolhida. Desenvolvido pensando no mobile first utilizando React e Material-UI.`,
           linkGitHub: 'https://github.com/m4rcos-dev/project-trybewallet.git',
-          linkApp: 'https://trybewallet.web.app/',
+          linkApp: 'https://trybewallett.web.app/',
         },
         // Projeto Solar System
         {
