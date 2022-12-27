@@ -12,6 +12,7 @@ import SchoolIcon from '@mui/icons-material/School';
 import BusinessIcon from '@mui/icons-material/Business';
 import BadgeIcon from '@mui/icons-material/Badge';
 import { v4 as uuidv4 } from 'uuid';
+import { dataIconStacks } from './dataIconsStacks';
 
 export const dataAvatarCardAbout = (colorIcon, sizeIcon) => {
   return {
@@ -83,6 +84,172 @@ export const dataAvatarCardAbout = (colorIcon, sizeIcon) => {
   }
 }
 
+export const dataStackCardAbout = (colorIcon, sizeIcon) => {
+  return {
+    head: [
+      {
+        id: uuidv4(),
+        icon: <ComputerIcon sx={{ color: colorIcon }} fontSize={sizeIcon} />,
+        title: 'Stack',
+      }
+    ],
+    languagesAndTools: [
+      {
+        id: uuidv4(),
+        title: 'Linguagens & Ferramentas',
+        icons: [
+          {
+            name: 'VS Code',
+            alt: 'VsCode logo',
+            src: dataIconStacks().languagesAndTolls.vsCode,
+          },
+          {
+            name: 'Java Script',
+            alt: 'JavaScript logo',
+            src: dataIconStacks().languagesAndTolls.javaScript,
+          },
+          {
+            name: 'Type Script',
+            alt: 'TypeScript logo',
+            src: dataIconStacks().languagesAndTolls.typeScript,
+          },
+          {
+            name: 'Linux',
+            alt: 'Linux logo',
+            src: dataIconStacks().languagesAndTolls.linux,
+          },
+          {
+            name: 'Unix & Bash',
+            alt: 'Bash logo',
+            src: dataIconStacks().languagesAndTolls.bash,
+          },
+          {
+            name: 'Git',
+            alt: 'Git logo',
+            src: dataIconStacks().languagesAndTolls.git,
+          },
+          {
+            name: 'GitHub',
+            alt: 'GitHub logo',
+            src: dataIconStacks().languagesAndTolls.gitHub,
+          },
+          {
+            name: 'Docker',
+            alt: 'Docker logo',
+            src: dataIconStacks().languagesAndTolls.docker,
+          },
+          {
+            name: 'Trello',
+            alt: 'Trello logo',
+            src: dataIconStacks().languagesAndTolls.trello,
+          },
+          {
+            name: 'Scrum',
+            alt: 'Scrum logo',
+            src: dataIconStacks().languagesAndTolls.scrum,
+          },
+        ]
+      }
+    ],
+    frontEnd: [
+      {
+        id: uuidv4(),
+        title: 'Front-End',
+        icons: [
+          {
+            name: 'Html 5',
+            alt: 'Html logo',
+            src: dataIconStacks().frontEnd.html,
+          },
+          {
+            name: 'Css 3',
+            alt: 'Css logo',
+            src: dataIconStacks().frontEnd.css,
+          },
+          {
+            name: 'React',
+            alt: 'React logo',
+            src: dataIconStacks().frontEnd.react,
+          },
+          {
+            name: 'Redux',
+            alt: 'Redux logo',
+            src: dataIconStacks().frontEnd.redux,
+          },
+          {
+            name: 'Jest',
+            alt: 'Jest logo',
+            src: dataIconStacks().frontEnd.jest,
+          },
+          {
+            name: 'React Testing Library',
+            alt: 'RTL logo',
+            src: dataIconStacks().frontEnd.rtl,
+          },
+          {
+            name: 'Material-UI',
+            alt: 'Material-UI logo',
+            src: dataIconStacks().frontEnd.materialUI,
+          },
+          {
+            name: 'Bootstrap',
+            alt: 'Bootstrap logo',
+            src: dataIconStacks().frontEnd.bootStrap,
+          },
+          {
+            name: 'SASS',
+            alt: 'SASS logo',
+            src: dataIconStacks().frontEnd.sass,
+          },
+          {
+            name: 'Responsive Page',
+            alt: 'ResponsivePage logo',
+            src: dataIconStacks().frontEnd.responsivePage,
+          },
+        ]
+      }
+    ],
+    backEnd: [
+      {
+        id: uuidv4(),
+        title: 'Back-End',
+        icons: [
+          {
+            name: 'Node JS',
+            alt: 'NodeJS logo',
+            src: dataIconStacks().backEnd.nodeJs,
+          },
+          {
+            name: 'Express',
+            alt: 'Express logo',
+            src: dataIconStacks().backEnd.express,
+          },
+          {
+            name: 'Mocha',
+            alt: 'Mocha logo',
+            src: dataIconStacks().backEnd.mocha,
+          },
+          {
+            name: 'MySql',
+            alt: 'MySql logo',
+            src: dataIconStacks().backEnd.mySql,
+          },
+          {
+            name: 'Mongo DB',
+            alt: 'MongoDB logo',
+            src: dataIconStacks().backEnd.mongoDB,
+          },
+          {
+            name: 'API',
+            alt: 'API logo',
+            src: dataIconStacks().backEnd.api,
+          },
+        ]
+      }
+    ],
+  }
+}
+
 export const dataAcademicTimeLine = (colorIcon, sizeIcon) => {
   return {
     head: [
@@ -143,7 +310,7 @@ export const dataExperienceTimeLine = (colorIcon, sizeIcon) => {
     head: [
       {
         icon: <BusinessIcon sx={{ color: colorIcon, }} fontSize={sizeIcon} />,
-        title: 'Experiência Profissionais',
+        title: 'Experiências Profissionais',
       }
     ],
     body: [

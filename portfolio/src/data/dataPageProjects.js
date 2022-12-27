@@ -1,6 +1,6 @@
 import RocketIcon from '@mui/icons-material/Rocket';
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
-import { dataAvatarCardAbout } from './dataPageAbout';
+import { dataIconStacks } from './dataIconsStacks';
 
 export const dataProjects = (iconColor, iconSize) => {
   return [
@@ -16,32 +16,32 @@ export const dataProjects = (iconColor, iconSize) => {
           title: 'Shopping cart',
           technologiesProgress: [
             {
+              name: 'JavaScript',
+              progress: 50,
+              src: dataIconStacks().languagesAndTolls.javaScript,
+            },
+            {
               name: 'HTML',
-              progress: 22,
-              src: dataAvatarCardAbout().icosTechnologies[2].src,
+              progress: 20,
+              src: dataIconStacks().frontEnd.html,
             },
             {
               name: 'CSS',
               progress: 38,
-              src: dataAvatarCardAbout().icosTechnologies[3].src,
+              src: dataIconStacks().frontEnd.css,
             },
             {
               name: 'API',
-              progress: 15,
-              src: dataAvatarCardAbout().icosTechnologies[5].src,
-            },
-            {
-              name: 'JavaScript',
-              progress: 50,
-              src: dataAvatarCardAbout().icosTechnologies[4].src,
+              progress: 2,
+              src: dataIconStacks().backEnd.api,
             },
           ],
-          mainImageProject: 'https://imgcloud.com.br/share/kTNpIDyNjyh2fGXL',
+          mainImageProject: 'https://user-images.githubusercontent.com/104791582/197052715-bef0000c-9962-49d2-a6ba-1c52d97752f2.gif',
           video: 'https://www.youtube.com/embed/8RgHsmP7Lbo',
           allImagesProject: [
-            'https://imgcloud.com.br/share/kTNpIDyNjyh2fGXL',
-            'https://imgcloud.com.br/share/sF1wg9iMsmk5jJ2Y',
-            'https://imgcloud.com.br/share/gP7sX5ELVbVezRI8',
+            'https://user-images.githubusercontent.com/104791582/209656479-c9ea5539-805c-439d-8f0c-ac757723a414.png',
+            'https://user-images.githubusercontent.com/104791582/209657651-1adef0e6-c0cf-4bcd-b1b8-03f9803fbce0.png',
+            'https://user-images.githubusercontent.com/104791582/209657654-caab708d-29d5-4664-a896-2fc52a4fd5b9.png',
           ],
           text: `Simula uma loja online, utilizando API do Mercado Livre. Com busca de produtos e um carrinho que armazena os produtos que são adicionados, somando o total, possibilitando excluir ou adicionar produtos. Projeto feito sem nenhum Framework, apenas com html, javascript e css puros.`,
           linkGitHub: 'https://github.com/m4rcos-dev/project-shopping-cart-trybe.git',
@@ -54,28 +54,33 @@ export const dataProjects = (iconColor, iconSize) => {
             {
               name: 'React',
               progress: 63,
-              src: dataAvatarCardAbout().icosTechnologies[7].src,
-            },
-            {
-              name: 'API',
-              progress: 10,
-              src: dataAvatarCardAbout().icosTechnologies[5].src,
+              src: dataIconStacks().frontEnd.react,
             },
             {
               name: 'Material-UI',
-              progress: 37,
-              src: dataAvatarCardAbout().icosTechnologies[10].src,
+              progress: 32,
+              src: dataIconStacks().frontEnd.materialUI,
+            },
+            {
+              name: 'API',
+              progress: 5,
+              src: dataIconStacks().backEnd.api,
+            },
+            {
+              name: 'Responsive Page',
+              progress: 100,
+              src: dataIconStacks().frontEnd.responsivePage,
             },
           ],
-          mainImageProject: 'https://imgcloud.com.br/share/EoZJThkfH2iHFsjK',
+          mainImageProject: 'https://user-images.githubusercontent.com/104791582/199237032-c637911e-2063-41eb-9586-105bae4d88f2.gif',
           video: 'https://www.youtube.com/embed/dX5W9jHAaSM',
           allImagesProject: [
-            'https://imgcloud.com.br/share/EoZJThkfH2iHFsjK',
-            'https://imgcloud.com.br/share/EbinnP8yhrWLIcrg',
+            'https://user-images.githubusercontent.com/104791582/209661079-cc8915e5-909f-4576-a89e-0b177a5b95ea.png',
+            'https://user-images.githubusercontent.com/104791582/209661137-e92532ce-216b-4d5c-9bfe-01150017171d.png',
           ],
           text: `Carteira virtual com cotação de moedas em tempo real utilizando API, podendo adicionar despesas, editar e excluir, com cálculo total convertido pela cotação da moeda escolhida. Desenvolvido pensando no mobile first utilizando React e Material-UI.`,
           linkGitHub: 'https://github.com/m4rcos-dev/project-trybewallet.git',
-          linkApp: 'https://trybewallet.web.app/',
+          linkApp: 'https://trybewallett.web.app/',
         },
         // Projeto Solar System
         {
@@ -84,23 +89,23 @@ export const dataProjects = (iconColor, iconSize) => {
             {
               name: 'React',
               progress: 90,
-              src: dataAvatarCardAbout().icosTechnologies[7].src,
+              src: dataIconStacks().frontEnd.react,
             },
             {
               name: 'CSS',
               progress: 10,
-              src: dataAvatarCardAbout().icosTechnologies[3].src,
+              src: dataIconStacks().frontEnd.css,
             },
           ],
-          mainImageProject: 'https://imgcloud.com.br/share/NQgnZztE1ksmhgLF',
+          mainImageProject: 'https://user-images.githubusercontent.com/104791582/209689985-0e62db6c-2d08-4333-b273-3b1c80f5719b.gif',
           video: 'https://www.youtube.com/embed/bKV2T5HiSho',
           allImagesProject: [
-            'https://imgcloud.com.br/share/NQgnZztE1ksmhgLF',
-            'https://imgcloud.com.br/share/LaxvOqh3vNdmFRLx',
+            'https://user-images.githubusercontent.com/104791582/209692261-1698009c-7e81-4dfe-bf97-debd8be13357.png',
+            'https://user-images.githubusercontent.com/104791582/209692347-e485168f-27ef-4964-8326-1b48a271fd54.png',
           ],
           text: `Meu primeiro projeto utilizando React, aprendendo a componentizar e reaproveitar o componente na página ganhado assim agilidade e tempo para desenvolver aplicações WEB. O projeto é simples apenas para colocar em prática todo os conceitos citado acima`,
           linkGitHub: 'https://github.com/m4rcos-dev/project-solar-system-trybe.git',
-          linkApp: 'https://m4rcos-dev.github.io/project-solar-system-trybe/',
+          linkApp: 'https://sistemasolar.web.app/',
         },
       ]
     },
@@ -118,26 +123,26 @@ export const dataProjects = (iconColor, iconSize) => {
             {
               name: 'HTML',
               progress: 26,
-              src: dataAvatarCardAbout().icosTechnologies[2].src,
+              src: dataIconStacks().frontEnd.html,
             },
             {
               name: 'JavaScript',
               progress: 48,
-              src: dataAvatarCardAbout().icosTechnologies[4].src,
+              src: dataIconStacks().languagesAndTolls.javaScript,
             },
             {
               name: 'CSS',
               progress: 26,
-              src: dataAvatarCardAbout().icosTechnologies[3].src,
+              src: dataIconStacks().frontEnd.css,
             },
           ],
-          mainImageProject: 'https://imgcloud.com.br/share/RTzhS0Jm2sXsDQDj',
+          mainImageProject: 'https://user-images.githubusercontent.com/104791582/196544338-a81c3180-1e7c-424e-9381-79bacf2c7b9c.gif',
           video: 'https://www.youtube.com/embed/tHYsUl38f54',
           allImagesProject: [
-            'https://imgcloud.com.br/share/RTzhS0Jm2sXsDQDj',
-            'https://imgcloud.com.br/share/S4zJpYBojnHxbeFO',
-            'https://imgcloud.com.br/share/FEmbjThK7Joltmx8',
-            'https://imgcloud.com.br/share/1Mo9S0byeF3IQCJk',
+            'https://user-images.githubusercontent.com/104791582/209671869-c5b10b65-7d60-4cb1-a21e-6684e565234f.png',
+            'https://user-images.githubusercontent.com/104791582/209671943-7671dfec-3e0e-4259-be9b-9d702ce89e37.png',
+            'https://user-images.githubusercontent.com/104791582/209672038-db90f9bd-abad-4fcc-922f-32ba2407ba34.png',
+            'https://user-images.githubusercontent.com/104791582/209672100-33813fd9-9b9b-4553-9ccd-16bc4c444f0e.png',
           ],
           text: `O projeto renderiza uma tabela de pixels onde é possível redefinir o tamanho e quantidade de pixels, escolher uma cor para pintar e criar sua própria arte pixelada. Projeto feito sem nenhum framework, utiliza htlm, javascript, css e manipulação do DOM puros.`,
           linkGitHub: 'https://github.com/m4rcos-dev/project-pixel-art.git',

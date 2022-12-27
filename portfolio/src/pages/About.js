@@ -11,6 +11,7 @@ import { activeTransition } from "../redux/actions/activeTransition";
 import ExperienceTimeLine from "../components/ExperienceTimeLine";
 import AvatarCardAbout from "../components/AvatarCardAbout";
 import styled from "@emotion/styled";
+import StacksCardAbout from "../components/StacksCardAbout";
 
 
 class About extends React.Component {
@@ -57,6 +58,7 @@ class About extends React.Component {
             }}
           >
             <AvatarCardAbout />
+            <StacksCardAbout />
             <BoxCustom
               sx={{
                 width: '100%',

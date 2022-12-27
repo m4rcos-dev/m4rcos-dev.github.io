@@ -62,7 +62,7 @@ class ExperienceTimeLine extends Component {
 
         <BoxCustomBg
           sx={{
-            height: '1220px',
+            height: '1237px',
             m: '0.5rem 0rem 2rem 0rem',
             p: '0rem 0rem 1rem 0rem',
             bgcolor: `primary.${currentTheme}`,

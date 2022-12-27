@@ -1,4 +1,4 @@
-import { Avatar, Box, styled, Tooltip, Typography } from '@mui/material';
+import { Avatar, Box, styled, Typography } from '@mui/material';
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import '../style/IconsTechnologies.css'
@@ -34,7 +34,7 @@ class AvatarCardAbout extends Component {
       <BoxCustom
         sx={{
           maxWidth: '87%',
-          height: '50vh',
+          height: '35vh',
           m: '2rem 0rem 0rem 0rem',
           bgcolor: `primary.${currentTheme}`,
           borderRadius: '0.7rem',
@@ -68,7 +68,7 @@ class AvatarCardAbout extends Component {
           <Box
             sx={{
               display: 'flex',
-              m: '0rem 0rem 0rem 0rem',
+              m: '0rem 1rem 0rem 0rem',
             }}
           >
             <Typography
@@ -94,43 +94,6 @@ class AvatarCardAbout extends Component {
                 boxShadow: '9',
               }}
             />
-          </Box>
-
-          <Box sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center'
-          }}>
-            {dataAvatarCardAbout(colorChange, currentIconTitleSize).icon2}
-            <Typography
-              variant={currentTypographyTitleSize}
-              fontFamily='Hack'
-              sx={{
-                width: '100%',
-                m: '0rem 0rem 0rem 1rem',
-                color: colorChange,
-              }}
-            >{dataAvatarCardAbout().title2}</Typography>
-          </Box>
-          <Box
-            sx={{
-              m: '1rem 0rem 1rem 0rem'
-            }}
-          >
-            {dataAvatarCardAbout().icosTechnologies.map((icon) => (
-              <Tooltip title={icon.name} key={icon.alt}>
-                <img
-                  alt={icon.alt}
-                  className='drop-shadow-svg'
-                  src={icon.src}
-                  style={{
-                    width: '40px',
-                    height: '40px',
-                    margin: '0rem 0.2rem 0rem 0.2rem'
-                  }}
-                />
-              </Tooltip>
-            ))}
           </Box>
 
         </Box>
