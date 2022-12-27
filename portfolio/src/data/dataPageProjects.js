@@ -1,7 +1,6 @@
 import RocketIcon from '@mui/icons-material/Rocket';
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 import { dataIconStacks } from './dataIconsStacks';
-import { dataAvatarCardAbout } from './dataPageAbout';
 
 export const dataProjects = (iconColor, iconSize) => {
   return [
@@ -90,12 +89,12 @@ export const dataProjects = (iconColor, iconSize) => {
             {
               name: 'React',
               progress: 90,
-              src: dataAvatarCardAbout().icosTechnologies[7].src,
+              src: dataIconStacks().frontEnd.react,
             },
             {
               name: 'CSS',
               progress: 10,
-              src: dataAvatarCardAbout().icosTechnologies[3].src,
+              src: dataIconStacks().frontEnd.css,
             },
           ],
           mainImageProject: 'https://imgcloud.com.br/share/NQgnZztE1ksmhgLF',
@@ -124,26 +123,26 @@ export const dataProjects = (iconColor, iconSize) => {
             {
               name: 'HTML',
               progress: 26,
-              src: dataAvatarCardAbout().icosTechnologies[2].src,
+              src: dataIconStacks().frontEnd.html,
             },
             {
               name: 'JavaScript',
               progress: 48,
-              src: dataAvatarCardAbout().icosTechnologies[4].src,
+              src: dataIconStacks().languagesAndTolls.javaScript,
             },
             {
               name: 'CSS',
               progress: 26,
-              src: dataAvatarCardAbout().icosTechnologies[3].src,
+              src: dataIconStacks().frontEnd.css,
             },
           ],
-          mainImageProject: 'https://imgcloud.com.br/share/RTzhS0Jm2sXsDQDj',
+          mainImageProject: 'https://user-images.githubusercontent.com/104791582/196544338-a81c3180-1e7c-424e-9381-79bacf2c7b9c.gif',
           video: 'https://www.youtube.com/embed/tHYsUl38f54',
           allImagesProject: [
-            'https://imgcloud.com.br/share/RTzhS0Jm2sXsDQDj',
-            'https://imgcloud.com.br/share/S4zJpYBojnHxbeFO',
-            'https://imgcloud.com.br/share/FEmbjThK7Joltmx8',
-            'https://imgcloud.com.br/share/1Mo9S0byeF3IQCJk',
+            'https://user-images.githubusercontent.com/104791582/209671869-c5b10b65-7d60-4cb1-a21e-6684e565234f.png',
+            'https://user-images.githubusercontent.com/104791582/209671943-7671dfec-3e0e-4259-be9b-9d702ce89e37.png',
+            'https://user-images.githubusercontent.com/104791582/209672038-db90f9bd-abad-4fcc-922f-32ba2407ba34.png',
+            'https://user-images.githubusercontent.com/104791582/209672100-33813fd9-9b9b-4553-9ccd-16bc4c444f0e.png',
           ],
           text: `O projeto renderiza uma tabela de pixels onde é possível redefinir o tamanho e quantidade de pixels, escolher uma cor para pintar e criar sua própria arte pixelada. Projeto feito sem nenhum framework, utiliza htlm, javascript, css e manipulação do DOM puros.`,
           linkGitHub: 'https://github.com/m4rcos-dev/project-pixel-art.git',
