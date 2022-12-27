@@ -310,7 +310,7 @@ export const dataExperienceTimeLine = (colorIcon, sizeIcon) => {
     head: [
       {
         icon: <BusinessIcon sx={{ color: colorIcon, }} fontSize={sizeIcon} />,
-        title: 'Experiência Profissionais',
+        title: 'Experiências Profissionais',
       }
     ],
     body: [
