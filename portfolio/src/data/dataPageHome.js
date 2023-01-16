@@ -12,7 +12,7 @@ export const dataPageHome = () => {
   return {
     titleInfo: 'Olá! Eu sou o',
     subTitleInfo: 'Marcos Paulo Pereira',
-    textInfo: 'Desenvolvedor Front-end, com muita disposição e vontade de aprender, acrescentar e evoluir. Cursando Back-end e almejando o desenvolvimento Full Stack.',
+    textInfo: 'Desenvolvedor Web Full-stack, com muita disposição e vontade de aprender, acrescentar e evoluir. Me considero um poliglota em ascensão na linguagem de programação e suas tecnologias pois nessa área não existe bala de prata mas sim uma forma de resolver o problema que pode ser evoluído e melhorado.',
     buttonInfo: 'Baixar Curriculo',
     buttonLink: Curriculo,
     donwload: 'CurriculoMarcosPaulo.pdf',
