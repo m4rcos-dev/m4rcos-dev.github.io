@@ -244,6 +244,16 @@ export const dataStackCardAbout = (colorIcon, sizeIcon) => {
             alt: 'API logo',
             src: dataIconStacks().backEnd.api,
           },
+          {
+            name: '.Net',
+            alt: '.Net logo',
+            src: dataIconStacks().backEnd.dotnet,
+          },
+          {
+            name: 'C#',
+            alt: 'C# logo',
+            src: dataIconStacks().backEnd.csharp,
+          },
         ]
       }
     ],
