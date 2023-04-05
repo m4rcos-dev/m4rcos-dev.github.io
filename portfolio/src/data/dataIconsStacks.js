@@ -31,6 +31,8 @@ export const dataIconStacks = () => {
       mySql: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
       mongoDB: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
       api: 'https://user-images.githubusercontent.com/104791582/209579992-f06b83cf-13c4-452c-81bc-1aad0d02f7bb.svg',
+      dotnet: 'https://upload.wikimedia.org/wikipedia/commons/7/7d/Microsoft_.NET_logo.svg',
+      csharp: 'https://user-images.githubusercontent.com/104791582/222735728-5500a799-0d1b-4b2d-b00b-a0ee7d293a90.svg',
     }
   }
 }

@@ -1,14 +1,115 @@
 import RocketIcon from '@mui/icons-material/Rocket';
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
+import CloudSyncIcon from '@mui/icons-material/CloudSync';
+import VrpanoIcon from '@mui/icons-material/Vrpano';
 import { dataIconStacks } from './dataIconsStacks';
 
 export const dataProjects = (iconColor, iconSize) => {
   return [
+    // Full Stack
+    {
+      head: {
+        title: 'Full Stack',
+        icon: <RocketLaunchIcon sx={{ color: iconColor }} fontSize={iconSize} />,
+      },
+      body: [
+        // PROJETO TFC
+        {
+          title: 'TFC Trybe Futebol Clube',
+          technologiesProgress: [
+            {
+              name: 'TypeScript',
+              progress: 40,
+              src: dataIconStacks().languagesAndTolls.typeScript,
+            },
+            {
+              name: 'Express',
+              progress: 20,
+              src: dataIconStacks().backEnd.express,
+            },
+            {
+              name: 'MySql',
+              progress: 10,
+              src: dataIconStacks().backEnd.mySql,
+            },
+            {
+              name: 'Docker',
+              progress: 10,
+              src: dataIconStacks().languagesAndTolls.docker,
+            },
+            {
+              name: 'React',
+              progress: 10,
+              src: dataIconStacks().frontEnd.react,
+            },
+            {
+              name: 'Mocha',
+              progress: 10,
+              src: dataIconStacks().backEnd.mocha,
+            },
+          ],
+          mainImageProject: 'https://user-images.githubusercontent.com/104791582/227270241-972e482f-f3f8-46c5-a4a5-43fb2d7bc9e3.gif',
+          video: 'https://www.youtube.com/embed/HvbWeOiHUgA',
+          allImagesProject: [
+            'https://user-images.githubusercontent.com/104791582/230154156-0108f9b9-9a78-462e-9f62-3ddd24886373.jpg',
+            'https://user-images.githubusercontent.com/104791582/230154164-06a0dd43-5705-4b9a-9570-6eb1f3a6d751.jpg',
+            'https://user-images.githubusercontent.com/104791582/230154167-53153bd9-35f6-4d1e-ac6a-51721121957a.jpg',
+          ],
+          text: `O TFC é um site informativo sobre partidas e classificações de futebol!
+          Foi desenvolvido uma API (utilizando o métodoTDD) e também integrado através do docker-compose as
+          aplicações para que elas funcionem consumindo um banco de dados em MySql.`,
+          linkGitHub: 'https://github.com/m4rcos-dev/FullStack-project-trybe-futebol-clube',
+          linkApp: 'https://tfc.up.railway.app/',
+        },
+        // PROJETO KarShop
+        {
+          title: 'KarShop',
+          technologiesProgress: [
+            {
+              name: 'C#',
+              progress: 40,
+              src: dataIconStacks().backEnd.csharp,
+            },
+            {
+              name: '.NET',
+              progress: 20,
+              src: dataIconStacks().backEnd.dotnet,
+            },
+            {
+              name: 'MySql',
+              progress: 10,
+              src: dataIconStacks().backEnd.mySql,
+            },
+            {
+              name: 'Docker',
+              progress: 10,
+              src: dataIconStacks().languagesAndTolls.docker,
+            },
+            {
+              name: 'React',
+              progress: 10,
+              src: dataIconStacks().frontEnd.react,
+            },
+          ],
+          mainImageProject: 'https://user-images.githubusercontent.com/104791582/228703451-681772cd-c984-401f-9481-67024a082ee7.gif',
+          video: 'https://www.youtube.com/embed/S2JOf_242dQ',
+          allImagesProject: [
+            'https://user-images.githubusercontent.com/104791582/230156619-4768ba05-33bf-46f5-89b4-25983ea07054.jpg',
+            'https://user-images.githubusercontent.com/104791582/230156630-651ef431-d9b0-406c-a160-d351cf171e24.jpg',
+            'https://user-images.githubusercontent.com/104791582/230156633-66be1660-7396-4b3b-bec7-548ba9f0c4b8.jpg',
+          ],
+          text: `Catálogo de veículos em uma página pública onde é possível ver os veículos cadastrados e somente o
+          administrador logado pode alterar, criar e deletar os carros do catálogo.`,
+          linkGitHub: 'https://github.com/m4rcos-dev/FullStack-vehicle-catalog',
+          linkApp: 'https://karsshop.bohr.io/',
+        },
+      ]
+    },
     // Front END
     {
       head: {
         title: 'Front End',
-        icon: <RocketLaunchIcon sx={{ color: iconColor }} fontSize={iconSize} />,
+        icon: <VrpanoIcon sx={{ color: iconColor }} fontSize={iconSize} />,
       },
       body: [
         // PROJETO shopping-cart-trybe
@@ -106,6 +207,53 @@ export const dataProjects = (iconColor, iconSize) => {
           text: `Meu primeiro projeto utilizando React, aprendendo a componentizar e reaproveitar o componente na página ganhado assim agilidade e tempo para desenvolver aplicações WEB. O projeto é simples apenas para colocar em prática todo os conceitos citado acima`,
           linkGitHub: 'https://github.com/m4rcos-dev/project-solar-system-trybe.git',
           linkApp: 'https://sistemasolar.web.app/',
+        },
+      ]
+    },
+    // Back END
+    {
+      head: {
+        title: 'Back End',
+        icon: <CloudSyncIcon sx={{ color: iconColor }} fontSize={iconSize} />,
+      },
+      body: [
+        // PROJETO blogs-api
+        {
+          title: 'Blogs API',
+          technologiesProgress: [
+            {
+              name: 'JavaScript',
+              progress: 40,
+              src: dataIconStacks().languagesAndTolls.javaScript,
+            },
+            {
+              name: 'Express',
+              progress: 30,
+              src: dataIconStacks().backEnd.express,
+            },
+            {
+              name: 'MySql',
+              progress: 10,
+              src: dataIconStacks().backEnd.mySql,
+            },
+            {
+              name: 'Docker',
+              progress: 10,
+              src: dataIconStacks().languagesAndTolls.docker,
+            },
+          ],
+          mainImageProject: 'https://user-images.githubusercontent.com/104791582/225178878-0b5ef381-f88b-4098-8043-a6ec66ea7d32.gif',
+          video: 'https://www.youtube.com/embed/zD7hn4FOQ0Q',
+          allImagesProject: [
+            'https://user-images.githubusercontent.com/104791582/230148044-5cfbebff-0ed1-46d2-9873-1df88cdedb83.jpg',
+            'https://user-images.githubusercontent.com/104791582/230148049-25bb3dad-926e-43e7-9e95-af60c7ea95f3.jpg',
+            'https://user-images.githubusercontent.com/104791582/230148052-879dd2bb-af5c-4d79-b89b-386dc7d8e565.jpg',
+          ],
+          text: `Neste projeto foi desenvolvido uma API e um banco de dados para a produção de conteúdo para um blog.
+          Uma aplicação em Node.js usando o pacote sequelize para fazer um CRUD de posts. Criando endpoints que
+          estão conectados ao banco de dados seguindo os princípios do REST`,
+          linkGitHub: 'https://github.com/m4rcos-dev/BackEnd-Project-Blogs-API',
+          linkApp: 'https://blogsapi.up.railway.app/swagger',
         },
       ]
     },
