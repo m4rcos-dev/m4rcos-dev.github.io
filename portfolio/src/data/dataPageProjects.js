@@ -57,10 +57,51 @@ export const dataProjects = (iconColor, iconSize) => {
           ],
           text: `O TFC é um site informativo sobre partidas e classificações de futebol!
           Foi desenvolvido uma API (utilizando o métodoTDD) e também integrado através do docker-compose as
-          aplicações para que elas funcionem consumindo um banco de dados em MySql.
-          Foi respeitado regras de negócio para a API se conectar corretamente com o Front-End`,
+          aplicações para que elas funcionem consumindo um banco de dados em MySql.`,
           linkGitHub: 'https://github.com/m4rcos-dev/FullStack-project-trybe-futebol-clube',
           linkApp: 'https://tfc.up.railway.app/',
+        },
+        // PROJETO KarShop
+        {
+          title: 'KarShop',
+          technologiesProgress: [
+            {
+              name: 'C#',
+              progress: 40,
+              src: dataIconStacks().backEnd.csharp,
+            },
+            {
+              name: '.NET',
+              progress: 20,
+              src: dataIconStacks().backEnd.dotnet,
+            },
+            {
+              name: 'MySql',
+              progress: 10,
+              src: dataIconStacks().backEnd.mySql,
+            },
+            {
+              name: 'Docker',
+              progress: 10,
+              src: dataIconStacks().languagesAndTolls.docker,
+            },
+            {
+              name: 'React',
+              progress: 10,
+              src: dataIconStacks().frontEnd.react,
+            },
+          ],
+          mainImageProject: 'https://user-images.githubusercontent.com/104791582/228703451-681772cd-c984-401f-9481-67024a082ee7.gif',
+          video: 'https://www.youtube.com/embed/S2JOf_242dQ',
+          allImagesProject: [
+            'https://user-images.githubusercontent.com/104791582/230156619-4768ba05-33bf-46f5-89b4-25983ea07054.jpg',
+            'https://user-images.githubusercontent.com/104791582/230156630-651ef431-d9b0-406c-a160-d351cf171e24.jpg',
+            'https://user-images.githubusercontent.com/104791582/230156633-66be1660-7396-4b3b-bec7-548ba9f0c4b8.jpg',
+          ],
+          text: `Catálogo de veículos em uma página pública onde é possível ver os veículos cadastrados e somente o
+          administrador logado pode alterar, criar e deletar os carros do catálogo.`,
+          linkGitHub: 'https://github.com/m4rcos-dev/FullStack-vehicle-catalog',
+          linkApp: 'https://karsshop.bohr.io/',
         },
       ]
     },
