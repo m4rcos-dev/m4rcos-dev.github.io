@@ -19,7 +19,7 @@ export const dataAvatarCardAbout = (colorIcon, sizeIcon) => {
     avatarImage: AvatarImg,
     title1: 'Bio',
     icon1: <BadgeIcon sx={{ color: colorIcon }} fontSize={sizeIcon} />,
-    text1: `Fascinado por desafio, encontrei na (TI) a área ideal, estudando e trabalhando desde os 15 anos de idade, já fui professor, técnico em informática, empreendedor, técnico em eletrônica e reparo em celulares, streamer, criador de conteúdo digital, e atualmente desenvolvedor Front-End cursando Back-end e almejando o desenvolvimento Full Stack.
+    text1: `Fascinado por desafio, encontrei na (TI) a área ideal, estudando e trabalhando desde os 15 anos de idade, já fui professor, técnico em informática, empreendedor, técnico em eletrônica e reparo em celulares, streamer, criador de conteúdo digital, e atualmente desenvolvedor Web Full Stack.
     Mineiro, nascido em 93, casado, pai de dois filhos que me motivam todos os dias a dar o meu máximo e claro, um sonhador correndo atrás de meus objetivos....
     Precisa de um DEV? Vamos trabalhar juntos!`,
     title2: 'Tecnologias',
