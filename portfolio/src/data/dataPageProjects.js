@@ -1,5 +1,7 @@
 import RocketIcon from '@mui/icons-material/Rocket';
-import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
+// import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
+import CloudSyncIcon from '@mui/icons-material/CloudSync';
+import VrpanoIcon from '@mui/icons-material/Vrpano';
 import { dataIconStacks } from './dataIconsStacks';
 
 export const dataProjects = (iconColor, iconSize) => {
@@ -8,7 +10,7 @@ export const dataProjects = (iconColor, iconSize) => {
     {
       head: {
         title: 'Front End',
-        icon: <RocketLaunchIcon sx={{ color: iconColor }} fontSize={iconSize} />,
+        icon: <VrpanoIcon sx={{ color: iconColor }} fontSize={iconSize} />,
       },
       body: [
         // PROJETO shopping-cart-trybe
@@ -106,6 +108,53 @@ export const dataProjects = (iconColor, iconSize) => {
           text: `Meu primeiro projeto utilizando React, aprendendo a componentizar e reaproveitar o componente na página ganhado assim agilidade e tempo para desenvolver aplicações WEB. O projeto é simples apenas para colocar em prática todo os conceitos citado acima`,
           linkGitHub: 'https://github.com/m4rcos-dev/project-solar-system-trybe.git',
           linkApp: 'https://sistemasolar.web.app/',
+        },
+      ]
+    },
+    // Back END
+    {
+      head: {
+        title: 'Back End',
+        icon: <CloudSyncIcon sx={{ color: iconColor }} fontSize={iconSize} />,
+      },
+      body: [
+        // PROJETO blogs-api
+        {
+          title: 'Blogs API',
+          technologiesProgress: [
+            {
+              name: 'JavaScript',
+              progress: 40,
+              src: dataIconStacks().languagesAndTolls.javaScript,
+            },
+            {
+              name: 'Express',
+              progress: 30,
+              src: dataIconStacks().backEnd.express,
+            },
+            {
+              name: 'MySql',
+              progress: 10,
+              src: dataIconStacks().backEnd.mySql,
+            },
+            {
+              name: 'Docker',
+              progress: 10,
+              src: dataIconStacks().languagesAndTolls.docker,
+            },
+          ],
+          mainImageProject: 'https://user-images.githubusercontent.com/104791582/225178878-0b5ef381-f88b-4098-8043-a6ec66ea7d32.gif',
+          video: 'https://www.youtube.com/embed/zD7hn4FOQ0Q',
+          allImagesProject: [
+            'https://user-images.githubusercontent.com/104791582/230148044-5cfbebff-0ed1-46d2-9873-1df88cdedb83.jpg',
+            'https://user-images.githubusercontent.com/104791582/230148049-25bb3dad-926e-43e7-9e95-af60c7ea95f3.jpg',
+            'https://user-images.githubusercontent.com/104791582/230148052-879dd2bb-af5c-4d79-b89b-386dc7d8e565.jpg',
+          ],
+          text: `Neste projeto foi desenvolvido uma API e um banco de dados para a produção de conteúdo para um blog.
+          Uma aplicação em Node.js usando o pacote sequelize para fazer um CRUD de posts. Criando endpoints que
+          estão conectados ao banco de dados seguindo os princípios do REST`,
+          linkGitHub: 'https://github.com/m4rcos-dev/BackEnd-Project-Blogs-API',
+          linkApp: 'https://blogsapi.up.railway.app/swagger',
         },
       ]
     },
