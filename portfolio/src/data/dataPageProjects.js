@@ -1,11 +1,69 @@
 import RocketIcon from '@mui/icons-material/Rocket';
-// import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
+import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 import CloudSyncIcon from '@mui/icons-material/CloudSync';
 import VrpanoIcon from '@mui/icons-material/Vrpano';
 import { dataIconStacks } from './dataIconsStacks';
 
 export const dataProjects = (iconColor, iconSize) => {
   return [
+    // Full Stack
+    {
+      head: {
+        title: 'Full Stack',
+        icon: <RocketLaunchIcon sx={{ color: iconColor }} fontSize={iconSize} />,
+      },
+      body: [
+        // PROJETO TFC
+        {
+          title: 'TFC Trybe Futebol Clube',
+          technologiesProgress: [
+            {
+              name: 'TypeScript',
+              progress: 40,
+              src: dataIconStacks().languagesAndTolls.typeScript,
+            },
+            {
+              name: 'Express',
+              progress: 20,
+              src: dataIconStacks().backEnd.express,
+            },
+            {
+              name: 'MySql',
+              progress: 10,
+              src: dataIconStacks().backEnd.mySql,
+            },
+            {
+              name: 'Docker',
+              progress: 10,
+              src: dataIconStacks().languagesAndTolls.docker,
+            },
+            {
+              name: 'React',
+              progress: 10,
+              src: dataIconStacks().frontEnd.react,
+            },
+            {
+              name: 'Mocha',
+              progress: 10,
+              src: dataIconStacks().backEnd.mocha,
+            },
+          ],
+          mainImageProject: 'https://user-images.githubusercontent.com/104791582/227270241-972e482f-f3f8-46c5-a4a5-43fb2d7bc9e3.gif',
+          video: 'https://www.youtube.com/embed/HvbWeOiHUgA',
+          allImagesProject: [
+            'https://user-images.githubusercontent.com/104791582/230154156-0108f9b9-9a78-462e-9f62-3ddd24886373.jpg',
+            'https://user-images.githubusercontent.com/104791582/230154164-06a0dd43-5705-4b9a-9570-6eb1f3a6d751.jpg',
+            'https://user-images.githubusercontent.com/104791582/230154167-53153bd9-35f6-4d1e-ac6a-51721121957a.jpg',
+          ],
+          text: `O TFC é um site informativo sobre partidas e classificações de futebol!
+          Foi desenvolvido uma API (utilizando o métodoTDD) e também integrado através do docker-compose as
+          aplicações para que elas funcionem consumindo um banco de dados em MySql.
+          Foi respeitado regras de negócio para a API se conectar corretamente com o Front-End`,
+          linkGitHub: 'https://github.com/m4rcos-dev/FullStack-project-trybe-futebol-clube',
+          linkApp: 'https://tfc.up.railway.app/',
+        },
+      ]
+    },
     // Front END
     {
       head: {
