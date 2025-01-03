@@ -67,8 +67,8 @@ class About extends React.Component {
                 justifyContent: 'space-evenly',
               }}
             >
-              <AcademicTimeLine />
               <ExperienceTimeLine />
+              <AcademicTimeLine />
             </BoxCustom>
           </Box>
         </Slide>

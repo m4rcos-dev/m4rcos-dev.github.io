@@ -10,7 +10,11 @@ export const dataIconStacks = () => {
       gitHub: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
       docker: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg',
       trello: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg',
-      scrum: 'https://user-images.githubusercontent.com/104791582/209566973-f3d0c5ca-e922-497e-abba-b21ec7a06cab.svg'
+      scrum: 'https://user-images.githubusercontent.com/104791582/209566973-f3d0c5ca-e922-497e-abba-b21ec7a06cab.svg',
+      csharp: 'https://upload.wikimedia.org/wikipedia/commons/b/bd/Logo_C_sharp.svg',
+      php: 'https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg',
+      python: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg',
+      expo: 'https://www.svgrepo.com/show/353722/expo.svg'
     },
     frontEnd: {
       html: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
@@ -31,6 +35,8 @@ export const dataIconStacks = () => {
       mySql: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
       mongoDB: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
       api: 'https://user-images.githubusercontent.com/104791582/209579992-f06b83cf-13c4-452c-81bc-1aad0d02f7bb.svg',
+      laravel: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg',
+      dotnet: 'https://upload.wikimedia.org/wikipedia/commons/7/7d/Microsoft_.NET_logo.svg'
     }
   }
 }
